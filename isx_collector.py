@@ -300,10 +300,23 @@ def _clean_num(v):
         return None
 
 
+def _merge_series(existing: dict, ticker: str, series: list) -> None:
+    old = {d: v for d, v in existing.get(ticker, []) if isinstance(d, str)}
+    for d, v in series:
+        old[d] = v
+    existing[ticker] = [[d, old[d]] for d in sorted(old)]
+
+
 def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
-    """Compact per-ticker close-price history + the ISX60 index, for charting.
-    Shape: { "TICKER": [["YYYY-MM-DD", close], ...], "__ISX60": [[...]] }"""
+    """Merge per-ticker close history + the ISX60 index INTO the existing
+    history.json (so a one-time backfill is preserved and daily runs just
+    extend it). Shape: { "TICKER": [["YYYY-MM-DD", close], ...], "__ISX60": [...] }"""
     hist = {}
+    if HISTORY_JSON.exists():
+        try:
+            hist = json.loads(HISTORY_JSON.read_text())
+        except Exception:
+            hist = {}
     if {"ticker", "date", "close"}.issubset(prices.columns):
         for tk, g in prices.groupby("ticker"):
             series = []
@@ -312,7 +325,7 @@ def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
                 if v is not None:
                     series.append([str(r["date"]), v])
             if series:
-                hist[str(tk)] = series
+                _merge_series(hist, str(tk), series)
     # ISX60 index history from the market-summary log
     try:
         if summary_path.exists():
@@ -324,7 +337,7 @@ def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
                     if v is not None:
                         idx.append([str(r["date"]), v])
                 if idx:
-                    hist["__ISX60"] = idx
+                    _merge_series(hist, "__ISX60", idx)
     except Exception as e:
         print("index history skipped:", e)
     HISTORY_JSON.write_text(json.dumps(hist, ensure_ascii=False))
