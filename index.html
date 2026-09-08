@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Dossier — Alhamraa Insurance (NHAM)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#EDEAE1; --ink-dim:#A7ADA0; --ink-faint:#6C7268;
+    --paper:#12161A; --panel:#181D22; --panel-2:#1D2329;
+    --line:#2B3239; --line-soft:#232A30;
+    --gold:#C9A24B; --gold-dim:#8A7038; --red:#B5675A;
+    --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', system-ui, sans-serif; font-size:14px; line-height:1.5;}
+  ::selection{background:var(--gold-dim); color:#12161A;}
+
+  .shell{display:grid; grid-template-columns:260px 1fr; min-height:100vh;}
+  @media (max-width:900px){ .shell{grid-template-columns:1fr;} .sidebar{position:static; height:auto;} }
+
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--panel); border-right:1px solid var(--line); padding:20px 0 40px;}
+  .brand{padding:0 20px 16px; margin-bottom:10px; border-bottom:1px solid var(--line-soft);}
+  .brand .mark{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;}
+  .brand input{width:100%; background:transparent; border:none; border-bottom:1px dashed var(--line); color:var(--ink); font-family:'IBM Plex Serif', serif; font-size:19px; font-weight:600; padding:4px 0 6px; outline:none;}
+  .brand input:focus{border-bottom-color:var(--gold);}
+  .brand .sub{margin-top:8px; font-size:11px; color:var(--ink-faint);}
+
+  .progress-wrap{padding:0 20px 16px; border-bottom:1px solid var(--line-soft); margin-bottom:8px;}
+  .progress-label{display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-dim); margin-bottom:6px;}
+  .progress-track{height:3px; background:var(--line); border-radius:2px; overflow:hidden;}
+  .progress-fill{height:100%; background:var(--gold); width:0%; transition:width .25s ease;}
+
+  .toc{padding:8px 8px 0;}
+  .toc a{display:flex; gap:10px; align-items:baseline; padding:5px 12px; color:var(--ink-dim); text-decoration:none; font-size:12.5px; border-radius:var(--radius);}
+  .toc a:hover{background:var(--panel-2); color:var(--ink);}
+  .toc a .n{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gold-dim); width:22px; flex:none;}
+
+  .main{padding:34px 40px 120px; max-width:960px;}
+  @media (max-width:900px){ .main{padding:24px 18px 100px;} }
+
+  .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid var(--line);}
+  .btn{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; background:var(--panel); color:var(--ink); border:1px solid var(--line); padding:8px 14px; border-radius:var(--radius); cursor:pointer;}
+  .btn:hover{border-color:var(--gold-dim); color:var(--gold);}
+  .btn.primary{border-color:var(--gold-dim); color:var(--gold);}
+  .btn.active{background:var(--gold); color:#12161A; border-color:var(--gold); font-weight:600;}
+  .search{flex:1; min-width:180px; background:var(--panel); border:1px solid var(--line); color:var(--ink); padding:8px 12px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; outline:none;}
+  .search:focus{border-color:var(--gold-dim);}
+
+  .part-desc{color:var(--ink-faint); font-size:12px; margin-bottom:22px;}
+
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px 24px; margin-bottom:18px; scroll-margin-top:20px; position:relative;}
+  .card-head{display:flex; align-items:baseline; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--line-soft);}
+  .card-head .num{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:13px;}
+  .card-head h2{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:18px; margin:0; color:var(--ink); flex:1;}
+  .card-delete{display:none; background:transparent; border:1px solid var(--line); color:var(--ink-faint); font-size:10.5px; font-family:'IBM Plex Mono',monospace; padding:4px 10px; border-radius:var(--radius); cursor:pointer;}
+  body.edit-mode .card-delete{display:inline-block;}
+  .card-delete:hover{color:var(--red); border-color:var(--red);}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:14px 18px;}
+  .field{display:flex; flex-direction:column; gap:5px; position:relative;}
+  .field-top{display:flex; align-items:baseline; justify-content:space-between; gap:8px;}
+  .field label{font-size:11.5px; color:var(--ink-dim);}
+  .field input[type=text], .field textarea{width:100%; background:var(--panel-2); border:1px solid var(--line); color:var(--ink); padding:8px 10px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:13px; outline:none; resize:vertical;}
+  .field textarea{min-height:56px; line-height:1.45;}
+  .field input:focus, .field textarea:focus{border-color:var(--gold-dim); background:#20262c;}
+  .field.wide{grid-column:1/-1;}
+
+  .rating{display:flex; gap:2px; flex:none;}
+  .star{cursor:pointer; font-size:12px; line-height:1; color:var(--line); user-select:none;}
+  .star.filled{color:var(--gold);}
+  .star:hover{color:var(--gold-dim);}
+
+  .field-delete{display:none; position:absolute; top:-7px; right:-7px; width:18px; height:18px; border-radius:50%; background:var(--panel-2); border:1px solid var(--line); color:var(--ink-faint); font-size:11px; line-height:1; align-items:center; justify-content:center; cursor:pointer; z-index:2;}
+  body.edit-mode .field-delete{display:flex;}
+  .field-delete:hover{color:var(--red); border-color:var(--red);}
+
+  .entries{display:flex; flex-direction:column; gap:16px;}
+  .entry{border:1px solid var(--line-soft); border-left:2px solid var(--gold-dim); border-radius:var(--radius); padding:16px 18px 18px; background:var(--panel-2); position:relative;}
+  .entry-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;}
+  .entry-head .tag{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gold); letter-spacing:.06em;}
+  .entry-remove{display:none; background:transparent; border:1px solid var(--line); color:var(--ink-faint); font-size:10.5px; font-family:'IBM Plex Mono',monospace; padding:3px 9px; border-radius:var(--radius); cursor:pointer;}
+  body.edit-mode .entry-remove{display:inline-block;}
+  .entry-remove:hover{color:var(--red); border-color:var(--red);}
+  .add-entry{align-self:flex-start; margin-top:14px; background:transparent; border:1px dashed var(--line); color:var(--ink-dim); font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:9px 16px; border-radius:var(--radius); cursor:pointer;}
+  .add-entry:hover{border-color:var(--gold-dim); color:var(--gold);}
+
+  .risk-cat{margin-bottom:18px;}
+  .risk-cat h3{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-dim); margin:0 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line-soft);}
+
+  .live-fetch{margin-bottom:16px; padding:12px 14px; background:var(--panel-2); border:1px solid var(--line-soft); border-radius:var(--radius);}
+  .live-fetch-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  .live-fetch-row .btn{flex:none;}
+  .live-fetch-status{font-size:11.5px; color:var(--ink-faint); line-height:1.5; flex:1; min-width:220px;}
+  .live-fetch-status a{color:var(--gold-dim);}
+  .live-fetch-status.ok{color:var(--gold-dim);}
+  .live-fetch-status.err{color:var(--red);}
+
+  .hidden{display:none !important;}
+  footer.note{color:var(--ink-faint); font-size:11.5px; margin-top:30px; border-top:1px solid var(--line); padding-top:16px;}
+
+  @media print{
+    .sidebar, .toolbar, .add-entry, .entry-remove, .field-delete, .card-delete, .rating{display:none !important;}
+    .shell{display:block;}
+    body{background:#fff; color:#111;}
+    .card{background:#fff; border:1px solid #ccc; break-inside:avoid;}
+    .field input, .field textarea{background:#fff; border:1px solid #999; color:#111;}
+  }
+
+  /* ============== MULTI-COMPANY SIDEBAR ============== */
+  html{ scroll-behavior:smooth; }
+  .sidebar{ display:flex; flex-direction:column; overflow:hidden; }
+
+  .side-viewport{ position:relative; flex:1 1 auto; min-height:0; overflow:hidden; }
+  .side-track{ display:flex; width:200%; height:100%; transform:translateX(0); transition:transform .34s cubic-bezier(.4,0,.2,1); }
+  .side-track.show-sections{ transform:translateX(-50%); }
+  .side-panel{ width:50%; flex:0 0 50%; height:100%; overflow-y:auto; padding:4px 0 26px; }
+
+  .side-panel-title{ font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); padding:6px 20px 10px; }
+
+  .company-list{ position:relative; padding:0 8px; }
+  .company-active-bar{ position:absolute; left:8px; width:2px; top:0; height:0; background:var(--gold); border-radius:2px; opacity:0; pointer-events:none; transition:top .32s cubic-bezier(.4,0,.2,1), height .32s cubic-bezier(.4,0,.2,1), opacity .2s ease; }
+  .company-row{ position:relative; display:flex; align-items:center; gap:10px; width:100%; text-align:left; background:transparent; border:1px solid transparent; border-radius:var(--radius); padding:10px 12px; margin-bottom:2px; color:var(--ink-dim); cursor:pointer; font-family:'IBM Plex Sans',sans-serif; transition:background .2s ease, color .2s ease, border-color .2s ease, transform .18s ease; }
+  .company-row:hover{ background:var(--panel-2); color:var(--ink); transform:translateX(2px); }
+  .company-row.active{ background:linear-gradient(90deg, rgba(201,162,75,.10), rgba(201,162,75,0)); color:var(--ink); border-color:var(--line-soft); }
+  .company-row-main{ flex:1; min-width:0; display:flex; flex-direction:column; gap:3px; }
+  .company-row-name{ font-family:'IBM Plex Serif',serif; font-size:14px; font-weight:500; line-height:1.25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .company-row.active .company-row-name{ color:var(--gold); }
+  .company-row-sub{ font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.03em; color:var(--ink-faint); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .company-row-chev{ flex:none; color:var(--ink-faint); font-size:15px; line-height:1; opacity:0; transform:translateX(-4px); transition:opacity .2s ease, transform .2s ease, color .2s ease; }
+  .company-row:hover .company-row-chev, .company-row.active .company-row-chev{ opacity:1; transform:translateX(0); color:var(--gold-dim); }
+  .company-row-del{ flex:none; display:none; width:20px; height:20px; align-items:center; justify-content:center; border-radius:50%; border:1px solid var(--line); background:var(--panel-2); color:var(--ink-faint); font-size:13px; line-height:1; transition:color .2s ease, border-color .2s ease; }
+  body.edit-mode .company-row-del{ display:flex; }
+  body.edit-mode .company-row-chev{ display:none; }
+  .company-row-del:hover{ color:var(--red); border-color:var(--red); }
+
+  .add-company{ display:block; width:calc(100% - 16px); margin:10px 8px 0; background:transparent; border:1px dashed var(--line); color:var(--ink-dim); font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:10px 14px; border-radius:var(--radius); cursor:pointer; transition:border-color .2s ease, color .2s ease, background .2s ease; }
+  .add-company:hover{ border-color:var(--gold-dim); color:var(--gold); background:var(--panel-2); }
+
+  .side-back{ display:inline-flex; align-items:center; gap:6px; background:transparent; border:none; color:var(--ink-dim); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; padding:2px 20px 2px; cursor:pointer; transition:color .2s ease, transform .18s ease; }
+  .side-back:hover{ color:var(--gold); transform:translateX(-2px); }
+  .side-panel-active-name{ font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; color:var(--ink); padding:8px 20px 12px; margin-bottom:4px; border-bottom:1px solid var(--line-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+  /* company rows populate in (single gentle load moment) */
+  @keyframes rowIn{ from{ opacity:0; transform:translateY(6px);} to{ opacity:1; transform:translateY(0);} }
+  body.first-load .company-row{ animation:rowIn .3s ease both; }
+  body.first-load .company-row:nth-child(2){ animation-delay:.02s; }
+  body.first-load .company-row:nth-child(3){ animation-delay:.05s; }
+  body.first-load .company-row:nth-child(4){ animation-delay:.08s; }
+  body.first-load .company-row:nth-child(5){ animation-delay:.11s; }
+  body.first-load .company-row:nth-child(n+6){ animation-delay:.14s; }
+
+  /* company-switch content swap (action-driven) */
+  #profileContainer{ transition:opacity .24s ease, transform .24s ease; will-change:opacity, transform; }
+  #profileContainer.swapping{ opacity:0; transform:translateY(10px); }
+
+  /* first-load card reveal (one orchestrated moment) */
+  @keyframes cardIn{ from{ opacity:0; transform:translateY(12px);} to{ opacity:1; transform:translateY(0);} }
+  body.first-load #profileContainer .card{ animation:cardIn .4s ease both; }
+  body.first-load #profileContainer .card:nth-child(1){ animation-delay:.02s; }
+  body.first-load #profileContainer .card:nth-child(2){ animation-delay:.05s; }
+  body.first-load #profileContainer .card:nth-child(3){ animation-delay:.08s; }
+  body.first-load #profileContainer .card:nth-child(4){ animation-delay:.11s; }
+  body.first-load #profileContainer .card:nth-child(n+5){ animation-delay:.13s; }
+
+  .btn, .toc a, .star{ transition:background .18s ease, color .18s ease, border-color .18s ease; }
+
+  @media (max-width:900px){
+    .sidebar{ height:auto; overflow:visible; }
+    .side-viewport{ height:auto; overflow:visible; }
+    .side-track{ width:100%; transform:none !important; display:block; height:auto; }
+    .side-panel{ width:100%; height:auto; overflow:visible; display:none; }
+    .side-panel--companies{ display:block; }
+    .side-track.show-sections .side-panel--companies{ display:none; }
+    .side-track.show-sections .side-panel--sections{ display:block; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+  }
+  .feed-bar{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; padding:9px 12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); }
+  .feed-dot{ width:8px; height:8px; border-radius:50%; background:var(--ink-faint); flex:none; }
+  .feed-dot.ok{ background:#4bb97a; }
+  .feed-dot.load{ background:var(--gold); animation:feedpulse 1s infinite; }
+  .feed-dot.err{ background:var(--red); }
+  @keyframes feedpulse{ 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .feed-status{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-dim); }
+  .feed-next{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); white-space:nowrap; }
+  .feed-spacer{ flex:1 1 auto; }
+  .feed-int{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); display:flex; align-items:center; gap:6px; }
+  .feed-int select{ background:var(--panel-2); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:4px 6px; font-family:inherit; font-size:11px; }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <nav class="sidebar">
+    <div class="brand">
+      <div class="mark">ISX Company Database</div>
+      <input id="companyNameInput" type="text" placeholder="Company name…" autocomplete="off">
+      <div class="sub" id="brandSub">Select a company to view its dossier.</div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Fields completed</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div class="side-viewport">
+      <div class="side-track" id="sideTrack">
+        <div class="side-panel side-panel--companies">
+          <div class="side-panel-title">Companies</div>
+          <div class="company-list" id="companyList"></div>
+          <button type="button" class="add-company" id="addCompanyBtn">+ Add company</button>
+        </div>
+        <div class="side-panel side-panel--sections">
+          <button type="button" class="side-back" id="sideBackBtn">‹ All companies</button>
+          <div class="side-panel-active-name" id="sidePanelActiveName">—</div>
+          <div class="toc" id="tocList"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="toolbar">
+      <input class="search" id="searchBox" type="text" placeholder="Filter fields and sections…">
+      <button class="btn" id="editModeBtn">Edit fields</button>
+      <button class="btn primary" id="exportBtn">Export JSON</button>
+      <button class="btn" id="importBtn">Import JSON</button>
+      <input type="file" id="importFile" accept="application/json" class="hidden">
+      <button class="btn" id="printBtn">Print / Save PDF</button>
+      <button class="btn" id="clearBtn">Clear all</button>
+    </div>
+    <div class="feed-bar">
+      <span class="feed-dot" id="feedDot"></span>
+      <span class="feed-status" id="feedStatus">Connecting to ISX feed…</span>
+      <span class="feed-next" id="feedNext"></span>
+      <span class="feed-spacer"></span>
+      <button class="btn" id="feedSyncBtn" type="button">Sync ISX prices</button>
+      <button class="btn" id="feedLoadAllBtn" type="button">+ Load all ISX companies</button>
+      <label class="feed-int">Auto
+        <select id="feedIntervalSel">
+          <option value="0">Off</option>
+          <option value="5">5 min</option>
+          <option value="15" selected>15 min</option>
+          <option value="30">30 min</option>
+          <option value="60">60 min</option>
+        </select>
+      </label>
+    </div>
+    <div class="part-desc" style="margin-bottom:8px;">Click <strong>Edit fields</strong> to reveal delete controls on any box or section. The 1–3 stars on each field are an importance rating you set yourself — they're just a personal reference marker and never combine into any overall company score.</div>
+    <div class="part-desc">Sections 1–10, 12–25, 27–31 — sections 11 (Competitors) and 26 (M&amp;A) removed, plus a handful of individual fields (Sister companies, Franchises, Joint ventures, Major milestones, Recent share purchases/sales, President) trimmed per request.</div>
+    <div id="profileContainer"></div>
+
+    <footer class="note">
+      Values live only in this page's memory — use <strong>Export JSON</strong> to save your work and <strong>Import JSON</strong> to restore it later.
+    </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  const TEXTAREA_HINTS = ["story","purpose","milestone","expansion","failure","rebrand","controvers",
+    "event","evolution","history","strategy","outlook","background","reason","result","integration",
+    "note","sentiment","reputation","risk","goal","scenario","plan","advantage","disadvantage",
+    "strength","weakness","trend","summary","complaint","criticism","scandal","perception","culture",
+    "description","features","review","why a customer","stated","forecast","vulnerabilit","dependenc",
+    "structure","model","conclusion","assessment"];
+
+  function isTextarea(label){
+    const l = label.toLowerCase();
+    return TEXTAREA_HINTS.some(h => l.includes(h));
+  }
+
+  const PROFILE_SECTIONS = [
+    {num:1, id:"basic-identity", title:"Basic Identity", fields:[
+      "Official legal name","Common/brand name","Founded date","Founders","Headquarters",
+      "Countries of operation","Website","Industry","Sub-industry","Business classification / NAICS / SIC",
+      "Public or private","Stock ticker","Stock exchange","Company registration","Parent company",
+      "Subsidiaries","Brands owned"]},
+    {num:2, id:"history", title:"History", fields:[
+      "Founding story","Original purpose","First product/service","Major expansions",
+      "Major failures","Rebranding","Name changes","Acquisitions","Divestitures","Mergers",
+      "Bankruptcy/restructuring","Ownership changes","Important historical events",
+      "Evolution of its business model"]},
+    {num:3, id:"ownership", title:"Ownership", fields:[
+      "Current owners","Largest shareholders","Founders' ownership","Institutional ownership",
+      "Government ownership","Ultimate beneficial owner","Controlling shareholder","Voting rights",
+      "Ownership history","Insider ownership"]},
+    {num:4, id:"leadership", title:"Leadership", fields:[
+      "CEO","Chairman","CFO","Board of directors","Major executives' backgrounds","Education",
+      "Previous companies","Length of tenure","Executive compensation","Executive departures",
+      "Board independence","Management structure"]},
+    {num:5, id:"business-model", title:"What the Company Actually Does", fields:[
+      "Core business","Business model","Products","Services","Revenue sources","How it makes money",
+      "Who pays it","Who uses its products","B2B/B2C/B2G","Subscription/transaction/sales/licensing/etc.",
+      "Pricing model","Distribution model","Geographic markets","Major customer groups","Major suppliers",
+      "Supply chain","Manufacturing","Sales channels"]},
+    {num:7, id:"brands", title:"Brands", fields:[
+      "Sub-brands","Brand acquisitions","Brand value","Brand recognition","Brand reputation",
+      "Brand changes/rebranding"]},
+    {num:8, id:"financials", title:"Financials", fields:[
+      "Revenue","Revenue growth","Gross profit","Gross margin","Operating income","Operating margin",
+      "Net income","Net margin","Cash","Debt","Net debt","Assets","Liabilities","Equity",
+      "Accounts receivable","Accounts payable","Interest expense","Tax expense"]},
+    {num:9, id:"stock-info", title:"Stock / Market Information", fields:[
+      "Current share price","Historical share price","Market capitalization","Enterprise value","P/E",
+      "Forward P/E","PEG","P/S","P/B","EV/EBITDA","Dividend yield","Dividend history","Earnings history",
+      "Earnings estimates","Analyst targets","Insider buying/selling","Share issuance","Buybacks",
+      "Volatility","Performance vs industry"]},
+    {num:10, id:"customers", title:"Customers", fields:[
+      "Who are the customers?","Largest customers","Consumer demographics","Geographic distribution",
+      "Enterprise customers","Government customers","Customer acquisition cost","Customer retention",
+      "Churn","Lifetime value","Customer satisfaction","Reviews","Complaints","Customer loyalty",
+      "Major contracts","Contract duration"]},
+    {num:12, id:"market-position", title:"Market Position", fields:[
+      "Market share","Market leader/challenger/niche","Market size","Addressable market","Growth rate",
+      "Geographic market share","Product market share","Pricing position","Customer perception",
+      "Brand strength","Barriers to entry","Switching costs"]},
+    {num:13, id:"industry", title:"Industry", fields:[
+      "Industry size","Industry growth","Major competitors","Supply/demand","Regulation",
+      "Technological changes","Consumer trends","Commodity exposure","Cyclicality","Seasonality",
+      "Industry risks","Future outlook"]},
+    {num:14, id:"strategy", title:"Strategy", fields:[
+      "Company's stated strategy","Actual strategy","Growth strategy","Geographic expansion",
+      "New products","Vertical integration","Cost reduction","Pricing strategy","Premiumization",
+      "Diversification","Capital allocation","Long-term goals"]},
+    {num:15, id:"moat", title:"Competitive Advantages / Moat", fields:[
+      "Brand","Technology","Distribution","Data","Intellectual property","Regulatory barriers",
+      "Manufacturing capability","Supply-chain advantage"]},
+    {num:16, id:"employees", title:"Employees", fields:[
+      "Number of employees","Employee growth","Hiring","Layoffs","Locations","Departments","Salaries",
+      "Benefits","Employee turnover","Workplace culture","Remote/hybrid policy","Unionization",
+      "Employee complaints","Glassdoor/Indeed/etc. sentiment"]},
+    {num:17, id:"tech-rd", title:"Technology & R&D", fields:[
+      "Technologies used","Patents","Patent applications","Trademarks","Software","AI usage","Automation",
+      "Manufacturing technology","Data infrastructure","Cybersecurity","Major technological partnerships",
+      "Technological dependencies","Technology advantages/disadvantages"]},
+    {num:18, id:"footprint", title:"Physical Footprint", fields:[
+      "Offices","Factories","Warehouses","Stores","Data centers","Distribution centers",
+      "Mines/oil fields/farms/etc. (industry-dependent)","Countries","Number of locations",
+      "Major facilities","Real-estate ownership vs leasing"]},
+    {num:19, id:"supply-chain", title:"Supply Chain", fields:[
+      "Raw materials","Critical components","Supplier concentration","Manufacturing locations",
+      "Logistics","Shipping","Supply-chain vulnerabilities","Single-source dependencies"]},
+    {num:20, id:"marketing", title:"Marketing", fields:[
+      "Advertising","Marketing budget","Target audience","Brand positioning","Slogans",
+      "Advertising campaigns","Celebrity partnerships","Influencers","Social media","SEO",
+      "Email marketing","Pricing psychology","Distribution of marketing spending"]},
+    {num:21, id:"reputation", title:"Reputation", fields:[
+      "Customer sentiment","Employee sentiment","Investor sentiment","Media coverage",
+      "Industry reputation","Awards","Criticism","Product complaints","Corporate scandals",
+      "Trustworthiness","Customer-service reputation"]},
+    {num:22, id:"legal", title:"Legal & Regulatory", fields:[
+      "Lawsuits","Regulatory investigations","Fines","Settlements","Criminal investigations",
+      "Civil litigation","Consumer-protection issues","Environmental violations","Employment lawsuits"]},
+    {num:23, id:"political", title:"Political / Government Exposure", fields:[
+      "Government contracts","Government subsidies","Tax incentives","Lobbying","Political donations",
+      "Sanctions exposure","Export restrictions","Trade restrictions"]},
+    {num:24, id:"esg", title:"ESG / Environmental", fields:[
+      "Carbon emissions","Energy consumption","Water usage","Waste","Pollution","Environmental lawsuits",
+      "Renewable energy","Recycling","Human rights","Supply-chain ethics"]},
+    {num:25, id:"partnerships", title:"Partnerships", fields:[
+      "Strategic partnerships","Technology partnerships","Distribution agreements",
+      "Licensing agreements","Government partnerships","University partnerships","Major customers",
+      "Failed partnerships"]},
+    {num:27, id:"news", title:"News (Timeline)", fields:[
+      "Partnerships","Funding","Expansions","Closures","Executive changes","Earnings announcements",
+      "Product failures","Recalls","Major successes"]},
+    {num:28, id:"documents", title:"Documents", fields:[
+      "Annual reports","Quarterly reports","SEC/regulatory filings","Investor presentations",
+      "Earnings transcripts","Press releases"]},
+    {num:30, id:"future", title:"Future", fields:[
+      "Management's stated goals","Expected revenue","Expected earnings","Expansion plans",
+      "Acquisition plans","Industry forecast","Technological threats","Potential opportunities",
+      "Possible failure scenarios","Possible growth scenarios"]},
+    {num:31, id:"final-assessment", title:"Final Assessment", fields:[
+      "Reduce the entire investigation to a single overall conclusion"]},
+  ];
+
+  const REPEATABLE_GROUPS = [
+    {num:6, id:"products-services", title:"Products & Services", itemLabel:"Product / Service", fields:[
+      "Name","Launch date","Price","Features","Target customer","Geographic availability","Sales volume",
+      "Profitability if available","Competitors","Product lifecycle","Customer reviews","Strengths",
+      "Weaknesses"]},
+  ];
+
+  const RISK_CATEGORIES = [
+    {cat:"Financial", items:["Debt","Cash burn","Falling margins","Customer concentration"]},
+    {cat:"Business", items:["Competition","Weak products","Market decline","Supplier dependence"]},
+    {cat:"Technological", items:["Obsolescence","Cybersecurity","AI disruption"]},
+    {cat:"Legal", items:["Lawsuits","Regulation","Intellectual property"]},
+    {cat:"Geopolitical", items:["War","Sanctions","Tariffs","Political instability"]},
+    {cat:"Operational", items:["Factory dependence","Supply chain","Key-person risk"]},
+  ];
+
+  let uid = 0;
+  function nextUid(){ return "f" + (uid++); }
+  function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
+  function escAttr(s){ return String(s).replace(/"/g,"&quot;"); }
+  function escHtml(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  /* ============== MULTI-COMPANY STATE ============== */
+  let companies = [];       // [{ id, name, data }]
+  let activeId = null;      // currently selected company
+  let displayedId = null;   // company whose data is actually in the form right now
+  let seq = 0;
+  let swapTimer = null;
+  function newCompanyId(){ return "c" + (seq++) + "_" + Math.random().toString(36).slice(2,7); }
+
+  function ratingHTML(name){
+    return `<div class="rating" data-rating-for="${escAttr(name)}" data-current="0">
+      <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span>
+    </div>`;
+  }
+
+  function setRating(ratingEl, val){
+    if (!ratingEl) return;
+    const current = parseInt(ratingEl.getAttribute("data-current") || "0", 10);
+    const newVal = (current === val) ? 0 : val;
+    ratingEl.setAttribute("data-current", String(newVal));
+    ratingEl.querySelectorAll(".star").forEach(s => {
+      const v = parseInt(s.getAttribute("data-val"), 10);
+      s.classList.toggle("filled", v <= newVal);
+    });
+  }
+
+  function fieldHTML(name, label, wide){
+    const id = nextUid();
+    const ta = isTextarea(label);
+    const cls = "field" + (wide ? " wide" : "");
+    const top = `<div class="field-top"><label for="${id}">${escHtml(label)}</label>${ratingHTML(name)}</div>`;
+    const del = `<button type="button" class="field-delete" title="Delete this field">&times;</button>`;
+    if (ta){
+      return `<div class="${cls}" data-field-label="${escAttr(label)}">
+        ${del}${top}
+        <textarea id="${id}" name="${escAttr(name)}" rows="2"></textarea>
+      </div>`;
+    }
+    return `<div class="${cls}" data-field-label="${escAttr(label)}">
+      ${del}${top}
+      <input id="${id}" type="text" name="${escAttr(name)}" autocomplete="off">
+    </div>`;
+  }
+
+  function renderSection(section){
+    const wrap = document.createElement("div");
+    wrap.className = "card";
+    wrap.id = "sec-" + section.id;
+    const fieldsHtml = section.fields.map(f => fieldHTML(`${section.id}__${slug(f)}`, f, section.fields.length === 1)).join("");
+    wrap.innerHTML = `
+      <div class="card-head"><span class="num">${String(section.num).padStart(2,"0")}</span><h2>${escHtml(section.title)}</h2><button type="button" class="card-delete" title="Delete this section">Remove section</button></div>
+      <div class="grid">${fieldsHtml}</div>`;
+    return wrap;
+  }
+
+  function renderRepeatableGroup(group){
+    const wrap = document.createElement("div");
+    wrap.className = "card";
+    wrap.id = "sec-" + group.id;
+    const noteHtml = group.extraNote ? `<div class="grid" style="margin-top:16px;">${fieldHTML(`${group.id}__note`, group.extraNote, true)}</div>` : "";
+    wrap.innerHTML = `
+      <div class="card-head"><span class="num">${String(group.num).padStart(2,"0")}</span><h2>${escHtml(group.title)}</h2><button type="button" class="card-delete" title="Delete this section">Remove section</button></div>
+      <div class="entries" id="entries-${group.id}"></div>
+      <button type="button" class="add-entry" data-add-entry="${group.id}">+ Add ${escHtml(group.itemLabel)}</button>
+      ${noteHtml}`;
+    return wrap;
+  }
+
+  function addGroupEntry(group){
+    const container = document.getElementById("entries-" + group.id);
+    const idx = container.children.length;
+    const entry = document.createElement("div");
+    entry.className = "entry";
+    const fieldsHtml = group.fields.map(f => fieldHTML(`${group.id}__${idx}__${slug(f)}`, f, isTextarea(f))).join("");
+    entry.innerHTML = `
+      <div class="entry-head">
+        <span class="tag">${escHtml(group.itemLabel).toUpperCase()} #${idx+1}</span>
+        <button type="button" class="entry-remove">Remove</button>
+      </div>
+      <div class="grid">${fieldsHtml}</div>`;
+    entry.querySelector(".entry-remove").addEventListener("click", () => entry.remove());
+    container.appendChild(entry);
+    return entry;
+  }
+
+  function renderRisks(){
+    const wrap = document.createElement("div");
+    wrap.className = "card";
+    wrap.id = "sec-risks";
+    const catsHtml = RISK_CATEGORIES.map(c => {
+      const itemsHtml = c.items.map(i => fieldHTML(`risks__${slug(c.cat)}__${slug(i)}`, i, true)).join("");
+      return `<div class="risk-cat"><h3>${escHtml(c.cat)}</h3><div class="grid">${itemsHtml}</div></div>`;
+    }).join("");
+    wrap.innerHTML = `<div class="card-head"><span class="num">29</span><h2>Risks</h2><button type="button" class="card-delete" title="Delete this section">Remove section</button></div>${catsHtml}`;
+    return wrap;
+  }
+
+  const profileContainer = document.getElementById("profileContainer");
+  const tocList = document.getElementById("tocList");
+
+  const allItems = [
+    ...PROFILE_SECTIONS.map(s => ({num:s.num, id:s.id, title:s.title, kind:"section", data:s})),
+    ...REPEATABLE_GROUPS.map(g => ({num:g.num, id:g.id, title:g.title, kind:"group", data:g})),
+    {num:29, id:"risks", title:"Risks", kind:"risks", data:null},
+  ].sort((a,b) => a.num - b.num);
+
+  let tocHtml = "";
+  allItems.forEach(item => {
+    let el;
+    if (item.kind === "section") el = renderSection(item.data);
+    else if (item.kind === "group") el = renderRepeatableGroup(item.data);
+    else el = renderRisks();
+    profileContainer.appendChild(el);
+    tocHtml += `<a href="#sec-${item.id}"><span class="n">${String(item.num).padStart(2,"0")}</span>${escHtml(item.title)}</a>`;
+  });
+  tocList.innerHTML = tocHtml;
+
+  document.body.addEventListener("click", function(e){
+    const addEntryBtn = e.target.closest("[data-add-entry]");
+    if (addEntryBtn){
+      const groupId = addEntryBtn.getAttribute("data-add-entry");
+      const group = REPEATABLE_GROUPS.find(g => g.id === groupId);
+      if (group) addGroupEntry(group);
+      updateProgress();
+      return;
+    }
+    const star = e.target.closest(".star");
+    if (star){
+      setRating(star.closest(".rating"), parseInt(star.getAttribute("data-val"), 10));
+      return;
+    }
+    const fieldDel = e.target.closest(".field-delete");
+    if (fieldDel){
+      if (!document.body.classList.contains("edit-mode")) return;
+      fieldDel.closest(".field").remove();
+      updateProgress();
+      return;
+    }
+    const cardDel = e.target.closest(".card-delete");
+    if (cardDel){
+      if (!document.body.classList.contains("edit-mode")) return;
+      if (!confirm("Delete this entire section, including everything in it? This cannot be undone (export first if you want a backup).")) return;
+      const card = cardDel.closest(".card");
+      const tocLink = document.querySelector(`.toc a[href="#${card.id}"]`);
+      if (tocLink) tocLink.remove();
+      card.remove();
+      updateProgress();
+      return;
+    }
+  });
+
+  document.getElementById("editModeBtn").addEventListener("click", function(){
+    const on = document.body.classList.toggle("edit-mode");
+    this.classList.toggle("active", on);
+    this.textContent = on ? "Done editing" : "Edit fields";
+  });
+
+  const companyNameInput = document.getElementById("companyNameInput");
+  companyNameInput.addEventListener("input", () => {
+    const nm = companyNameInput.value.trim() || "Untitled Company";
+    document.title = "Company Dossier — " + nm;
+    const id = (displayedId != null ? displayedId : activeId);
+    const c = companies.find(x => x.id === id);
+    if (c){
+      c.name = nm;
+      const rowName = document.querySelector('#companyList .company-row[data-id="' + c.id + '"] .company-row-name');
+      if (rowName) rowName.textContent = nm;
+      const spn = document.getElementById("sidePanelActiveName");
+      if (spn) spn.textContent = nm;
+    }
+  });
+
+  /* ============== ISX LIVE FEED ==============
+     Reads data/latest.json produced by isx_collector.py (the scheduled
+     collector). Point FEED_URL at wherever that file is served. If you host
+     this dossier in the same GitHub repo as the data, the relative path below
+     works. Otherwise set it to your GitHub raw URL, e.g.:
+       https://raw.githubusercontent.com/USER/REPO/main/data/latest.json      */
+  const FEED_URL = "data/latest.json";
+
+  let feedData = {};          // { TICKER: {close, change_pct, volume, date, name, ...} }
+  let feedFetchedAt = null;
+  let feedReportDate = "";
+  let feedTimer = null;
+  let feedNextAt = null;
+  const feedAppliedKey = {};  // ticker -> last "date|close" written to history (dedupe)
+
+  function tickerOf(c){
+    if (c && c.id === displayedId){
+      const el = document.querySelector('[name="basic-identity__stock-ticker"]');
+      if (el && el.value.trim()) return el.value.trim().toUpperCase();
+    }
+    const t = (c && c.data && c.data["basic-identity__stock-ticker"]) ? String(c.data["basic-identity__stock-ticker"]) : "";
+    return t.trim().toUpperCase();
+  }
+
+  function fmtPrice(rec){
+    let s = (rec.close != null && rec.close !== "") ? (rec.close + " IQD") : "";
+    const extra = [];
+    if (rec.change_pct != null && rec.change_pct !== "") extra.push("chg " + rec.change_pct + "%");
+    if (rec.volume != null && rec.volume !== "") extra.push("vol " + rec.volume);
+    if (extra.length) s += " (" + extra.join(", ") + ")";
+    if (rec.date) s += " -- as of " + rec.date + " (ISX daily bulletin)";
+    return s;
+  }
+
+  function writeField(c, key, value){
+    if (c.id === displayedId){
+      const el = document.querySelector('[name="' + key + '"]');
+      if (el){ el.value = value; return; }
+    }
+    c.data[key] = value;
+  }
+
+  function appendHistory(c, line){
+    const key = "stock-info__historical-share-price";
+    if (c.id === displayedId){
+      const el = document.querySelector('[name="' + key + '"]');
+      if (el){ if (!el.value.startsWith(line)) el.value = line + (el.value ? "\n" + el.value : ""); return; }
+    }
+    const prev = c.data[key] || "";
+    if (!prev.startsWith(line)) c.data[key] = line + (prev ? "\n" + prev : "");
+  }
+
+  function applyFeedToCompany(c){
+    const tk = tickerOf(c);
+    if (!tk || !feedData[tk]) return false;
+    const rec = feedData[tk];
+    writeField(c, "stock-info__current-share-price", fmtPrice(rec));
+    const stampKey = (rec.date || "") + "|" + (rec.close || "");
+    if (feedAppliedKey[tk] !== stampKey){
+      if (rec.close != null && rec.close !== "") appendHistory(c, "[" + (rec.date || "") + "] " + rec.close + " IQD");
+      feedAppliedKey[tk] = stampKey;
+    }
+    return true;
+  }
+
+  function syncAllFromFeed(){
+    let n = 0;
+    companies.forEach(c => { if (applyFeedToCompany(c)) n++; });
+    if (displayedId != null) updateProgress();
+    updateFeedStatus("synced", n);
+    return n;
+  }
+
+  function loadAllIsxCompanies(){
+    const have = new Set(companies.map(c => tickerOf(c)).filter(Boolean));
+    let added = 0;
+    Object.keys(feedData).forEach(tk => {
+      if (have.has(tk)) return;
+      const rec = feedData[tk];
+      const c = { id: newCompanyId(), name: rec.name || tk, data: {
+        "__companyName": rec.name || tk,
+        "basic-identity__stock-ticker": tk,
+        "stock-info__current-share-price": fmtPrice(rec)
+      }};
+      if (rec.close != null && rec.close !== "") c.data["stock-info__historical-share-price"] = "[" + (rec.date || "") + "] " + rec.close + " IQD";
+      feedAppliedKey[tk] = (rec.date || "") + "|" + (rec.close || "");
+      companies.push(c);
+      added++;
+    });
+    if (added) renderCompanyList();
+    updateFeedStatus("loaded", added);
+    return added;
+  }
+
+  async function fetchFeed(){
+    updateFeedStatus("loading");
+    try{
+      const res = await fetch(FEED_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const json = await res.json();
+      feedData = json || {};
+      feedFetchedAt = new Date();
+      const first = Object.keys(feedData)[0];
+      feedReportDate = (first && feedData[first] && feedData[first].date) ? feedData[first].date : "";
+      return true;
+    } catch(err){
+      updateFeedStatus("error", err.message);
+      return false;
+    }
+  }
+
+  function two(n){ return (n < 10 ? "0" : "") + n; }
+  function fmtClock(d){ return two(d.getHours()) + ":" + two(d.getMinutes()); }
+
+  function updateFeedStatus(state, info){
+    const el = document.getElementById("feedStatus");
+    if (!el) return;
+    const dot = document.getElementById("feedDot");
+    let cls = "feed-dot", txt = "";
+    if (state === "loading"){ cls += " load"; txt = "Fetching ISX data..."; }
+    else if (state === "error"){ cls += " err"; txt = "Feed unavailable (" + info + "). Set FEED_URL to your latest.json (e.g. GitHub raw URL)."; }
+    else if (state === "loaded"){ cls += " ok"; txt = "Loaded " + info + " new companies from ISX" + (feedReportDate ? (" - " + feedReportDate) : ""); }
+    else {
+      cls += " ok";
+      const count = Object.keys(feedData).length;
+      txt = count ? ("ISX feed: " + count + " tickers" + (feedReportDate ? (" - " + feedReportDate) : "") + (feedFetchedAt ? (" - updated " + fmtClock(feedFetchedAt)) : "")) : "No feed loaded yet.";
+      if (typeof info === "number") txt += " - matched " + info;
+    }
+    if (dot) dot.className = cls;
+    el.textContent = txt;
+    updateCountdownLabel();
+  }
+
+  function updateCountdownLabel(){
+    const el = document.getElementById("feedNext");
+    if (!el) return;
+    if (!feedNextAt){ el.textContent = ""; return; }
+    const ms = feedNextAt - new Date();
+    if (ms <= 0){ el.textContent = "- refreshing..."; return; }
+    const m = Math.floor(ms / 60000), s = Math.floor((ms % 60000) / 1000);
+    el.textContent = "- next in " + m + ":" + two(s);
+  }
+
+  function stopFeedTimer(){
+    if (feedTimer){ clearInterval(feedTimer); feedTimer = null; }
+    feedNextAt = null; updateCountdownLabel();
+  }
+
+  function setRefreshInterval(minutes){
+    stopFeedTimer();
+    if (!minutes || minutes <= 0){ updateFeedStatus("synced"); return; }
+    const ms = minutes * 60000;
+    feedNextAt = new Date(Date.now() + ms);
+    feedTimer = setInterval(async () => {
+      const ok = await fetchFeed();
+      if (ok) syncAllFromFeed();
+      feedNextAt = new Date(Date.now() + ms);
+    }, ms);
+    updateFeedStatus("synced");
+  }
+
+  (function wireFeedControls(){
+    const syncBtn = document.getElementById("feedSyncBtn");
+    const loadBtn = document.getElementById("feedLoadAllBtn");
+    const sel = document.getElementById("feedIntervalSel");
+    if (syncBtn) syncBtn.addEventListener("click", async () => { const ok = await fetchFeed(); if (ok) syncAllFromFeed(); });
+    if (loadBtn) loadBtn.addEventListener("click", async () => {
+      if (!Object.keys(feedData).length){ const ok = await fetchFeed(); if (!ok) return; }
+      const n = loadAllIsxCompanies();
+      if (n === 0) alert("All companies from the ISX feed are already in your database.");
+    });
+    if (sel) sel.addEventListener("change", () => setRefreshInterval(parseInt(sel.value, 10)));
+    setInterval(updateCountdownLabel, 1000);
+  })();
+
+  async function bootFeed(){
+    const ok = await fetchFeed();
+    if (ok) syncAllFromFeed();
+    const sel = document.getElementById("feedIntervalSel");
+    const mins = sel ? parseInt(sel.value, 10) : 0;
+    if (mins > 0) setRefreshInterval(mins);
+  }
+
+  function updateProgress(){
+    const inputs = document.querySelectorAll('.main .field input[type=text], .main .field textarea');
+    let total = inputs.length, filled = 0;
+    inputs.forEach(i => { if (i.value.trim() !== "") filled++; });
+    const pct = total ? Math.round((filled/total)*100) : 0;
+    document.getElementById("progressPct").textContent = pct + "%";
+    document.getElementById("progressFill").style.width = pct + "%";
+    if (typeof refreshActiveRowMeta === "function") refreshActiveRowMeta(pct);
+  }
+  document.body.addEventListener("input", updateProgress);
+  updateProgress();
+
+  document.getElementById("searchBox").addEventListener("input", function(){
+    const q = this.value.trim().toLowerCase();
+    const cards = document.querySelectorAll(".main .card");
+    cards.forEach(card => {
+      if (!q){ card.classList.remove("hidden"); card.querySelectorAll(".field").forEach(f=>f.classList.remove("hidden")); return; }
+      let cardMatches = card.querySelector("h2").textContent.toLowerCase().includes(q);
+      let anyFieldVisible = false;
+      card.querySelectorAll(".field").forEach(f => {
+        const label = (f.getAttribute("data-field-label")||"").toLowerCase();
+        const show = cardMatches || label.includes(q);
+        f.classList.toggle("hidden", !show);
+        if (show) anyFieldVisible = true;
+      });
+      card.classList.toggle("hidden", !(cardMatches || anyFieldVisible));
+    });
+  });
+
+  document.getElementById("exportBtn").addEventListener("click", () => {
+    saveDisplayed();
+    const db = {
+      "__dossierDB": true,
+      "version": 2,
+      "exported": new Date().toISOString(),
+      "companies": companies.map(c => ({ id: c.id, name: c.name, data: c.data }))
+    };
+    const blob = new Blob([JSON.stringify(db, null, 2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "isx_company_database.json";
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  document.getElementById("importBtn").addEventListener("click", () => document.getElementById("importFile").click());
+  document.getElementById("importFile").addEventListener("change", function(){
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e){
+      let parsed;
+      try{ parsed = JSON.parse(e.target.result); }
+      catch(err){ alert("Could not read that file as valid dossier JSON."); return; }
+      importParsed(parsed);
+    };
+    reader.readAsText(file);
+    this.value = "";
+  });
+
+  function importParsed(parsed){
+    saveDisplayed();
+    if (parsed && Array.isArray(parsed.companies)){
+      // full database
+      companies = parsed.companies.map(c => ({
+        id: c.id || newCompanyId(),
+        name: c.name || (c.data && c.data["__companyName"]) || "Untitled Company",
+        data: c.data || {}
+      }));
+      activeId = null; displayedId = null;
+      renderCompanyList();
+      if (companies.length){ selectCompany(companies[0].id, { animate: false }); }
+      else { resetForm(); companyNameInput.value = ""; document.title = "Company Dossier"; sidePanelActiveNameEl.textContent = "—"; updateProgress(); }
+      backToCompanies();
+    } else if (parsed && typeof parsed === "object"){
+      // legacy single-company dossier: append as a new company
+      const nm = parsed["__companyName"] || "Imported company";
+      const c = { id: newCompanyId(), name: nm, data: parsed };
+      companies.push(c);
+      renderCompanyList();
+      selectCompany(c.id, { animate: false });
+      drillToSections();
+    } else {
+      alert("That file didn't look like a dossier or a dossier database.");
+    }
+  }
+
+  function applyImport(data){
+    REPEATABLE_GROUPS.forEach(group => {
+      let maxIdx = -1;
+      Object.keys(data).forEach(key => {
+        const prefix = group.id + "__";
+        if (key.startsWith(prefix)){
+          const idx = parseInt(key.slice(prefix.length).split("__")[0], 10);
+          if (!isNaN(idx) && idx > maxIdx) maxIdx = idx;
+        }
+      });
+      const container = document.getElementById("entries-" + group.id);
+      while (container.children.length <= maxIdx) addGroupEntry(group);
+    });
+    Object.keys(data).forEach(key => {
+      if (key === "__companyName" || key === "__ratings") return;
+      const el = document.querySelector(`[name="${CSS.escape(key)}"]`);
+      if (el) el.value = data[key];
+    });
+    if (data["__ratings"]){
+      Object.keys(data["__ratings"]).forEach(key => {
+        const ratingEl = document.querySelector(`.rating[data-rating-for="${CSS.escape(key)}"]`);
+        if (ratingEl) setRating(ratingEl, data["__ratings"][key]);
+      });
+    }
+    if (data["__companyName"] !== undefined){
+      companyNameInput.value = data["__companyName"];
+      document.title = "Company Dossier — " + (companyNameInput.value.trim() || "Untitled Company");
+    }
+    updateProgress();
+  }
+
+  document.getElementById("printBtn").addEventListener("click", () => window.print());
+  document.getElementById("clearBtn").addEventListener("click", () => {
+    const id = (displayedId != null ? displayedId : activeId);
+    if (id == null) return;
+    const c = companies.find(x => x.id === id);
+    const nm = c ? (c.name || "this company") : "this company";
+    if (!confirm('Clear every field for "' + nm + '"? This cannot be undone (export first if you want a backup).')) return;
+    document.querySelectorAll('.main .field input[type=text], .main .field textarea').forEach(el => el.value = "");
+    document.querySelectorAll('.rating[data-rating-for]').forEach(r => {
+      r.setAttribute("data-current", "0");
+      r.querySelectorAll(".star").forEach(s => s.classList.remove("filled"));
+    });
+    updateProgress();
+  });
+
+  /* ============== SURVIVING DATA — Alhamraa Insurance (NHAM) ==============
+     Only values whose field is still present on this trimmed checklist are
+     carried over from the previous dossier. Everything tied to a removed
+     field (e.g. the Part II regulatory filing, M&A, historical-financials
+     table) was dropped along with the field itself. */
+  const PREFILL = {
+    "__companyName": "Alhamraa Insurance (NHAM)",
+
+    "basic-identity__official-legal-name": "شركة الحمراء للتأمين (Alhamraa Insurance Company)",
+    "basic-identity__common-brand-name": "الحمراء للتأمين / Hamraa Insurance / Alhamraa",
+    "basic-identity__founded-date": "1 July 2001 (per Rabee Securities company profile); insurance operating license No. 4/2001 dated 27/3/2001",
+    "basic-identity__headquarters": "Baghdad, Iraq — Arasat Al-Hindiya, Al-Hamraa Building (next to Maxi Mall), Dist. 929, St. 23, Bldg. 27, P.O. Box 10491 Karrada. Phone (per Rabee Securities): +964 790 176 7169",
+    "basic-identity__countries-of-operation": "Iraq",
+    "basic-identity__website": "www.hic.iq / https://www.alhamraains.com (confirmed via Rabee Securities company profile)",
+    "basic-identity__industry": "Insurance",
+    "basic-identity__sub-industry": "Composite insurer — general (P&C) and life insurance underwriting",
+    "basic-identity__business-classification-naics-sic": "Insurance carriers (general & life), regulated under Iraq's Insurance Business Regulation Law No. 10 of 2005",
+    "basic-identity__public-or-private": "Private shareholding company (مساهمة خاصة), publicly listed",
+    "basic-identity__stock-ticker": "NHAM",
+    "basic-identity__stock-exchange": "Iraq Stock Exchange (ISX) — listed 9 January 2006",
+    "basic-identity__company-registration": "Insurance license No. 4/2001, dated 27/3/2001, issued by the Ministry of Finance – Insurance Diwan (ديوان التأمين)",
+    "basic-identity__brands-owned": "Tareeq / طريق (motor insurance), Khazina / خزينة (business/workplace insurance), Sakan / سكن (home insurance), Amanak / أمانك (personal accident insurance), Wayak / وياك (travel insurance)",
+
+    "history__founding-story": "Founded in 2001 under insurance license No. 4/2001 (dated 27/3/2001); operates under Iraq's Insurance Business Regulation Law No. 10 of 2005.",
+    "history__important-historical-events": "Listed on the Iraq Stock Exchange (ISX) on 9 January 2006 under ticker NHAM. Marked its 25th anniversary (Silver Jubilee) in 2026.",
+
+    "leadership__chairman": "Dr. Yasser Sabri Raouf (د. ياسر صبري رؤوف) — Chairman of the Board",
+    "leadership__ceo": "Mundhir Abbas Ismail Al-Aswad (منذر عباس إسماعيل الأسود) — المدير المفوض (Managing Director)",
+    "leadership__cfo": "Mahdi Abbas Kadhim (مهدي عباس كاظم) — الخبير المالي (Financial Officer, signs quarterly filings)",
+
+    "business-model__core-business": "Underwriting of general (P&C) and life insurance products for individuals and organizations in Iraq",
+    "business-model__business-model": "Premium underwriting combined with investment income earned on technical reserves and paid-up capital",
+    "business-model__products": "Life & annuities, health/medical, motor, aviation, financial reinsurance, GAP, group, marine/cargo, travel, liability/professional liability, property & injury insurance; retail programs Tareeq, Khazina, Sakan, Amanak, Wayak",
+    "business-model__revenue-sources": "Insurance premiums, other insurance revenues, investment revenues",
+    "business-model__how-it-makes-money": "Collects premiums for underwriting risk and earns investment income on invested reserves and capital",
+    "business-model__who-pays-it": "Policyholders — individuals and organizations living/operating in Iraq",
+    "business-model__who-uses-its-products": "Individuals and organizations living and working in Iraq",
+    "business-model__b2b-b2c-b2g": "B2C and B2B",
+    "business-model__pricing-model": "Premium-based, risk-rated",
+    "business-model__distribution-model": "Direct sales via marketing/customer-facing agents",
+    "business-model__geographic-markets": "Iraq",
+
+    "financials__revenue": "13,610,884,853 IQD total current-activity revenue (Q1 2026), down from 18,274,724,993 IQD in Q1 2025",
+    "financials__net-income": "2,395,366,140 IQD net surplus (Q1 2026), down from 4,255,160,150 IQD in Q1 2025",
+    "financials__assets": "83,418,170,169 IQD (as of 2026/03/31), vs 84,997,624,669 IQD (2025/12/31)",
+    "financials__liabilities": "83,418,170,169 IQD (as of 2026/03/31), vs 84,997,624,669 IQD (2025/12/31)",
+    "financials__equity": "Paid-up capital 25,000,000,000 IQD (unchanged); technical reserves 11,257,074,000 IQD; other reserves 24,273,635,804 IQD (as of 2026/03/31)",
+    "financials__cash": "8,347,282,917 IQD (2026/03/31), vs 5,712,346,478 IQD (2025/12/31)",
+    "financials__accounts-receivable": "27,018,343,454 IQD (2026/03/31), vs 32,781,724,312 IQD (2025/12/31)",
+    "financials__accounts-payable": "19,480,661,530 IQD creditors (2026/03/31), vs 23,880,495,770 IQD (2025/12/31)",
+
+    "products-services__0__name": "Tareeq (طريق)",
+    "products-services__0__features": "Motor/vehicle insurance program",
+    "products-services__1__name": "Khazina (خزينة)",
+    "products-services__1__features": "Business/workplace insurance program",
+    "products-services__2__name": "Sakan (سكن)",
+    "products-services__2__features": "Home insurance program",
+    "products-services__3__name": "Amanak (أمانك)",
+    "products-services__3__features": "Personal accident insurance program",
+    "products-services__4__name": "Wayak (وياك)",
+    "products-services__4__features": "Travel insurance program",
+
+    // --- Industry (comparable ISX-listed insurers, per Rabee Securities) ---
+    "industry__major-competitors": "ISX-listed insurance peers (per Rabee Securities comparable-companies list): Al-Ameen Insurance (NAME), Al-Ahlia Insurance (NAHF), Gulf Insurance & Reinsurance (NGIR), Dar Al Salam Insurance (NDSA)",
+
+    // --- Stock / Market Information (source: Rabee Securities, data as of 23/08/2026) ---
+    "stock-info__current-share-price": "5.000 IQD as of 23 Aug 2026 (D/D change 0.0%, YTD change +557.9%); trading volume that day was 0 IQD mn (avg. daily trading volume ~US$0.4 thousand — an extremely illiquid stock)",
+    "stock-info__historical-share-price": "Per Rabee Securities' RS ISX price series: traded around IQD 0.80–1.00 from 2016–2023, then began a sharp rally in late 2025/early 2026 — from ~IQD 0.76 (Dec 2025) to a 52-week high of IQD 6.10 (Mar–Apr 2026), before settling near IQD 5.00 by Aug 2026. 52-week range: IQD 0.760–6.100; upside potential to the 52-week high is ~22.0%.",
+    "stock-info__market-capitalization": "IQD 125,000 mn (~US$94.7 mn), based on 25,000 mn shares outstanding at IQD 5.000/share (23 Aug 2026, per Rabee Securities)",
+    "stock-info__p-e": "15.3x (Rabee Securities estimate, based on annualized net profit)",
+    "stock-info__p-b": "2.1x (Rabee Securities estimate)",
+    "stock-info__dividend-yield": "33.75% at the time of the last recorded dividend (see Dividend history below) — not necessarily representative of the current yield, given how much the share price has moved since",
+    "stock-info__dividend-history": "Most recent dividend on record (per Rabee Securities): AGM date 17 October 2016, cash dividend of IQD 0.216/share. No more recent dividend appears on record as of Aug 2026.",
+    "stock-info__volatility": "Extremely thinly traded — 0 IQD mn traded on 23 Aug 2026 and an average daily trading volume of only ~US$0.4 thousand, despite a +557.9% YTD price move in 2026",
+    "stock-info__performance-vs-industry": "ROAE ~13.7% and ROAA ~9.7% (Rabee Securities estimates, based on annualized net profit) — no direct industry-average comparison was provided by the source",
+
+    "final-assessment__reduce-the-entire-investigation-to-a-single-overall-conclusion":
+      "Established, ISX-listed composite insurer (NHAM) marking its 25th year in 2026, with a stable, unlevered balance sheet — paid-up capital unchanged at 25.0B IQD, no debt, total assets ~83.4B IQD. Q1 2026 shows top- and bottom-line pressure versus Q1 2025: total revenue down ~26% (13.6B vs 18.3B IQD) and net profit down ~44% (2.4B vs 4.3B IQD), driven mainly by a large drop in insurance-premium income only partly offset by new 'other insurance revenues'. Notably, the stock itself tells a very different story from the fundamentals: after trading flat around IQD 0.80–1.00 for most of 2016–2024, NHAM shares have rallied over 550% YTD in 2026 to ~IQD 5.00 (52-week high IQD 6.10) on essentially no trading volume — a move that looks driven by illiquidity/speculation rather than by the softer Q1 2026 operating results. Overall: financially sound at the balance-sheet level but with a near-term earnings headwind, and a share price whose recent run does not obviously track the underlying numbers — this conclusion rests on one quarterly filing, the company website, and Rabee Securities' market data, so it should be revisited once ownership, deeper competitor, and industry-level data are gathered."
+  };
+
+  /* ============== COMPANY DATA MODEL & NAVIGATION ============== */
+
+  const companyListEl = document.getElementById("companyList");
+  const sideTrackEl = document.getElementById("sideTrack");
+  const sidePanelActiveNameEl = document.getElementById("sidePanelActiveName");
+
+  function gatherData(){
+    const data = {};
+    document.querySelectorAll('.main [name]').forEach(el => { data[el.name] = el.value; });
+    const ratings = {};
+    document.querySelectorAll('.rating[data-rating-for]').forEach(r => {
+      const v = parseInt(r.getAttribute("data-current") || "0", 10);
+      if (v > 0) ratings[r.getAttribute("data-rating-for")] = v;
+    });
+    data["__ratings"] = ratings;
+    data["__companyName"] = companyNameInput.value;
+    return data;
+  }
+
+  function resetForm(){
+    document.querySelectorAll('.main .field input[type=text], .main .field textarea').forEach(el => { el.value = ""; });
+    document.querySelectorAll('.rating[data-rating-for]').forEach(r => {
+      r.setAttribute("data-current", "0");
+      r.querySelectorAll(".star").forEach(s => s.classList.remove("filled"));
+    });
+    REPEATABLE_GROUPS.forEach(g => {
+      const c = document.getElementById("entries-" + g.id);
+      if (c) c.innerHTML = "";
+    });
+  }
+
+  function schemaFieldCount(){ return document.querySelectorAll('.main [name]').length || 1; }
+  function companyProgress(c){
+    if (!c || !c.data) return 0;
+    const total = schemaFieldCount();
+    let filled = 0;
+    Object.keys(c.data).forEach(k => {
+      if (k === "__ratings" || k === "__companyName") return;
+      if (String(c.data[k]).trim() !== "") filled++;
+    });
+    return Math.round(Math.min(filled, total) / total * 100);
+  }
+  function companyTicker(c){
+    if (c && c.data && c.data["basic-identity__stock-ticker"]) return String(c.data["basic-identity__stock-ticker"]).trim();
+    return "";
+  }
+  function companySubLabel(c, pct){
+    const t = companyTicker(c);
+    const p = (pct == null ? companyProgress(c) : pct) + "% complete";
+    return t ? (t + " · " + p) : p;
+  }
+
+  function renderCompanyList(){
+    let html = '<span class="company-active-bar" id="companyActiveBar"></span>';
+    companies.forEach(c => {
+      html += '<button type="button" class="company-row" data-id="' + c.id + '">' +
+                '<span class="company-row-main">' +
+                  '<span class="company-row-name">' + escHtml(c.name || "Untitled Company") + '</span>' +
+                  '<span class="company-row-sub">' + escHtml(companySubLabel(c)) + '</span>' +
+                '</span>' +
+                '<span class="company-row-chev">\u203A</span>' +
+                '<span class="company-row-del" title="Remove company">\u00D7</span>' +
+              '</button>';
+    });
+    companyListEl.innerHTML = html;
+    updateActiveRow();
+  }
+
+  function updateActiveRow(){
+    const rows = companyListEl.querySelectorAll(".company-row");
+    let activeRow = null;
+    rows.forEach(r => {
+      const on = r.getAttribute("data-id") === activeId;
+      r.classList.toggle("active", on);
+      if (on) activeRow = r;
+    });
+    const bar = document.getElementById("companyActiveBar");
+    if (bar){
+      if (activeRow){
+        bar.style.opacity = "1";
+        bar.style.top = activeRow.offsetTop + "px";
+        bar.style.height = activeRow.offsetHeight + "px";
+      } else {
+        bar.style.opacity = "0";
+      }
+    }
+  }
+
+  function refreshActiveRowMeta(pct){
+    const id = (displayedId != null ? displayedId : activeId);
+    if (id == null) return;
+    const c = companies.find(x => x.id === id);
+    if (!c) return;
+    const sub = companyListEl.querySelector('.company-row[data-id="' + id + '"] .company-row-sub');
+    if (sub) sub.textContent = companySubLabel(c, pct);
+  }
+
+  function saveDisplayed(){
+    if (displayedId == null) return;
+    const c = companies.find(x => x.id === displayedId);
+    if (c){
+      c.data = gatherData();
+      c.name = (companyNameInput.value.trim() || "Untitled Company");
+    }
+  }
+
+  function loadCompany(c){
+    resetForm();
+    applyImport(c && c.data ? c.data : { "__companyName": (c ? c.name : "") });
+    displayedId = c ? c.id : null;
+  }
+
+  function selectCompany(id, opts){
+    opts = opts || {};
+    const target = companies.find(x => x.id === id);
+    if (!target) return;
+    saveDisplayed();
+    activeId = id;
+    sidePanelActiveNameEl.textContent = target.name || "Untitled Company";
+    updateActiveRow();
+    const container = document.getElementById("profileContainer");
+    if (opts.animate === false){
+      if (swapTimer){ clearTimeout(swapTimer); swapTimer = null; }
+      container.classList.remove("swapping");
+      loadCompany(target);
+      return;
+    }
+    if (swapTimer) clearTimeout(swapTimer);
+    container.classList.add("swapping");
+    swapTimer = window.setTimeout(() => {
+      loadCompany(target);
+      void container.offsetWidth;
+      container.classList.remove("swapping");
+      swapTimer = null;
+    }, 220);
+  }
+
+  function drillToSections(){ sideTrackEl.classList.add("show-sections"); }
+  function backToCompanies(){ sideTrackEl.classList.remove("show-sections"); }
+
+  function addCompany(){
+    const c = { id: newCompanyId(), name: "New company", data: { "__companyName": "New company" } };
+    companies.push(c);
+    renderCompanyList();
+    selectCompany(c.id, { animate: false });
+    drillToSections();
+    companyNameInput.focus();
+    companyNameInput.select();
+  }
+
+  function deleteCompany(id){
+    const idx = companies.findIndex(x => x.id === id);
+    if (idx === -1) return;
+    const nm = companies[idx].name || "this company";
+    if (!confirm('Remove "' + nm + '" from the database? This cannot be undone (export first if you want a backup).')) return;
+    const wasShown = (id === displayedId || id === activeId);
+    companies.splice(idx, 1);
+    if (displayedId === id) displayedId = null;
+    if (activeId === id) activeId = null;
+    if (wasShown){
+      if (companies.length){
+        const next = companies[Math.min(idx, companies.length - 1)];
+        renderCompanyList();
+        selectCompany(next.id, { animate: false });
+      } else {
+        resetForm();
+        displayedId = null;
+        companyNameInput.value = "";
+        document.title = "Company Dossier";
+        sidePanelActiveNameEl.textContent = "\u2014";
+        renderCompanyList();
+        updateProgress();
+      }
+      backToCompanies();
+    } else {
+      renderCompanyList();
+    }
+  }
+
+  companyListEl.addEventListener("click", function(e){
+    const del = e.target.closest(".company-row-del");
+    if (del){
+      if (!document.body.classList.contains("edit-mode")) return;
+      const row = del.closest(".company-row");
+      if (row) deleteCompany(row.getAttribute("data-id"));
+      e.stopPropagation();
+      return;
+    }
+    const row = e.target.closest(".company-row");
+    if (row){
+      selectCompany(row.getAttribute("data-id"));
+      drillToSections();
+    }
+  });
+  document.getElementById("addCompanyBtn").addEventListener("click", addCompany);
+  document.getElementById("sideBackBtn").addEventListener("click", backToCompanies);
+  window.addEventListener("resize", updateActiveRow);
+
+  /* ============== INIT ============== */
+  companies = [ { id: newCompanyId(), name: (PREFILL["__companyName"] || "Alhamraa Insurance (NHAM)"), data: PREFILL } ];
+  renderCompanyList();
+  selectCompany(companies[0].id, { animate: false });
+  drillToSections();
+  bootFeed();
+  document.body.classList.add("first-load");
+  window.setTimeout(() => document.body.classList.remove("first-load"), 1300);
+
+})();
+</script>
+</body>
+</html>
