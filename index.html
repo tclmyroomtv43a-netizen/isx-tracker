@@ -192,6 +192,26 @@
   .feed-spacer{ flex:1 1 auto; }
   .feed-int{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); display:flex; align-items:center; gap:6px; }
   .feed-int select{ background:var(--panel-2); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:4px 6px; font-family:inherit; font-size:11px; }
+  .chart-card{ padding:16px 18px; }
+  .chart-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; gap:12px; }
+  .chart-title{ font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+  .chart-legend{ display:flex; gap:14px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; }
+  .lg{ display:inline-flex; align-items:center; gap:6px; color:var(--ink-dim); }
+  .lg::before{ content:""; width:12px; height:2px; display:inline-block; border-radius:2px; }
+  .lg-price::before{ background:#5b9bd5; }
+  .lg-index::before{ background:var(--gold); }
+  .chart-body{ width:100%; }
+  .chart-svg{ width:100%; height:auto; display:block; }
+  .chart-grid{ stroke:var(--line-soft); stroke-width:1; }
+  .chart-line{ fill:none; stroke-width:1.6; vector-effect:non-scaling-stroke; }
+  .chart-price{ stroke:#5b9bd5; }
+  .chart-index{ stroke:var(--gold); opacity:.85; }
+  .chart-dot{ fill:#5b9bd5; }
+  .chart-axl{ font-family:'IBM Plex Mono',monospace; font-size:9px; fill:var(--ink-faint); }
+  .chart-axl-l{ text-anchor:end; }
+  .chart-axl-r{ text-anchor:start; }
+  .chart-cap{ margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-dim); }
+  .chart-empty{ padding:26px 10px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-faint); line-height:1.5; }
 </style>
 </head>
 <body>
@@ -582,6 +602,7 @@
      works. Otherwise set it to your GitHub raw URL, e.g.:
        https://raw.githubusercontent.com/USER/REPO/main/data/latest.json      */
   const FEED_URL = "data/latest.json";
+  const HISTORY_URL = "data/history.json";
 
   let feedData = {};          // { TICKER: {close, change_pct, volume, date, name, ...} }
   let feedFetchedAt = null;
@@ -589,6 +610,83 @@
   let feedTimer = null;
   let feedNextAt = null;
   const feedAppliedKey = {};  // ticker -> last "date|close" written to history (dedupe)
+
+  /* ---- price history + chart ---- */
+  let histData = {};
+
+  async function fetchHistory(){
+    try{
+      const res = await fetch(HISTORY_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      histData = (await res.json()) || {};
+    } catch(err){ /* history is optional; leave chart empty */ }
+  }
+
+  function fmtNum(v){
+    if (Math.abs(v) >= 1000) return Math.round(v).toLocaleString();
+    return (Math.round(v * 100) / 100).toString();
+  }
+  function niceRange(min, max){
+    if (min === max){ const d = Math.abs(min) * 0.1 || 1; return [min - d, max + d]; }
+    const pad = (max - min) * 0.06; return [min - pad, max + pad];
+  }
+  function xlab(s){ const d = String(s).split("-"); return d.length === 3 ? (d[2] + "/" + d[1] + "/" + d[0].slice(2)) : s; }
+
+  function renderPriceChart(){
+    const body = document.getElementById("priceChartBody");
+    if (!body) return;
+    const c = companies.find(x => x.id === displayedId);
+    const tk = c ? tickerOf(c) : "";
+    const series = (tk && Array.isArray(histData[tk])) ? histData[tk].slice() : [];
+    const idxAll = Array.isArray(histData["__ISX60"]) ? histData["__ISX60"] : [];
+
+    if (series.length < 2){
+      let msg;
+      if (!tk) msg = "Set this company's Stock ticker to see its price history.";
+      else if (series.length === 0) msg = "No price history recorded yet for " + tk + " — it appears as the collector runs each trading day.";
+      else msg = "Only one trading session recorded so far. The line fills in as the collector runs each day.";
+      body.innerHTML = '<div class="chart-empty">' + msg + '</div>';
+      return;
+    }
+
+    const W = 720, H = 280, mL = 48, mR = 54, mT = 12, mB = 32;
+    const iw = W - mL - mR, ih = H - mT - mB;
+    const t = s => new Date(s + "T00:00:00").getTime();
+    const times = series.map(p => t(p[0]));
+    const tMin = Math.min.apply(null, times), tMax = Math.max.apply(null, times);
+    const xhas = tMax > tMin;
+    const X = tm => mL + (xhas ? (tm - tMin) / (tMax - tMin) : 0.5) * iw;
+    const [pMin, pMax] = niceRange(Math.min.apply(null, series.map(p => p[1])), Math.max.apply(null, series.map(p => p[1])));
+    const YP = v => mT + ih - (v - pMin) / (pMax - pMin) * ih;
+    const rows = 4;
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="chart-svg">';
+    for (let i = 0; i <= rows; i++){
+      const yy = mT + ih * i / rows;
+      const val = pMax - (pMax - pMin) * i / rows;
+      svg += '<line x1="' + mL + '" y1="' + yy.toFixed(1) + '" x2="' + (mL + iw) + '" y2="' + yy.toFixed(1) + '" class="chart-grid"/>';
+      svg += '<text x="' + (mL - 6) + '" y="' + (yy + 3).toFixed(1) + '" class="chart-axl chart-axl-l">' + fmtNum(val) + '</text>';
+    }
+    const idx = idxAll.filter(p => t(p[0]) >= tMin && t(p[0]) <= tMax);
+    if (idx.length >= 2){
+      const [iMin, iMax] = niceRange(Math.min.apply(null, idx.map(p => p[1])), Math.max.apply(null, idx.map(p => p[1])));
+      const YI = v => mT + ih - (v - iMin) / (iMax - iMin) * ih;
+      svg += '<polyline points="' + idx.map(p => X(t(p[0])).toFixed(1) + ',' + YI(p[1]).toFixed(1)).join(' ') + '" class="chart-line chart-index"/>';
+      for (let i = 0; i <= rows; i++){
+        const yy = mT + ih * i / rows;
+        const val = iMax - (iMax - iMin) * i / rows;
+        svg += '<text x="' + (mL + iw + 6) + '" y="' + (yy + 3).toFixed(1) + '" class="chart-axl chart-axl-r">' + fmtNum(val) + '</text>';
+      }
+    }
+    svg += '<polyline points="' + series.map(p => X(t(p[0])).toFixed(1) + ',' + YP(p[1]).toFixed(1)).join(' ') + '" class="chart-line chart-price"/>';
+    const last = series[series.length - 1];
+    svg += '<circle cx="' + X(t(last[0])).toFixed(1) + '" cy="' + YP(last[1]).toFixed(1) + '" r="3" class="chart-dot"/>';
+    svg += '<text x="' + mL + '" y="' + (H - 10) + '" class="chart-axl chart-axl-x" text-anchor="start">' + xlab(series[0][0]) + '</text>';
+    svg += '<text x="' + (mL + iw) + '" y="' + (H - 10) + '" class="chart-axl chart-axl-x" text-anchor="end">' + xlab(last[0]) + '</text>';
+    svg += '</svg>';
+    const base = series[0][1];
+    const chg = base ? ((last[1] - base) / base * 100) : 0;
+    body.innerHTML = svg + '<div class="chart-cap">' + tk + ' &middot; last ' + fmtNum(last[1]) + ' IQD (' + (chg >= 0 ? '+' : '') + chg.toFixed(1) + '% over ' + series.length + ' sessions)</div>';
+  }
 
   function tickerOf(c){
     if (c && c.id === displayedId){
@@ -730,7 +828,9 @@
     feedNextAt = new Date(Date.now() + ms);
     feedTimer = setInterval(async () => {
       const ok = await fetchFeed();
+      await fetchHistory();
       if (ok) syncAllFromFeed();
+      renderPriceChart();
       feedNextAt = new Date(Date.now() + ms);
     }, ms);
     updateFeedStatus("synced");
@@ -751,8 +851,9 @@
   })();
 
   async function bootFeed(){
-    const ok = await fetchFeed();
-    if (ok) syncAllFromFeed();
+    await Promise.all([fetchFeed(), fetchHistory()]);
+    syncAllFromFeed();
+    renderPriceChart();
     const sel = document.getElementById("feedIntervalSel");
     const mins = sel ? parseInt(sel.value, 10) : 0;
     if (mins > 0) setRefreshInterval(mins);
@@ -1081,6 +1182,7 @@
     resetForm();
     applyImport(c && c.data ? c.data : { "__companyName": (c ? c.name : "") });
     displayedId = c ? c.id : null;
+    if (typeof renderPriceChart === "function") renderPriceChart();
   }
 
   function selectCompany(id, opts){
@@ -1170,6 +1272,15 @@
   window.addEventListener("resize", updateActiveRow);
 
   /* ============== INIT ============== */
+  document.getElementById("profileContainer").insertAdjacentHTML("afterbegin",
+    '<div class="card chart-card" id="priceChartCard">' +
+      '<div class="chart-head">' +
+        '<span class="chart-title">Price history</span>' +
+        '<span class="chart-legend"><span class="lg lg-price">Price</span><span class="lg lg-index">ISX60</span></span>' +
+      '</div>' +
+      '<div class="chart-body" id="priceChartBody"><div class="chart-empty">Loading price history…</div></div>' +
+    '</div>');
+
   companies = [ { id: newCompanyId(), name: (PREFILL["__companyName"] || "Alhamraa Insurance (NHAM)"), data: PREFILL } ];
   renderCompanyList();
   selectCompany(companies[0].id, { animate: false });

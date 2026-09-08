@@ -44,6 +44,7 @@ REPORTS_DIR = DATA / "reports"
 PRICES_CSV  = DATA / "isx_daily_prices.csv"
 SUMMARY_CSV = DATA / "isx_market_summary.csv"
 LATEST_JSON = DATA / "latest.json"
+HISTORY_JSON = DATA / "history.json"
 
 # Be a polite bot: identify yourself and keep the request rate low.
 HEADERS = {"User-Agent": "ISX-personal-recorder/1.0 (research use; contact you@example.com)"}
@@ -289,6 +290,46 @@ def write_latest_json(prices: pd.DataFrame) -> None:
     LATEST_JSON.write_text(json.dumps(latest, ensure_ascii=False, indent=2))
 
 
+def _clean_num(v):
+    s = str(v).strip()
+    if s == "" or s.lower() in ("nan", "none", "<na>"):
+        return None
+    try:
+        return float(s.replace(",", ""))
+    except ValueError:
+        return None
+
+
+def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
+    """Compact per-ticker close-price history + the ISX60 index, for charting.
+    Shape: { "TICKER": [["YYYY-MM-DD", close], ...], "__ISX60": [[...]] }"""
+    hist = {}
+    if {"ticker", "date", "close"}.issubset(prices.columns):
+        for tk, g in prices.groupby("ticker"):
+            series = []
+            for _, r in g.sort_values("date").iterrows():
+                v = _clean_num(r.get("close"))
+                if v is not None:
+                    series.append([str(r["date"]), v])
+            if series:
+                hist[str(tk)] = series
+    # ISX60 index history from the market-summary log
+    try:
+        if summary_path.exists():
+            s = pd.read_csv(summary_path, dtype=str)
+            if {"date", "main_index"}.issubset(s.columns):
+                idx = []
+                for _, r in s.sort_values("date").iterrows():
+                    v = _clean_num(r.get("main_index"))
+                    if v is not None:
+                        idx.append([str(r["date"]), v])
+                if idx:
+                    hist["__ISX60"] = idx
+    except Exception as e:
+        print("index history skipped:", e)
+    HISTORY_JSON.write_text(json.dumps(hist, ensure_ascii=False))
+
+
 def main() -> None:
     DATA.mkdir(exist_ok=True)
     s = session()
@@ -315,6 +356,7 @@ def main() -> None:
 
     prices = append_csv(df, PRICES_CSV, keys=["date", "ticker"])
     write_latest_json(prices)
+    write_history_json(prices, SUMMARY_CSV)
     print("wrote", PRICES_CSV, "and", LATEST_JSON)
 
 
