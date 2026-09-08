@@ -276,7 +276,16 @@ def write_latest_json(prices: pd.DataFrame) -> None:
         p = prices.copy()
         p["date"] = p["date"].astype(str)
         for tk, g in p.groupby("ticker"):
-            latest[str(tk)] = g.sort_values("date").iloc[-1].to_dict()
+            row = g.sort_values("date").iloc[-1].to_dict()
+            clean = {}
+            for k, v in row.items():
+                if v is None:
+                    continue
+                s = str(v).strip()
+                if s == "" or s.lower() in ("nan", "none", "<na>"):
+                    continue                       # skip blanks so the JSON stays valid
+                clean[k] = s
+            latest[str(tk)] = clean
     LATEST_JSON.write_text(json.dumps(latest, ensure_ascii=False, indent=2))
 
 
