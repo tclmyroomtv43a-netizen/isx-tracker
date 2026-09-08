@@ -212,6 +212,10 @@
   .chart-axl-r{ text-anchor:start; }
   .chart-cap{ margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-dim); }
   .chart-empty{ padding:26px 10px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-faint); line-height:1.5; }
+  .side-panel-head{ display:flex; align-items:center; justify-content:space-between; gap:8px; padding:6px 14px 10px 20px; }
+  .side-panel-head .side-panel-title{ padding:0; }
+  .company-sort{ background:var(--panel-2); color:var(--ink-dim); border:1px solid var(--line); border-radius:6px; padding:3px 6px; font-family:'IBM Plex Mono',monospace; font-size:10px; cursor:pointer; }
+  .company-sort:hover{ color:var(--ink); border-color:var(--gold-dim); }
 </style>
 </head>
 <body>
@@ -230,7 +234,15 @@
     <div class="side-viewport">
       <div class="side-track" id="sideTrack">
         <div class="side-panel side-panel--companies">
-          <div class="side-panel-title">Companies</div>
+          <div class="side-panel-head">
+            <span class="side-panel-title">Companies</span>
+            <select id="companySort" class="company-sort" title="Sort companies">
+              <option value="name">A–Z</option>
+              <option value="price_desc">Price ↓</option>
+              <option value="price_asc">Price ↑</option>
+              <option value="change_desc">% ↓</option>
+            </select>
+          </div>
           <div class="company-list" id="companyList"></div>
           <button type="button" class="add-company" id="addCompanyBtn">+ Add company</button>
         </div>
@@ -742,6 +754,7 @@
     let n = 0;
     companies.forEach(c => { if (applyFeedToCompany(c)) n++; });
     if (displayedId != null) updateProgress();
+    renderCompanyList();
     updateFeedStatus("synced", n);
     return n;
   }
@@ -1120,13 +1133,49 @@
   }
   function companySubLabel(c, pct){
     const t = companyTicker(c);
+    const rec = t ? feedData[t.toUpperCase()] : null;
+    if (rec && rec.close != null && rec.close !== ""){
+      let s = (t ? (t + " · ") : "") + rec.close + " IQD";
+      if (rec.change_pct != null && rec.change_pct !== "") s += " · " + rec.change_pct + "%";
+      return s;
+    }
     const p = (pct == null ? companyProgress(c) : pct) + "% complete";
     return t ? (t + " · " + p) : p;
   }
 
+  let companySortMode = "name";
+  function companyPriceVal(c){
+    const t = companyTicker(c);
+    const rec = t ? feedData[t.toUpperCase()] : null;
+    const v = rec ? parseFloat(rec.close) : NaN;
+    return isNaN(v) ? null : v;
+  }
+  function companyChangeVal(c){
+    const t = companyTicker(c);
+    const rec = t ? feedData[t.toUpperCase()] : null;
+    const v = rec ? parseFloat(rec.change_pct) : NaN;
+    return isNaN(v) ? null : v;
+  }
+  function sortedCompanyList(){
+    const arr = companies.slice();
+    const byName = (a, b) => (a.name || "").localeCompare(b.name || "");
+    const cmp = (val, dir) => (a, b) => {
+      const av = val(a), bv = val(b);
+      if (av == null && bv == null) return byName(a, b);
+      if (av == null) return 1;            // companies without a price go last
+      if (bv == null) return -1;
+      return dir * (av - bv) || byName(a, b);
+    };
+    if (companySortMode === "price_desc") arr.sort(cmp(companyPriceVal, -1));
+    else if (companySortMode === "price_asc") arr.sort(cmp(companyPriceVal, 1));
+    else if (companySortMode === "change_desc") arr.sort(cmp(companyChangeVal, -1));
+    else arr.sort(byName);
+    return arr;
+  }
+
   function renderCompanyList(){
     let html = '<span class="company-active-bar" id="companyActiveBar"></span>';
-    companies.forEach(c => {
+    sortedCompanyList().forEach(c => {
       html += '<button type="button" class="company-row" data-id="' + c.id + '">' +
                 '<span class="company-row-main">' +
                   '<span class="company-row-name">' + escHtml(c.name || "Untitled Company") + '</span>' +
@@ -1268,6 +1317,8 @@
     }
   });
   document.getElementById("addCompanyBtn").addEventListener("click", addCompany);
+  const _sortSel = document.getElementById("companySort");
+  if (_sortSel) _sortSel.addEventListener("change", () => { companySortMode = _sortSel.value; renderCompanyList(); });
   document.getElementById("sideBackBtn").addEventListener("click", backToCompanies);
   window.addEventListener("resize", updateActiveRow);
 
