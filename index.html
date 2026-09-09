@@ -251,6 +251,31 @@
   .fchart-ax{font-family:'IBM Plex Mono',monospace; font-size:9px; fill:var(--ink-faint);}
   .fchart-cap{margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--ink-faint);}
   @media print{ .field-chart{background:#fff; border:1px solid #ccc;} }
+  #marketHome{display:none;}
+  body.home-view #marketHome{display:block;}
+  body.home-view #profileContainer{display:none;}
+  body.home-view .feed-bar + .part-desc, body.home-view .part-desc{display:none;}
+  .mkt-head{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:14px; margin-bottom:18px;}
+  .mkt-title{font-family:'IBM Plex Serif',serif; font-size:26px; font-weight:600;}
+  .mkt-date{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-faint);}
+  .mkt-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:14px; margin-bottom:22px;}
+  .mkt-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px;}
+  .mkt-k{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:7px;}
+  .mkt-v{font-family:'IBM Plex Serif',serif; font-size:23px; font-weight:600; line-height:1.15;}
+  .mkt-sub{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-dim); margin-top:5px;}
+  .up{color:#4bb97a;} .down{color:var(--red);} .flat{color:var(--ink-dim);}
+  .mkt-cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:18px;}
+  .mkt-panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:15px 17px;}
+  .mkt-panel h3{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:11px; font-weight:500;}
+  .mkt-row{display:flex; align-items:center; gap:10px; padding:6px 0; border-bottom:1px solid var(--line-soft); cursor:pointer;}
+  .mkt-row:last-child{border-bottom:none;}
+  .mkt-row:hover .mkt-name{color:var(--gold);}
+  .mkt-tk{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); width:52px; flex:none;}
+  .mkt-name{flex:1; font-size:13.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; transition:color .15s ease;}
+  .mkt-num{font-family:'IBM Plex Mono',monospace; font-size:12px; white-space:nowrap;}
+  .mkt-bar{height:7px; border-radius:4px; background:var(--line); overflow:hidden; display:flex; margin:8px 0 4px;}
+  .mkt-bar span{display:block; height:100%;}
+  .mkt-empty{color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:8px 0;}
 </style>
 </head>
 <body>
@@ -329,6 +354,7 @@
     </div>
     <div class="part-desc" style="margin-bottom:8px;">Click <strong>Edit fields</strong> to reveal delete controls on any box or section. Each field has <strong>1–3 stars</strong> (how the company scores on that point) and a <strong>priority button</strong> — L, M or H — for how much it counts. The sidebar <strong>Overall rating</strong> is the weighted average: stars × priority weight (Low 1, Medium 2, High 4) over the fields you've starred. Unstarred fields are ignored, so the score reflects only what you've judged.</div>
     <div class="part-desc">Sections 1–10, 12–25, 27–31 — sections 11 (Competitors) and 26 (M&amp;A) removed, plus a handful of individual fields (Sister companies, Franchises, Joint ventures, Major milestones, Recent share purchases/sales, President) trimmed per request.</div>
+    <div id="marketHome"></div>
     <div id="profileContainer"></div>
 
     <footer class="note">
@@ -1047,6 +1073,7 @@
     if (displayedId != null) updateProgress();
     renderCompanyList();
     scheduleSave();
+    if (document.body.classList.contains("home-view")) renderMarketHome();
     updateFeedStatus("synced", n);
     return n;
   }
@@ -1313,6 +1340,7 @@
     await Promise.all([fetchFeed(), fetchHistory(), fetchGuide(), fetchFin()]);
     syncAllFromFeed();
     renderPriceChart();
+    if (document.body.classList.contains("home-view")) renderMarketHome();
     const sel = document.getElementById("feedIntervalSel");
     const mins = sel ? parseInt(sel.value, 10) : 0;
     if (mins > 0) setRefreshInterval(mins);
@@ -1768,8 +1796,128 @@
     }, 220);
   }
 
-  function drillToSections(){ sideTrackEl.classList.add("show-sections"); }
-  function backToCompanies(){ sideTrackEl.classList.remove("show-sections"); }
+  /* ============== MARKET HOME ==============
+     Shown before you pick a company. Built entirely from the feed files the
+     page already loads: latest.json (prices), history.json (ISX60) and
+     companies_guide.json (sectors).                                        */
+  function num(v){ const n = parseFloat(String(v).replace(/,/g, "")); return isNaN(n) ? null : n; }
+  function money(v){
+    const a = Math.abs(v);
+    if (a >= 1e12) return (v/1e12).toFixed(2) + " tn";
+    if (a >= 1e9)  return (v/1e9).toFixed(2) + " bn";
+    if (a >= 1e6)  return (v/1e6).toFixed(1) + " m";
+    if (a >= 1e3)  return Math.round(v).toLocaleString();
+    return String(Math.round(v));
+  }
+  function sgn(v){ return v > 0 ? "up" : (v < 0 ? "down" : "flat"); }
+  function arrow(v){ return v > 0 ? "▲" : (v < 0 ? "▼" : "="); }
+
+  function indexSeriesSVG(series){
+    if (!series || series.length < 2) return '<div class="mkt-empty">The ISX60 line builds up as the collector runs each trading day.</div>';
+    const W = 620, H = 120, mL = 8, mR = 8, mT = 10, mB = 16;
+    const iw = W - mL - mR, ih = H - mT - mB;
+    const vals = series.map(p => p[1]);
+    let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    if (lo === hi){ lo -= 1; hi += 1; }
+    const X = i => mL + (series.length === 1 ? 0.5 : i / (series.length - 1)) * iw;
+    const Y = v => mT + ih - (v - lo) / (hi - lo) * ih;
+    const pts = series.map((p, i) => X(i).toFixed(1) + "," + Y(p[1]).toFixed(1)).join(" ");
+    const rising = vals[vals.length - 1] >= vals[0];
+    const col = rising ? "#4bb97a" : "var(--red)";
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:110px;display:block">' +
+      '<polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="1.8" vector-effect="non-scaling-stroke"/>' +
+      '<text x="' + mL + '" y="' + (H - 3) + '" class="fchart-ax">' + series[0][0] + '</text>' +
+      '<text x="' + (mL + iw) + '" y="' + (H - 3) + '" class="fchart-ax" text-anchor="end">' + series[series.length-1][0] + '</text>' +
+      '</svg>';
+  }
+
+  function renderMarketHome(){
+    const el = document.getElementById("marketHome");
+    if (!el) return;
+    const tickers = Object.keys(feedData);
+    if (!tickers.length){
+      el.innerHTML = '<div class="mkt-head"><span class="mkt-title">ISX Market</span></div>' +
+        '<div class="mkt-empty">No price feed loaded yet. Check that data/latest.json is published.</div>';
+      return;
+    }
+    let up = 0, down = 0, flat = 0, value = 0, volume = 0, trades = 0, traded = 0;
+    const rows = [];
+    tickers.forEach(tk => {
+      const r = feedData[tk];
+      const chg = num(r.change_pct), val = num(r.value_iqd), vol = num(r.volume), tr = num(r.trades);
+      if (val) value += val;
+      if (vol) volume += vol;
+      if (tr) trades += tr;
+      if (vol && vol > 0) traded++;
+      if (chg !== null){ if (chg > 0) up++; else if (chg < 0) down++; else flat++; }
+      rows.push({ tk: tk, name: (r.name || tk), close: num(r.close), chg: chg, val: val || 0, vol: vol || 0 });
+    });
+    const date = (feedData[tickers[0]] || {}).date || "";
+    const idx = Array.isArray(histData["__ISX60"]) ? histData["__ISX60"] : [];
+    const last = idx.length ? idx[idx.length - 1][1] : null;
+    const prev = idx.length > 1 ? idx[idx.length - 2][1] : null;
+    const idxChg = (last !== null && prev !== null) ? ((last - prev) / prev * 100) : null;
+
+    const gainers = rows.filter(r => r.chg > 0).sort((a, b) => b.chg - a.chg).slice(0, 6);
+    const losers  = rows.filter(r => r.chg < 0).sort((a, b) => a.chg - b.chg).slice(0, 6);
+    const active  = rows.filter(r => r.val > 0).sort((a, b) => b.val - a.val).slice(0, 6);
+
+    const sectors = {};
+    tickers.forEach(tk => {
+      const g = guideData[tk];
+      if (!g || !g.sector_ar) return;
+      const s = sectors[g.sector_ar] || (sectors[g.sector_ar] = { n: 0, val: 0 });
+      s.n++; s.val += num((feedData[tk] || {}).value_iqd) || 0;
+    });
+    const secList = Object.keys(sectors).map(k => ({ k: k, n: sectors[k].n, val: sectors[k].val }))
+                          .sort((a, b) => b.val - a.val).slice(0, 8);
+
+    const list = (arr, fmt) => arr.length
+      ? arr.map(r => '<div class="mkt-row" data-go="' + r.tk + '"><span class="mkt-tk">' + r.tk + '</span>' +
+          '<span class="mkt-name">' + escHtml(r.name) + '</span>' + fmt(r) + '</div>').join("")
+      : '<div class="mkt-empty">Nothing to show for this session.</div>';
+
+    const pct = n => (rows.length ? (n / rows.length * 100) : 0).toFixed(1) + "%";
+
+    el.innerHTML =
+      '<div class="mkt-head"><span class="mkt-title">Iraq Stock Exchange</span>' +
+        '<span class="mkt-date">' + (date ? ("session " + date) : "") + " · " + tickers.length + ' listed companies tracked</span></div>' +
+      '<div class="mkt-grid">' +
+        '<div class="mkt-card"><div class="mkt-k">ISX60 index</div><div class="mkt-v ' + (idxChg === null ? "" : sgn(idxChg)) + '">' +
+          (last === null ? "—" : last.toFixed(2)) + '</div><div class="mkt-sub">' +
+          (idxChg === null ? "awaiting a second session" : (arrow(idxChg) + " " + idxChg.toFixed(2) + "% on the day")) + '</div></div>' +
+        '<div class="mkt-card"><div class="mkt-k">Value traded</div><div class="mkt-v">' + money(value) + '</div><div class="mkt-sub">IQD</div></div>' +
+        '<div class="mkt-card"><div class="mkt-k">Shares traded</div><div class="mkt-v">' + money(volume) + '</div><div class="mkt-sub">' + trades.toLocaleString() + ' trades</div></div>' +
+        '<div class="mkt-card"><div class="mkt-k">Companies traded</div><div class="mkt-v">' + traded + '</div><div class="mkt-sub">of ' + tickers.length + ' · ' + pct(traded) + '</div></div>' +
+        '<div class="mkt-card"><div class="mkt-k">Breadth</div>' +
+          '<div class="mkt-bar"><span class="up" style="background:#4bb97a;width:' + pct(up) + '"></span>' +
+          '<span style="background:var(--line);width:' + pct(flat) + '"></span>' +
+          '<span style="background:var(--red);width:' + pct(down) + '"></span></div>' +
+          '<div class="mkt-sub"><span class="up">' + up + ' up</span> · <span class="flat">' + flat + ' flat</span> · <span class="down">' + down + ' down</span></div></div>' +
+      '</div>' +
+      '<div class="mkt-cols">' +
+        '<div class="mkt-panel"><h3>ISX60 index</h3>' + indexSeriesSVG(idx) + '</div>' +
+        '<div class="mkt-panel"><h3>Most active by value</h3>' + list(active, r => '<span class="mkt-num">' + money(r.val) + '</span>') + '</div>' +
+        '<div class="mkt-panel"><h3>Top gainers</h3>' + list(gainers, r => '<span class="mkt-num up">+' + r.chg + '%</span>') + '</div>' +
+        '<div class="mkt-panel"><h3>Top losers</h3>' + list(losers, r => '<span class="mkt-num down">' + r.chg + '%</span>') + '</div>' +
+        '<div class="mkt-panel"><h3>Sectors by value traded</h3>' +
+          (secList.length ? secList.map(s => '<div class="mkt-row"><span class="mkt-name">' + escHtml(s.k) + '</span>' +
+            '<span class="mkt-num">' + s.n + ' co · ' + money(s.val) + '</span></div>').join("")
+            : '<div class="mkt-empty">Run “Fill from ISX Guide” to group companies by sector.</div>') + '</div>' +
+      '</div>';
+
+    el.querySelectorAll("[data-go]").forEach(r => r.addEventListener("click", () => {
+      const tk = r.getAttribute("data-go");
+      const c = companies.find(x => tickerOf(x) === tk);
+      if (c){ selectCompany(c.id); drillToSections(); }
+    }));
+  }
+
+  function showHome(){ document.body.classList.add("home-view"); renderMarketHome(); }
+  function hideHome(){ document.body.classList.remove("home-view"); }
+
+  function drillToSections(){ sideTrackEl.classList.add("show-sections"); hideHome(); }
+  function backToCompanies(){ sideTrackEl.classList.remove("show-sections"); showHome(); }
 
   function addCompany(){
     const c = { id: newCompanyId(), name: "New company", data: { "__companyName": "New company" } };
