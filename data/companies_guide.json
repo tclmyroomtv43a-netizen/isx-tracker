@@ -1,0 +1,3489 @@
+{
+  "BAAI": {
+    "ticker": "BAAI",
+    "name_ar": "مصرف العربية الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BAAI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BAAI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/baai_BAAI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف العربية_BAAI _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BAIB": {
+    "ticker": "BAIB",
+    "name_ar": "مصرف اسيا العراق الاسلامي للاستثمار والت",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BAIB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BAIB",
+    "files": []
+  },
+  "BAME": {
+    "ticker": "BAME",
+    "name_ar": "مصرف امين العراق الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BAME",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BAME",
+    "files": []
+  },
+  "BAMS": {
+    "ticker": "BAMS",
+    "name_ar": "مصرف المشرق العربي الاسلامي للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BAMS",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BAMS",
+    "files": []
+  },
+  "BANS": {
+    "ticker": "BANS",
+    "name_ar": "مصرف الانصاري الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BANS",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BANS",
+    "files": []
+  },
+  "BASH": {
+    "ticker": "BASH",
+    "name_ar": "مصرف آشور الدولي للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BASH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BASH",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BASH_BASH _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف اشور_BASH _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/17_BASH _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف اشور_BASH _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Ashur Bank_BASH_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BBAY": {
+    "ticker": "BBAY",
+    "name_ar": "مصرف بابل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BBAY",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BBAY",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BBAY_BBAY _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف بابل_BBAY _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/10_BBAY _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف بابل_BBAY _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013 Babil Bank_BBAY _2013_Ar.pdf"
+      }
+    ]
+  },
+  "BBOB": {
+    "ticker": "BBOB",
+    "name_ar": "مصرف بغداد",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BBOB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BBOB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BBOB_BBOB _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف بغداد_BBOB _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/2_BBOB _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف بغداد_BBOB _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013ق Baghdad Bank_BBOB_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BCIH": {
+    "ticker": "BCIH",
+    "name_ar": "مصرف جيهان للاستثمار والتمويل الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BCIH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BCIH",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BCIH_BCIH _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف جيهان_BCIH _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BCOI": {
+    "ticker": "BCOI",
+    "name_ar": "المصرف التجاري العراقي الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BCOI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BCOI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/Bcoi_BCOI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف التجاري_BCOI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/1_BCOI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف تجاري_BCOI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Commercial Bank_BCOI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BDFD": {
+    "ticker": "BDFD",
+    "name_ar": "مصرف دجلة والفرات للتنمية والاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BDFD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BDFD",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BDFD_BDFD _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف دجلة والفرات_BDFD _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/20_BDFD _2016_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Dijlah & Furat Bank_BDFD_2013_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Dijlah & Furat Bank_BDFD _2012_Ar.pdf"
+      }
+    ]
+  },
+  "BDSI": {
+    "ticker": "BDSI",
+    "name_ar": "مصرف دار السلام للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BDSI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BDSI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BDSI_BDSI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف دار السلام_BDSI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/8_BDSI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف دار السلام_BDSI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Dar Essalam Bank_BDSI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BEFI": {
+    "ticker": "BEFI",
+    "name_ar": "مصرف الاقتصاد",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BEFI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BEFI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BEFI_BEFI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الاقتصاد_BEFI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/11_BEFI _2016_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2012Economy Bank_BEFI _2013_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Economy Bank_BEFI _2012_Ar.pdf"
+      }
+    ]
+  },
+  "BELF": {
+    "ticker": "BELF",
+    "name_ar": "مصرف ايلاف الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BELF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BELF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BELF_BELF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف ايلاف_BELF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/21_BELF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف ايلاف_BELF _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Elaf Islamic Bank_BELF_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BERI": {
+    "ticker": "BERI",
+    "name_ar": "مصرف اربيل للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BERI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BERI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/beri_BERI _2018_Ar.pdf"
+      }
+    ]
+  },
+  "BGUC": {
+    "ticker": "BGUC",
+    "name_ar": "مصرف الخليج التجاري",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BGUC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BGUC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BGUC_BGUC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الخليج_BGUC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/12_BGUC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الخليج_BGUC _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققGulf Bank_BGUC_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BHAM": {
+    "ticker": "BHAM",
+    "name_ar": "مصرف حمورابي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BHAM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BHAM",
+    "files": []
+  },
+  "BIBI": {
+    "ticker": "BIBI",
+    "name_ar": "مصرف الاستثمار العراقي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BIBI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BIBI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BIBI_BIBI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الاستثمار_BIBI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/5_BIBI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الاستثمار_BIBI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Investment Bank_BIBI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BIDB": {
+    "ticker": "BIDB",
+    "name_ar": "مصرف التنمية الدولي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BIDB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BIDB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BIDB_BIDB _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف التنمية_BIDB _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BIIB": {
+    "ticker": "BIIB",
+    "name_ar": "المصرف العراقي الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BIIB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BIIB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BIIB_BIIB _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف العراقي الاسلامي_BIIB _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/3_BIIB _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الاسلامي_BIIB _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققIslamic Bank_BIIB_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BIME": {
+    "ticker": "BIME",
+    "name_ar": "مصرف الشرق الاوسط للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BIME",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BIME",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BIME_BIME _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الشرق الاوسط_BIME _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/4_BIME _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الشرق الاوسط_BIME _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققMiddle East Bank_BIME_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BINI": {
+    "ticker": "BINI",
+    "name_ar": "مصرف نور العراق الاسلامي للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BINI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BINI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BINI_BINI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف نور العراق_BINI _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BINT": {
+    "ticker": "BINT",
+    "name_ar": "المصرف الدولي الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BINT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BINT",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BINT_BINT _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الدولي الاسلامي_BINT _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BJAB": {
+    "ticker": "BJAB",
+    "name_ar": "مصرف الجنوب الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BJAB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BJAB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/bj_BJAB _2018_Ar.pdf"
+      }
+    ]
+  },
+  "BKUI": {
+    "ticker": "BKUI",
+    "name_ar": "مصرف كوردستان الدولي الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BKUI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BKUI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BKUI_BKUI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف كوردستان_BKUI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/16_BKUI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف كوردستان_BKUI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Kurdistan Bank_BKUI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BLAD": {
+    "ticker": "BLAD",
+    "name_ar": "مصرف العطاء الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BLAD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BLAD",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BLAD_BLAD _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف البلاد الاسلامي_BLAD _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BMAL": {
+    "ticker": "BMAL",
+    "name_ar": "مصرف المال الاسلامي للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BMAL",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BMAL",
+    "files": []
+  },
+  "BMFI": {
+    "ticker": "BMFI",
+    "name_ar": "مصرف الموصل للتنمية والاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BMFI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BMFI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BMFI_BMFI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الموصل_BMFI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/13_BMFI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الموصل_BMFI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Mousil Bank_BMFI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BMNS": {
+    "ticker": "BMNS",
+    "name_ar": "مصرف المنصور للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BMNS",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BMNS",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BMNS_BMNS _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف المنصور_BMNS _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/18_BMNS _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف المنصور_BMNS _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013 Al-Mansour Bank_BMNS_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BMUI": {
+    "ticker": "BMUI",
+    "name_ar": "مصرف المستشار الاسلامي للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BMUI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BMUI",
+    "files": []
+  },
+  "BNAI": {
+    "ticker": "BNAI",
+    "name_ar": "المصرف الوطني الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BNAI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BNAI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BANI_BNAI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الوطني الاسلامي_BNAI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/22_BNAI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الوطني الاسلامي_BNAI _2014_Ar.pdf"
+      }
+    ]
+  },
+  "BNOI": {
+    "ticker": "BNOI",
+    "name_ar": "المصرف الاهلي العراقي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BNOI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BNOI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BNOI_BNOI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الاهلي_BNOI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/6_BNOI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف الاهلي_BNOI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/national bank 2013_BNOI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BNOR": {
+    "ticker": "BNOR",
+    "name_ar": "مصرف الشمال للتمويل والاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BNOR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BNOR",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BNOR_BNOR _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الشمال_BNOR _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/15_BNOR _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الشمال_BNOR _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013North Bank_BNOR_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BQAB": {
+    "ticker": "BQAB",
+    "name_ar": "مصرف القابض الاسلامي للتمويل والاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BQAB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BQAB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/bqab_BQAB _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف القابض_BQAB _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BQUR": {
+    "ticker": "BQUR",
+    "name_ar": "مصرف القرطاس الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BQUR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BQUR",
+    "files": []
+  },
+  "BRAJ": {
+    "ticker": "BRAJ",
+    "name_ar": "مصرف الراجح الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BRAJ",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BRAJ",
+    "files": []
+  },
+  "BROI": {
+    "ticker": "BROI",
+    "name_ar": "مصرف الأئتمان العراقي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BROI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BROI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BROI_BROI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الائتمان_BROI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/7_BROI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الائتمان_BROI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/Credit Bank 2013_BROI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BRTB": {
+    "ticker": "BRTB",
+    "name_ar": "مصرف الاقليم التجاري للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BRTB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BRTB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BRTB_BRTB _2018_Ar.pdf"
+      }
+    ]
+  },
+  "BSAN": {
+    "ticker": "BSAN",
+    "name_ar": "مصرف السنام الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BSAN",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BSAN",
+    "files": []
+  },
+  "BSUC": {
+    "ticker": "BSUC",
+    "name_ar": "مصرف سومر التجاري",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BSUC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BSUC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BSUC_BSUC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف سومر_BSUC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/9_BSUC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف سومر_BSUC _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققSumer Bank_BSUC_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BTIB": {
+    "ticker": "BTIB",
+    "name_ar": "مصرف الطيف الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BTIB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BTIB",
+    "files": []
+  },
+  "BTRI": {
+    "ticker": "BTRI",
+    "name_ar": "مصرف عبر العراق للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BTRI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BTRI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BTRI_BTRI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف عبر العراق_BTRI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/72_BTRI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف عبر العراق_BTRI _2014_Ar.pdf"
+      }
+    ]
+  },
+  "BTRU": {
+    "ticker": "BTRU",
+    "name_ar": "مصرف الثقة الدولي الاسلامي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BTRU",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BTRU",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/btru_BTRU _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الثقة_BTRU _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BUND": {
+    "ticker": "BUND",
+    "name_ar": "مصرف المتحد للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BUND",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BUND",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BUND_BUND _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف المتحد_BUND _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/19_BUND _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المصرف المتحد_BUND _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013United Bank_BUND_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BUOI": {
+    "ticker": "BUOI",
+    "name_ar": "مصرف الاتحاد العراقي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BUOI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BUOI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BUOI_BUOI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الاتحاد_BUOI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/14_BUOI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف الاتحاد_BUOI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Union Bankdd_BUOI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "BWAI": {
+    "ticker": "BWAI",
+    "name_ar": "مصرف الوركاء للاستثمار",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BWAI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BWAI",
+    "files": [
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/الوركاء N_BWAI _2011_Ar.pdf"
+      }
+    ]
+  },
+  "BWOR": {
+    "ticker": "BWOR",
+    "name_ar": "مصرف العالم الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BWOR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BWOR",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BWOR_BWOR _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف العالم الاسلامي_BWOR _2017_Ar.pdf"
+      }
+    ]
+  },
+  "BZII": {
+    "ticker": "BZII",
+    "name_ar": "زين العراق الاسلامي للاستثمار والتمويل",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=BZII",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=BZII",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/BZII_BZII _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مصرف زين العراق_BZII _2017_Ar.pdf"
+      }
+    ]
+  },
+  "MTUA": {
+    "ticker": "MTUA",
+    "name_ar": "العربية المتحدة للتحويل المالي",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTUA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTUA",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/82_MTUA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العربية المتحدة للتحويل المالي_MTUA _2014_Ar.pdf"
+      }
+    ]
+  },
+  "NZAI": {
+    "ticker": "NZAI",
+    "name_ar": "شركة زين للتأمين",
+    "sector_ar": "المصارف",
+    "sector_id": "2",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NZAI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NZAI",
+    "files": []
+  },
+  "NAHF": {
+    "ticker": "NAHF",
+    "name_ar": "الاهلية للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NAHF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NAHF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/NAHF_NAHF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الاهلية للتامين_NAHF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/25_NAHF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الاهلية للتامين_NAHF _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/AHliya For Insurance_NAHF_2013_Ar.pdf"
+      }
+    ]
+  },
+  "NAME": {
+    "ticker": "NAME",
+    "name_ar": "الامين للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NAME",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NAME",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/NAME_NAME _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للتامين_NAME _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/23_name_2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للتامين_NAME _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Al-Ameen for Insurance_NAME_2013_Ar.pdf"
+      }
+    ]
+  },
+  "NAMN": {
+    "ticker": "NAMN",
+    "name_ar": "دار الامان للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NAMN",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NAMN",
+    "files": []
+  },
+  "NAND": {
+    "ticker": "NAND",
+    "name_ar": "الاندلس للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NAND",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NAND",
+    "files": []
+  },
+  "NBAD": {
+    "ticker": "NBAD",
+    "name_ar": "البادية للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NBAD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NBAD",
+    "files": []
+  },
+  "NBAT": {
+    "ticker": "NBAT",
+    "name_ar": "الباتك للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NBAT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NBAT",
+    "files": []
+  },
+  "NDSA": {
+    "ticker": "NDSA",
+    "name_ar": "دار السلام للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NDSA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NDSA",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/NDSA_NDSA _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/دار السلام للتامين_NDSA _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/24_NDSA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/دار السلام للتامين_NDSA _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Dar Al-Salam for Insurance_NDSA_2013_Ar.pdf"
+      }
+    ]
+  },
+  "NELF": {
+    "ticker": "NELF",
+    "name_ar": "الإيلاف للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NELF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NELF",
+    "files": []
+  },
+  "NGAT": {
+    "ticker": "NGAT",
+    "name_ar": "بوابة آسيا للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NGAT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NGAT",
+    "files": []
+  },
+  "NGIR": {
+    "ticker": "NGIR",
+    "name_ar": "الخليج للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NGIR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NGIR",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/NGIR_NGIR _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الخليج للتامين_NGIR _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/26_NGIR _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الخليج للتامين_NGIR _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Gulf Insurance_NGIR _2013_Ar.pdf"
+      }
+    ]
+  },
+  "NHAM": {
+    "ticker": "NHAM",
+    "name_ar": "الحمراء للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NHAM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NHAM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/NHAF_NHAM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الحمراء للتامين_NHAM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/73_NHAM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الحمراء للتامين_NHAM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al- Hamraa for Insurance_NHAM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "NIRQ": {
+    "ticker": "NIRQ",
+    "name_ar": "العراق الدولية للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NIRQ",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NIRQ",
+    "files": []
+  },
+  "NKHA": {
+    "ticker": "NKHA",
+    "name_ar": "الخير للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NKHA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NKHA",
+    "files": []
+  },
+  "NKUI": {
+    "ticker": "NKUI",
+    "name_ar": "كوردستان الدولي للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NKUI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NKUI",
+    "files": []
+  },
+  "NMAS": {
+    "ticker": "NMAS",
+    "name_ar": "المصير للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NMAS",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NMAS",
+    "files": []
+  },
+  "NSHA": {
+    "ticker": "NSHA",
+    "name_ar": "شط العرب للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NSHA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NSHA",
+    "files": []
+  },
+  "NSHQ": {
+    "ticker": "NSHQ",
+    "name_ar": "الشرق للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NSHQ",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NSHQ",
+    "files": []
+  },
+  "NSIA": {
+    "ticker": "NSIA",
+    "name_ar": "آسيا للتأمين",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NSIA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NSIA",
+    "files": []
+  },
+  "SYAM": {
+    "ticker": "SYAM",
+    "name_ar": "اليم الازرق للتجارة العامة",
+    "sector_ar": "التأمين",
+    "sector_id": "3",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SYAM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SYAM",
+    "files": []
+  },
+  "VAMF": {
+    "ticker": "VAMF",
+    "name_ar": "الامين للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VAMF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VAMF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/VAMF_VAMF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للاستثمار المالي_VAMF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/75_VAMF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للاستثمار المالي_VAMF _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Ameen for Financial Investment_VAMF _2012_Ar.pdf"
+      }
+    ]
+  },
+  "VAYF": {
+    "ticker": "VAYF",
+    "name_ar": "الايام للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VAYF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VAYF",
+    "files": [
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-AYaam for Financial Investment_VAYF _2012_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/الايام للاستثمار المالي Z_VAYF _2011_Ar.pdf"
+      }
+    ]
+  },
+  "VBAT": {
+    "ticker": "VBAT",
+    "name_ar": "الباتك للاستثمارات المالية",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VBAT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VBAT",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/VBAT_VBAT _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الباتك للاستثمارات_VBAT _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/77_VBAT _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الباتك للاستثمار المالي_VBAT _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/AL- Batek for Financial Investments_VBAT _2012_Ar.pdf"
+      }
+    ]
+  },
+  "VKHA": {
+    "ticker": "VKHA",
+    "name_ar": "الخيمة للاستثمارات المالية",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VKHA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VKHA",
+    "files": [
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Khaima for Finanical Investment_VKHA _2012_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/الخيمة للاستثمارات المالية Z_VKHA _2011_Ar.pdf"
+      }
+    ]
+  },
+  "VKHF": {
+    "ticker": "VKHF",
+    "name_ar": "الخير للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VKHF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VKHF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/vkhf_VKHF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الخير للاستثمار المالي_VKHF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/74_VKHF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الخيرللاستثمار المالي_VKHF _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Khair for Financial Investment_VKHF _2012_Ar.pdf"
+      }
+    ]
+  },
+  "VMES": {
+    "ticker": "VMES",
+    "name_ar": "بين النهرين للاستثمارات المالية",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VMES",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VMES",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/VMES_VMES _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/بين النهرين للاستثمارات_VMES _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/76_VMES _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/بين النهرين للاستثمار المالي_VMES _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Bain Alnahrain Investment (2)_VMES _2012_Ar.pdf"
+      }
+    ]
+  },
+  "VQUF": {
+    "ticker": "VQUF",
+    "name_ar": "القمة للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VQUF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VQUF",
+    "files": [
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/Zالقمة للاستثمار المالي_VQUF _2011_Ar.pdf"
+      }
+    ]
+  },
+  "VWIF": {
+    "ticker": "VWIF",
+    "name_ar": "الوئام للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VWIF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VWIF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/VWIF_VWIF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الوئام للاستثمار_VWIF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/27_VWIF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الوئام للاستثمارالمالي_VWIF _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Wiaam for Financial Investment2013_VWIF_2013_Ar.pdf"
+      }
+    ]
+  },
+  "VZAF": {
+    "ticker": "VZAF",
+    "name_ar": "الزوراء للاستثمار المالي",
+    "sector_ar": "الإستثمار",
+    "sector_id": "4",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=VZAF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=VZAF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/VZAF_VZAF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الزوراء للاستثمار المالي_VZAF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/28_VZAF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الزوراء للاستثمار المالي_VZAF _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Zawraa for Finanical Investment2013دقق_VZAF_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SAEI": {
+    "ticker": "SAEI",
+    "name_ar": "الامين للاستثمارات العقارية",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SAEI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SAEI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SAEI_SAEI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للاستثمارات العقارية_SAEI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/93_SAEI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الامين للاستثمارات العقارية_SAEI _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Ameen Estate Investment_SAEI _2012_Ar.pdf"
+      }
+    ]
+  },
+  "SBAG": {
+    "ticker": "SBAG",
+    "name_ar": "البادية للنقل العام",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SBAG",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SBAG",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SBAG_SBAG _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/البادية للنقل العام_SBAG _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/35_SBAG _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/البادية للنقل العام_SBAG _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققAL-Badia for General Trans_SBAG_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SBMC": {
+    "ticker": "SBMC",
+    "name_ar": "بغداد لخدمات السيارات",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SBMC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SBMC",
+    "files": [
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد لخدمات سيارات_SBMC _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2010Baghdad Motor Cars_SBMC _2013_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Baghdad Motor Cars_SBMC _2012_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد خدمات  نهائي سيارات كامل_SBMC _2011_Ar.pdf"
+      }
+    ]
+  },
+  "SBPT": {
+    "ticker": "SBPT",
+    "name_ar": "بغداد العراق للنقل العام",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SBPT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SBPT",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SBPT_SBPT _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد العراق للنقل العام_SBPT _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/33_SBPT _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد العراق للنقل العام_SBPT _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققIraq Baghdad for General transportation_SBPT_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SIBD": {
+    "ticker": "SIBD",
+    "name_ar": "ابداع الشرق الاوسط للمقاولات العامة",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SIBD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SIBD",
+    "files": []
+  },
+  "SIGT": {
+    "ticker": "SIGT",
+    "name_ar": "العراقية لنقل المنتجات النفطية والبضائع",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SIGT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SIGT",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SIGT_SIGT _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لمنتجات النفطية_SIGT _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/34_SIGT _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/نقل المنتجات نفطية_SIGT _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/نفطية وبضائع_SIGT _2011_Ar.pdf"
+      }
+    ]
+  },
+  "SILT": {
+    "ticker": "SILT",
+    "name_ar": "العراقية للنقل البري",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SILT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SILT",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SILT_SILT _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للنقل البري_SILT _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/32_SILT _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقيةللنقل البري_SILT _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013aqi land Transport_SILT_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SKTA": {
+    "ticker": "SKTA",
+    "name_ar": "مدينة العاب الكرخ السياحية",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SKTA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SKTA",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SKTA_SKTA _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مدينة العاب الكرخ_SKTA _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/29_SKTA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العاب الكرخ السياحية_SKTA _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققKharkh Tour Amuzement City_SKTA_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SMOF": {
+    "ticker": "SMOF",
+    "name_ar": "الموصل لمدن الالعاب",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SMOF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SMOF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SMOF_SMOF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الموصل لمدن الالعاب_SMOF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/94_SMOF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الموصل لمدن الالعاب_SMOF _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققAl-Mosul for Funfairs_SMOF_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SMRI": {
+    "ticker": "SMRI",
+    "name_ar": "المعمورة للاستثمارات العقارية",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SMRI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SMRI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SMRI_SMRI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المعمورة العقارية_SMRI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/30_SMRI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المعمورة للاستثمارات السياحية_SMRI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دamoura Realestate Investment_SMRI_2013_Ar.pdf"
+      }
+    ]
+  },
+  "SNUC": {
+    "ticker": "SNUC",
+    "name_ar": "النخبة للمقاولات العامة والاستثمارات الع",
+    "sector_ar": "الخدمات",
+    "sector_id": "5",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=SNUC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=SNUC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/SNUC_SNUC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/النخبة للمقاولات العامة_SNUC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/31_SNUC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/النخبةللمقاولات العامة_SNUC _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013مدققAL-Nukhba for Construction_SNUC_2013_Ar.pdf"
+      }
+    ]
+  },
+  "IBPM": {
+    "ticker": "IBPM",
+    "name_ar": "بغداد لصناعة مواد التغليف",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IBPM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IBPM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IBPM_IBPM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد لصناعة مواد التغليف_IBPM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/39_IBPM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد لصناعة مواد التغليف_IBPM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Baghdad for Packing Materials_IBPM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IBSD": {
+    "ticker": "IBSD",
+    "name_ar": "بغداد للمشروبات الغازية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IBSD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IBSD",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IBSD_IBSD _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد للمشروبات الغازية_IBSD _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/40_IBSD _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/بغداد للمشروبات الغازية_IBSD _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Baghdad Soft Drinks_IBSD _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IEAB": {
+    "ticker": "IEAB",
+    "name_ar": "البيرة الشرقية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IEAB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IEAB",
+    "files": [
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/البيرة الشرقية ج نهائي_IEAB _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IELI": {
+    "ticker": "IELI",
+    "name_ar": "الصناعات الالكترونية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IELI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IELI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IELI_IELI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الصناعات الالكترونية_IELI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/45_IELI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الصناعات الالكترونية_IELI _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/صناعات الالكترونية نهائي  _IELI _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IFCM": {
+    "ticker": "IFCM",
+    "name_ar": "الفلوجة لانتاج المواد الانشائية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IFCM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IFCM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IFCM_IFCM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الفلوجة لانتاج المواد الانشائية_IFCM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/47_ifcm_2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الفلوجة الانشائية_IFCM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Fallujah for Construction Materials_IFCM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IHFI": {
+    "ticker": "IHFI",
+    "name_ar": "الوطنية لصناعات الاثاث المنزلي",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IHFI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IHFI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IHFI_IHFI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الاثاث المنزلي_IHFI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/97_IHFI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الوطنية لصناعات الاثاث المنزلي_IHFI _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Household Furniture  مدققIndustry_IHFI _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IHLI": {
+    "ticker": "IHLI",
+    "name_ar": "الهلال الصناعية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IHLI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IHLI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IHLI_IHLI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الهلال الصناعية_IHLI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/42_IHLI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الهلال الصناعية_IHLI _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Hilal Industries - Copy_IHLI _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IICM": {
+    "ticker": "IICM",
+    "name_ar": "العراقية لصناعات الكارتون",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IICM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IICM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/iicm_IICM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/صناعة الكارتون_IICM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/53_IICM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لصناعة الكارتون_IICM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Iraqi Company for Carton Manufacturies_IICM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IIDP": {
+    "ticker": "IIDP",
+    "name_ar": "العراقية لتصنيع وتسويق التمور",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IIDP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IIDP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IIDP_IIDP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/تصنيع وتسويق التمور_IIDP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/41_IIDP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لتصنيع التمور_IIDP _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/التمور العراقية كامل_IIDP _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IIEW": {
+    "ticker": "IIEW",
+    "name_ar": "العراقية للاعمال الهندسية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IIEW",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IIEW",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/iiew_IIEW _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للاعمال الهندسية_IIEW _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/48_IIEW _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للاعمال الهندسية_IIEW _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/هندسية نهائي ج_IIEW _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IITC": {
+    "ticker": "IITC",
+    "name_ar": "العراقية للسجاد والمفروشات",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IITC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IITC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IITC_IITC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/السجاد والمفروشات_IITC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/38_IITC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للسجاد_IITC _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Iraqi For Tufted Carpets_IITC _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IKFP": {
+    "ticker": "IKFP",
+    "name_ar": "كركوك لانتاج المواد الانشائية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IKFP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IKFP",
+    "files": [
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/كركوك لانتاج الماد الانشائية ج_IKFP _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IKHC": {
+    "ticker": "IKHC",
+    "name_ar": "طريق الخازر لانتاج وتجارة المواد الانشائ",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IKHC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IKHC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/ikhc_IKHC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الخازر الانشائية_IKHC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/49_IKHC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الخازرالانشائية_IKHC _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al -Khazer for Construction Materials_IKHC _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IKLV": {
+    "ticker": "IKLV",
+    "name_ar": "الكندي لانتاج اللقاحات البيطرية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IKLV",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IKLV",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IKLV_IKLV _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الكندي لانتاج اللقاحات_IKLV _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/46_IKLV _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الكندي لانتاج اللقاحات_IKLV _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/الكندي للقاحات  نهائي_IKLV _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IMAP": {
+    "ticker": "IMAP",
+    "name_ar": "المنصور للصناعات الدوائية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMAP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMAP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IMAP_IMAP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المنصور الدوائية_IMAP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/36_IMAP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المنصور الدوائية_IMAP _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Mansour Pharmaceuticals Industries_IMAP _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IMCI": {
+    "ticker": "IMCI",
+    "name_ar": "الصنائع الكيماوية العصرية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMCI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMCI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IMCI_IMCI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الصنائع العصرية_IMCI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/95_IMCI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الصنائع الكيمياوية العصرية_IMCI _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Modern Chemical Industries_IMCI _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IMCM": {
+    "ticker": "IMCM",
+    "name_ar": "صناعة المواد الانشائية الحديثة",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMCM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMCM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IMCM_IMCM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المواد الانشائية الحديثة_IMCM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/96_IMCM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/انشائية حديثة_IMCM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Modern Constrcution Materials Industry_IMCM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IMIB": {
+    "ticker": "IMIB",
+    "name_ar": "الصناعات المعدنية والدراجات",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMIB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMIB",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IMIB_IMIB _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المعدنية والدراجات_IMIB _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/51_IMIB _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المعدنية والدراجات_IMIB _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/دراجات ج نهائي_IMIB _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IMOS": {
+    "ticker": "IMOS",
+    "name_ar": "الخياطة الحديثة",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMOS",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMOS",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IMOS_IMOS _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الخياطة الحديثة_IMOS _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/37_IMOS _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/خياطةالحديثة_IMOS _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Modern Sewing_IMOS _2012_Ar.pdf"
+      }
+    ]
+  },
+  "IMPI": {
+    "ticker": "IMPI",
+    "name_ar": "صناعات الاصباغ الحديثة",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IMPI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IMPI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/impi_IMPI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الاصباغ الحديثة_IMPI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/50_IMPI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الاصباغ الحديثة_IMPI _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/Modern Paint Industries_IMPI _2011_Ar.pdf"
+      }
+    ]
+  },
+  "INCP": {
+    "ticker": "INCP",
+    "name_ar": "الوطنية للصناعات الكيمياوية والبلاستيكية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=INCP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=INCP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/INCP_INCP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الوطنية للصناعات الكيمياوية_INCP _2017_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الصناعات الكيمياوية_INCP _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/كيمياوية وبلاستيكية ج نهائي_INCP _2011_Ar.pdf"
+      }
+    ]
+  },
+  "INFI": {
+    "ticker": "INFI",
+    "name_ar": "نينوى للصناعات الغذائية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=INFI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=INFI",
+    "files": []
+  },
+  "INSD": {
+    "ticker": "INSD",
+    "name_ar": "المشروبات الغازية الشمالية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=INSD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=INSD",
+    "files": [
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المشروبات الغازية الشمالية_INSD _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/المشروبات الغازية الشمالية ج نهائي_INSD _2011_Ar.pdf"
+      }
+    ]
+  },
+  "IRMC": {
+    "ticker": "IRMC",
+    "name_ar": "انتاج الالبسة الجاهزة",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=IRMC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=IRMC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/IRMC_IRMC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/انتاج الالبسة الجاهزة_IRMC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/52_IRMC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/انتاج الالبسة الجاهزة_IRMC _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Ready Made Clothes_IRMC _2012_Ar.pdf"
+      }
+    ]
+  },
+  "ITLI": {
+    "ticker": "ITLI",
+    "name_ar": "الصناعات الخفيفة والتعدينية",
+    "sector_ar": "الصناعة",
+    "sector_id": "6",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=ITLI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=ITLI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/ITLI_ITLI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الصناعات الخفيفة_ITLI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/43_ITLI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الصناعات الخفيفة_ITLI _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/خفيفة نهائي ج_ITLI _2011_Ar.pdf"
+      }
+    ]
+  },
+  "HASH": {
+    "ticker": "HASH",
+    "name_ar": "فندق اشور",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HASH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HASH",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HASH_HASH _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق اشور_HASH _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/98_HASH _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق اشور_HASH _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013ققAshur Hotel_HASH _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HBAG": {
+    "ticker": "HBAG",
+    "name_ar": "فندق بغداد",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HBAG",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HBAG",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HBAG_HBAG _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق بغداد_HBAG _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/60_HBAG _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق بغداد_HBAG _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/Baghdad Hotel2013دقق_HBAG _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HBAY": {
+    "ticker": "HBAY",
+    "name_ar": "فندق بابل",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HBAY",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HBAY",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HBAY_HBAY _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق بابل_HBAY _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/57_HBAY _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق بابل_HBAY _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دقق babylon Hotel_HBAY _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HISH": {
+    "ticker": "HISH",
+    "name_ar": "فنادق عشتار",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HISH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HISH",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HISH_HISH _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فنادق عشتار_HISH _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/56_HISH _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فنادق عشتار_HISH _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققIshtar Hotels_HISH _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HKAR": {
+    "ticker": "HKAR",
+    "name_ar": "رحاب كربلاء",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HKAR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HKAR",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HKAR_HKAR _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فنادق كربلاء_HKAR _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/54_HKAR _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فنادق كربلاء_HKAR _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققKarbala Hotels_HKAR _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HMAN": {
+    "ticker": "HMAN",
+    "name_ar": "فنادق المنصور",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HMAN",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HMAN",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HMAN_HMAN _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فنادق المنصور_HMAN _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/58_HMAN _2016_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013Al-Mansour Hotel_HMAN _2013_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Al-Mansour Hotel_HMAN _2012_Ar.pdf"
+      }
+    ]
+  },
+  "HNTI": {
+    "ticker": "HNTI",
+    "name_ar": "الوطنية للاستثمارات السياحية والمشاريع",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HNTI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HNTI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HNTI_HNTI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الاستثمارات السياحية_HNTI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/61_HNTI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الوطنية للاستثمارات سياحية_HNTI _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013National for Tourist Investment_HNTI _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HPAL": {
+    "ticker": "HPAL",
+    "name_ar": "فندق فلسطين",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HPAL",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HPAL",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HPAL_HPAL _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق فلسطين_HPAL _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/55_HPAL _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق فلسطين_HPAL _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/Palestine hotel_HPAL _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HSAD": {
+    "ticker": "HSAD",
+    "name_ar": "فندق السدير",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HSAD",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HSAD",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HSAD_HSAD _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق السدير_HSAD _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/59_HSAD _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/فندق السدير_HSAD _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققAl-Sadeer Hotel_HSAD _2013_Ar.pdf"
+      }
+    ]
+  },
+  "HTVM": {
+    "ticker": "HTVM",
+    "name_ar": "المدينة السياحية في سد الموصل",
+    "sector_ar": "الفنادق والسياحة",
+    "sector_id": "7",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=HTVM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=HTVM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/HTVM_HTVM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المدينة السياحية في سد الموصل_HTVM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/62_HTVM _2016_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/2013دققTourist Village of Mousil Dam_HTVM _2013_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Tourist Village of Mousil Dam_HTVM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AAHP": {
+    "ticker": "AAHP",
+    "name_ar": "الاهلية للانتاج الزراعي",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AAHP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AAHP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AAHP_AAHP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الاهلية للانتاج الزراعي_AAHP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/64_AAHP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الاهلية للانتاج الزراعي_AAHP _2014_Ar.pdf"
+      },
+      {
+        "year": "2011",
+        "url": "http://www.isx-iq.net/isxportal/files/الاهليةالانتاج الزراعي.xls كامل_AAHP _2011_Ar.pdf"
+      }
+    ]
+  },
+  "ABAP": {
+    "ticker": "ABAP",
+    "name_ar": "شركة بابل للانتاج الحيواني والنباتي",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=ABAP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=ABAP",
+    "files": []
+  },
+  "AIPM": {
+    "ticker": "AIPM",
+    "name_ar": "العراقية لانتاج وتسويق اللحوم",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AIPM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AIPM",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AIPM_AIPM _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/تسويق اللحوم_AIPM _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/68_AIPM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لانتاج وتسويق اللحوم_AIPM _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Iraqi Agricultural Products Marketing Meat_AIPM _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AIRP": {
+    "ticker": "AIRP",
+    "name_ar": "العراقية للمنتجات الزراعية",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AIRP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AIRP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AIRP_AIRP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المنتجات الزراعية_AIRP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/69_AIRP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للمنتجات زراعية_AIRP _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Iraqi Agricultural Products_AIRP _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AISP": {
+    "ticker": "AISP",
+    "name_ar": "العراقية لانتاج البذور",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AISP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AISP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AISP_AISP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لانتاج البذور_AISP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/67_AISP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية لانتاج البذور_AISP _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Iraqi for Seed Production_AISP _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AMAP": {
+    "ticker": "AMAP",
+    "name_ar": "الحديثة للانتاج الحيواني",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AMAP",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AMAP",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AMAP_AMAP _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الحديثة الحيواني_AMAP _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/65_AMAP _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الحديثة للانتاج الحيواني_AMAP _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Modern for Animal Production_AMAP _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AMEF": {
+    "ticker": "AMEF",
+    "name_ar": "الشرق الاوسط لانتاج وتسويق الاسماك",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AMEF",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AMEF",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/AMEF_AMEF _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الشرق الاوسط للاسماك_AMEF _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/66_AMEF _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الشرق الاوسط اسماك_AMEF _2014_Ar.pdf"
+      },
+      {
+        "year": "2012",
+        "url": "http://www.isx-iq.net/isxportal/files/Middle East for Production- Fish_AMEF _2012_Ar.pdf"
+      }
+    ]
+  },
+  "AREB": {
+    "ticker": "AREB",
+    "name_ar": "الريباس للدواجن والاعلاف",
+    "sector_ar": "الزراعة",
+    "sector_id": "8",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=AREB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=AREB",
+    "files": []
+  },
+  "TASC": {
+    "ticker": "TASC",
+    "name_ar": "اسيا سيل للاتصالات",
+    "sector_ar": "الإتصالات",
+    "sector_id": "10",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=TASC",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=TASC",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/TASC_TASC _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/اسيا سيل للاتصالات_TASC _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/70_TASC _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/اسيا سيل_TASC _2014_Ar.pdf"
+      },
+      {
+        "year": "2013",
+        "url": "http://www.isx-iq.net/isxportal/files/اسيا سيل 2013دقق_TASC_2013_Ar.pdf"
+      }
+    ]
+  },
+  "TZNI": {
+    "ticker": "TZNI",
+    "name_ar": "شركة الخاتم للاتصالات",
+    "sector_ar": "الإتصالات",
+    "sector_id": "10",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=TZNI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=TZNI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/tzni_TZNI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الخاتم للاتصالات_TZNI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/71_tzni_2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الخاتم_TZNI _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTAG": {
+    "ticker": "MTAG",
+    "name_ar": "عطاء الغري للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTAG",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTAG",
+    "files": []
+  },
+  "MTAH": {
+    "ticker": "MTAH",
+    "name_ar": "الحرير للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTAH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTAH",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTAH_MTAH _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الحرير للتحويل المالي_MTAH _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/79_MTAH _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الحرير للتحويل المالي_MTAH _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTAI": {
+    "ticker": "MTAI",
+    "name_ar": "الطيف للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTAI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTAI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTAI_MTAI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الطيف للتحويل المالي_MTAI _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/89_MTAI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الطيف للتحويل المالي_MTAI _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTAM": {
+    "ticker": "MTAM",
+    "name_ar": "المهج للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTAM",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTAM",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/81_MTAM _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المهج للتحويل المالي_MTAM _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTIR": {
+    "ticker": "MTIR",
+    "name_ar": "العراقية للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTIR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTIR",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/78_MTIR _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/العراقية للتحويل المالي_MTIR _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTMA": {
+    "ticker": "MTMA",
+    "name_ar": "المنافع للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTMA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTMA",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTMA_MTMA _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/المنافع للتحويل المالي_MTMA _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/84_MTMA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المنافع للتحويل المالي_MTMA _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTMO": {
+    "ticker": "MTMO",
+    "name_ar": "مؤتة للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTMO",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTMO",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTMO_MTMO _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/مؤته للتحويل المالي_MTMO _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/83_MTMO _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/مؤته للتحويل المالي_MTMO _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTMR": {
+    "ticker": "MTMR",
+    "name_ar": "المرج العالمية للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTMR",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTMR",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/92_MTMR _2016_Ar.pdf"
+      }
+    ]
+  },
+  "MTMT": {
+    "ticker": "MTMT",
+    "name_ar": "المؤتمن للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTMT",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTMT",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/90_MTMT _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/المؤتمن للتحويل المالي_MTMT _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTNI": {
+    "ticker": "MTNI",
+    "name_ar": "النبال العربية للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTNI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTNI",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTNI_MTNI _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/النبال العربية_mtni_2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/91_MTNI _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/النبال للتحويل المالي_MTNI _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTNN": {
+    "ticker": "MTNN",
+    "name_ar": "النور للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTNN",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTNN",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTNN_MTNN _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/النور للتحويل المالي_MTNN _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/85_MTNN _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/النور للتحويل المالي_MTNN _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTNO": {
+    "ticker": "MTNO",
+    "name_ar": "النبلاء للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTNO",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTNO",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTNO_MTNO _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/النبلاء للتحويل المالي_MTNO _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/87_MTNO _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/النبلاء للتحويل المالي_MTNO _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTRA": {
+    "ticker": "MTRA",
+    "name_ar": "الرابطة المالية للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTRA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTRA",
+    "files": [
+      {
+        "year": "2018",
+        "url": "http://www.isx-iq.net/isxportal/files/MTRA_MTRA _2018_Ar.pdf"
+      },
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الرابطة المالية_MTRA _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/88_MTRA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الرابطةللتحويل المالي_MTRA _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTRV": {
+    "ticker": "MTRV",
+    "name_ar": "النهر الخالد للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTRV",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTRV",
+    "files": []
+  },
+  "MTSB": {
+    "ticker": "MTSB",
+    "name_ar": "سما بغداد للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTSB",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTSB",
+    "files": [
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/80_MTSB _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/سما بغداد للتحويل المالي_MTSB _2014_Ar.pdf"
+      }
+    ]
+  },
+  "MTUN": {
+    "ticker": "MTUN",
+    "name_ar": "الشركة المتحدة للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTUN",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTUN",
+    "files": []
+  },
+  "MTWA": {
+    "ticker": "MTWA",
+    "name_ar": "الوائل للتحويل المالي",
+    "sector_ar": "التحويل المالي",
+    "sector_id": "11",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=MTWA",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=MTWA",
+    "files": [
+      {
+        "year": "2017",
+        "url": "http://www.isx-iq.net/isxportal/files/الؤائل للتحويل المالي_MTWA _2017_Ar.pdf"
+      },
+      {
+        "year": "2016",
+        "url": "http://www.isx-iq.net/isxportal/files/86_MTWA _2016_Ar.pdf"
+      },
+      {
+        "year": "2014",
+        "url": "http://www.isx-iq.net/isxportal/files/الوائل للتحويل المالي_MTWA _2014_Ar.pdf"
+      }
+    ]
+  },
+  "FIDI": {
+    "ticker": "FIDI",
+    "name_ar": "الشركة العراقية لضمان الودائع",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=FIDI",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=FIDI",
+    "files": []
+  },
+  "FISH": {
+    "ticker": "FISH",
+    "name_ar": "بوابة عشتار للنظم وخدمات الدفع",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=FISH",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=FISH",
+    "files": []
+  },
+  "FKSX": {
+    "ticker": "FKSX",
+    "name_ar": "الكرمل للوساطة",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=FKSX",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=FKSX",
+    "files": []
+  },
+  "FRSE": {
+    "ticker": "FRSE",
+    "name_ar": "الربيع للوساطة",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=FRSE",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=FRSE",
+    "files": []
+  },
+  "FSBE": {
+    "ticker": "FSBE",
+    "name_ar": "سما بغداد للصرافة",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=FSBE",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=FSBE",
+    "files": []
+  },
+  "NDIL": {
+    "ticker": "NDIL",
+    "name_ar": "دلنيا للتأمين",
+    "sector_ar": "الخدمات المالية",
+    "sector_id": "12",
+    "guide_url": "http://www.isx-iq.net/isxportal/portal/companyGuide.html?companyCode=NDIL",
+    "profile_url": "http://www.isx-iq.net/isxportal/portal/companyprofilecontainer.html?companyCode=NDIL",
+    "files": []
+  }
+}
