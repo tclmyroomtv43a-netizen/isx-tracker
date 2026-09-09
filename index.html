@@ -241,6 +241,16 @@
   .side-panel-head .side-panel-title{ padding:0; }
   .company-sort{ background:var(--panel-2); color:var(--ink-dim); border:1px solid var(--line); border-radius:6px; padding:3px 6px; font-family:'IBM Plex Mono',monospace; font-size:10px; cursor:pointer; }
   .company-sort:hover{ color:var(--ink); border-color:var(--gold-dim); }
+  .field-chart{margin-top:8px; padding:8px 10px 6px; background:var(--panel-2); border:1px solid var(--line-soft); border-radius:var(--radius);}
+  .fchart-svg{width:100%; height:88px; display:block;}
+  .fchart-grid{stroke:var(--line); stroke-width:1;}
+  .fchart-line{fill:none; stroke:#5b9bd5; stroke-width:1.8; vector-effect:non-scaling-stroke;}
+  .fchart-carry{stroke:var(--gold-dim); stroke-width:1.6; stroke-dasharray:4 4; vector-effect:non-scaling-stroke;}
+  .fchart-dot{fill:#5b9bd5;}
+  .fchart-dot-open{fill:var(--paper); stroke:var(--gold-dim); stroke-width:1.4;}
+  .fchart-ax{font-family:'IBM Plex Mono',monospace; font-size:9px; fill:var(--ink-faint);}
+  .fchart-cap{margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--ink-faint);}
+  @media print{ .field-chart{background:#fff; border:1px solid #ccc;} }
 </style>
 </head>
 <body>
@@ -295,6 +305,7 @@
       <button class="btn" id="importBtn">Import JSON</button>
       <input type="file" id="importFile" accept="application/json" class="hidden">
       <button class="btn" id="printBtn">Print / Save PDF</button>
+      <button class="btn" id="chartsToggleBtn">Field charts: on</button>
       <button class="btn" id="clearBtn">Clear all</button>
     </div>
     <div class="feed-bar">
@@ -304,6 +315,7 @@
       <span class="feed-spacer"></span>
       <button class="btn" id="feedSyncBtn" type="button">Sync ISX prices</button>
       <button class="btn" id="feedLoadAllBtn" type="button">+ Load all ISX companies</button>
+      <button class="btn" id="guideFillBtn" type="button" title="Fill Arabic name, sector and ISX document links for every company from the ISX Companies Guide">Fill from ISX Guide</button>
       <label class="feed-int">Auto
         <select id="feedIntervalSel">
           <option value="0">Off</option>
@@ -340,6 +352,117 @@
     return TEXTAREA_HINTS.some(h => l.includes(h));
   }
 
+
+  /* ============== PER-FIELD ANNUAL CHARTS ==============
+     Reads year/value pairs straight out of what a field already says
+     (e.g. "FY2025 2,024 | FY2024 1,872 | FY2023 1,659") and draws a small
+     history chart under the box. Years with no figure are carried forward
+     as a flat dashed line to CHART_END_YEAR, so a stale number is visibly
+     stale rather than silently missing.                                    */
+  const CHART_END_YEAR = 2026;
+  let fieldChartsOn = true;
+  try{ fieldChartsOn = localStorage.getItem("isx_field_charts") !== "off"; }catch(e){}
+
+  function parseYearSeries(text){
+    if (!text || text.length < 8) return null;
+    const re = /(?:^|[^\d.,])(?:FY|fy)?\s*((?:19|20)\d{2})(?!\d)\s*([:=]|-|–|—)?\s*\(?\s*([+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)\s*(%|bn|bln|mn|m|k)?/g;
+    const byYear = {}; let m, unit = "";
+    while ((m = re.exec(text)) !== null){
+      const year = parseInt(m[1], 10);
+      const sep = m[2], raw = m[3], u = m[4];
+      if (year < 1990 || year > 2035) continue;
+      const hadComma = raw.indexOf(",") !== -1;
+      const stripped = raw.replace(/,/g, "");
+      // skip year lists ("2013, 2014, 2015") and ranges ("2014-2017"):
+      // a bare 4-digit year as the "value" is not a data point
+      const looksLikeYear = !hadComma && /^(19|20)\d{2}$/.test(stripped);
+      if (looksLikeYear && !u && sep !== ":" && sep !== "=") continue;
+      const v = parseFloat(stripped);
+      if (!isFinite(v)) continue;
+      if (!unit && u) unit = u;
+      if (!(year in byYear)) byYear[year] = v;      // first mention wins
+    }
+    const years = Object.keys(byYear).map(Number).sort((a, b) => a - b);
+    if (years.length < 2) return null;
+    return { pts: years.map(y => ({ y: y, v: byYear[y] })), unit: unit };
+  }
+
+  function niceNum(v){
+    const a = Math.abs(v);
+    if (a >= 1000) return Math.round(v).toLocaleString();
+    if (a >= 10) return (Math.round(v * 10) / 10).toString();
+    return (Math.round(v * 100) / 100).toString();
+  }
+
+  function fieldChartSVG(ser){
+    const pts = ser.pts, unit = ser.unit ? (" " + ser.unit) : "";
+    const last = pts[pts.length - 1];
+    const endYear = Math.max(CHART_END_YEAR, last.y);
+    const y0 = pts[0].y, y1 = endYear;
+    const W = 620, H = 108, mL = 46, mR = 12, mT = 10, mB = 20;
+    const iw = W - mL - mR, ih = H - mT - mB;
+    const vals = pts.map(p => p.v);
+    let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    if (lo === hi){ const d = Math.abs(lo) * 0.1 || 1; lo -= d; hi += d; }
+    else { const pad = (hi - lo) * 0.14; lo -= pad; hi += pad; }
+    const X = y => mL + (y1 === y0 ? 0.5 : (y - y0) / (y1 - y0)) * iw;
+    const Y = v => mT + ih - (v - lo) / (hi - lo) * ih;
+
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="fchart-svg" preserveAspectRatio="none">';
+    [0, 1].forEach(i => {
+      const yy = mT + ih * i;
+      svg += '<line x1="' + mL + '" y1="' + yy + '" x2="' + (mL + iw) + '" y2="' + yy + '" class="fchart-grid"/>';
+    });
+    svg += '<text x="' + (mL - 6) + '" y="' + (mT + 4) + '" class="fchart-ax" text-anchor="end">' + niceNum(hi) + '</text>';
+    svg += '<text x="' + (mL - 6) + '" y="' + (mT + ih + 3) + '" class="fchart-ax" text-anchor="end">' + niceNum(lo) + '</text>';
+
+    svg += '<polyline points="' + pts.map(p => X(p.y).toFixed(1) + ',' + Y(p.v).toFixed(1)).join(" ") + '" class="fchart-line"/>';
+    if (endYear > last.y){
+      svg += '<line x1="' + X(last.y).toFixed(1) + '" y1="' + Y(last.v).toFixed(1) +
+             '" x2="' + X(endYear).toFixed(1) + '" y2="' + Y(last.v).toFixed(1) + '" class="fchart-carry"/>';
+      svg += '<circle cx="' + X(endYear).toFixed(1) + '" cy="' + Y(last.v).toFixed(1) + '" r="3" class="fchart-dot-open"/>';
+    }
+    pts.forEach(p => {
+      svg += '<circle cx="' + X(p.y).toFixed(1) + '" cy="' + Y(p.v).toFixed(1) + '" r="2.6" class="fchart-dot"><title>' +
+             p.y + ": " + niceNum(p.v) + escHtml(unit) + '</title></circle>';
+    });
+    svg += '<text x="' + mL + '" y="' + (H - 6) + '" class="fchart-ax">' + y0 + '</text>';
+    svg += '<text x="' + (mL + iw) + '" y="' + (H - 6) + '" class="fchart-ax" text-anchor="end">' + endYear + '</text>';
+    svg += '</svg>';
+
+    const carried = endYear > last.y
+      ? ' · flat from ' + last.y + ' (no newer figure)'
+      : '';
+    svg += '<div class="fchart-cap">' + pts.length + ' years · latest ' + niceNum(last.v) + escHtml(unit) +
+           ' in ' + last.y + carried + '</div>';
+    return svg;
+  }
+
+  function renderFieldChart(f){
+    let box = f.querySelector(".field-chart");
+    const el = f.querySelector("input[type=text], textarea");
+    const ser = (fieldChartsOn && el) ? parseYearSeries(el.value) : null;
+    if (!ser){ if (box) box.remove(); return; }
+    if (!box){
+      box = document.createElement("div");
+      box.className = "field-chart";
+      f.appendChild(box);
+    }
+    box.innerHTML = fieldChartSVG(ser);
+  }
+
+  function renderFieldCharts(){
+    document.querySelectorAll(".main .field").forEach(renderFieldChart);
+  }
+
+  let fcTimer = null;
+  document.addEventListener("input", function(e){
+    const f = e.target && e.target.closest ? e.target.closest(".main .field") : null;
+    if (!f) return;
+    if (fcTimer) clearTimeout(fcTimer);
+    fcTimer = setTimeout(() => renderFieldChart(f), 500);
+  });
+
   /* ---- content-proportional field sizing ----
      Boxes grow to fit what they hold: textareas auto-grow to their content,
      single-line inputs holding a lot of text are promoted to textareas, and
@@ -369,6 +492,7 @@
 
   function autoSizeFields(){
     document.querySelectorAll(".main .field").forEach(autoSizeField);
+    if (typeof renderFieldCharts === "function") renderFieldCharts();
   }
 
   // keep boxes fitting while the person types
@@ -972,6 +1096,12 @@
     let cls = "feed-dot", txt = "";
     if (state === "loading"){ cls += " load"; txt = "Fetching ISX data..."; }
     else if (state === "error"){ cls += " err"; txt = "Feed unavailable (" + info + "). Set FEED_URL to your latest.json (e.g. GitHub raw URL)."; }
+    else if (state === "guide"){
+      cls += " ok";
+      txt = "ISX Guide: filled " + info.filled + " companies" +
+            (info.added ? (", added " + info.added + " new") : "") +
+            " (directory of " + info.total + ")";
+    }
     else if (state === "loaded"){ cls += " ok"; txt = "Loaded " + info + " new companies from ISX" + (feedReportDate ? (" - " + feedReportDate) : ""); }
     else {
       cls += " ok";
@@ -1025,11 +1155,80 @@
       if (n === 0) alert("All companies from the ISX feed are already in your database.");
     });
     if (sel) sel.addEventListener("change", () => setRefreshInterval(parseInt(sel.value, 10)));
+    const gb = document.getElementById("guideFillBtn");
+    if (gb) gb.addEventListener("click", fillFromGuide);
     setInterval(updateCountdownLabel, 1000);
   })();
 
+  /* ---- ISX Companies Guide (directory + filing links) ---- */
+  const GUIDE_URL = "data/companies_guide.json";
+  let guideData = {};
+
+  async function fetchGuide(){
+    try{
+      const res = await fetch(GUIDE_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      guideData = (await res.json()) || {};
+    }catch(err){ guideData = {}; }
+  }
+
+  function guideDocsText(g){
+    const lines = (g.files || []).map(f => "[" + (f.year || "n/a") + "] " + f.url);
+    let s = "ISX Companies Guide profile: " + g.guide_url;
+    if (lines.length) s += "\nAnnual PDF profiles (scanned, Arabic):\n" + lines.join("\n");
+    else s += "\n(No PDF profiles listed for this company in the guide.)";
+    return s;
+  }
+
+  function fillOneFromGuide(c){
+    const tk = tickerOf(c);
+    const g = tk ? guideData[tk] : null;
+    if (!g) return false;
+    const set = (key, val) => {
+      if (!val) return;
+      if (c.id === displayedId){
+        const el = document.querySelector('[name="' + key + '"]');
+        if (el){ if (!el.value.trim()) el.value = val; return; }   // never overwrite your work
+      } else if (!String(c.data[key] || "").trim()){
+        c.data[key] = val;
+      }
+    };
+    set("basic-identity__official-legal-name", g.name_ar);
+    set("basic-identity__industry", g.sector_ar);
+    set("basic-identity__stock-exchange",
+        "Iraq Stock Exchange (ISX) — sector: " + (g.sector_ar || "") + ". Profile: " + g.profile_url);
+    set("basic-identity__countries-of-operation", "Iraq");
+    set("documents__annual-reports", guideDocsText(g));
+    if ((!c.name || /^(New company|Untitled Company)$/.test(c.name)) && g.name_ar) c.name = g.name_ar;
+    return true;
+  }
+
+  async function fillFromGuide(){
+    if (!Object.keys(guideData).length) await fetchGuide();
+    const n = Object.keys(guideData).length;
+    if (!n){
+      updateFeedStatus("error", "companies_guide.json not found — run isx_guide_scraper.py and commit data/companies_guide.json");
+      return;
+    }
+    const have = new Set(companies.map(c => tickerOf(c)).filter(Boolean));
+    let added = 0;
+    Object.keys(guideData).forEach(tk => {
+      if (have.has(tk)) return;
+      const g = guideData[tk];
+      companies.push({ id: newCompanyId(), name: g.name_ar || tk,
+                       data: { "__companyName": g.name_ar || tk, "basic-identity__stock-ticker": tk } });
+      added++;
+    });
+    let filled = 0;
+    companies.forEach(c => { if (fillOneFromGuide(c)) filled++; });
+    if (displayedId != null){ autoSizeFields(); updateProgress(); }
+    renderCompanyList();
+    saveNow();
+    updateFeedStatus("guide", { filled: filled, added: added, total: n });
+  }
+
   async function bootFeed(){
-    await Promise.all([fetchFeed(), fetchHistory()]);
+    await Promise.all([fetchFeed(), fetchHistory(), fetchGuide()]);
     syncAllFromFeed();
     renderPriceChart();
     const sel = document.getElementById("feedIntervalSel");
@@ -1546,6 +1745,18 @@
       drillToSections();
     }
   });
+  (function(){
+    const b = document.getElementById("chartsToggleBtn");
+    if (!b) return;
+    const paint = () => { b.textContent = "Field charts: " + (fieldChartsOn ? "on" : "off"); b.classList.toggle("primary", fieldChartsOn); };
+    paint();
+    b.addEventListener("click", () => {
+      fieldChartsOn = !fieldChartsOn;
+      try{ localStorage.setItem("isx_field_charts", fieldChartsOn ? "on" : "off"); }catch(e){}
+      paint();
+      renderFieldCharts();
+    });
+  })();
   document.getElementById("addCompanyBtn").addEventListener("click", addCompany);
   const _sortSel = document.getElementById("companySort");
   if (_sortSel) _sortSel.addEventListener("change", () => { companySortMode = _sortSel.value; renderCompanyList(); });
