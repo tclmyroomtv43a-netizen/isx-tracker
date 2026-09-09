@@ -60,7 +60,7 @@ FIELD_SYNONYMS = {
     "open":       ["opening price"],
     "high":       ["highest price"],
     "low":        ["lowest price"],
-    "close":      ["closing price"],
+    "close":      ["closing price", "average price"],   # OTC sheet has no close
     "prev_close": ["prev closing price", "previous closing price"],
     "change_pct": ["change (%)", "change(%)", "change %", "change"],
     "trades":     ["no.of trades", "no. of trades", "number of trades"],
@@ -80,13 +80,20 @@ def _norm(v) -> str:
 
 
 def _resolve_columns(header_cells) -> dict:
-    """field -> column index, from normalised header text (first free match wins)."""
+    """field -> column index. Synonyms are tried in priority order, so a
+    preferred header ("closing price") always beats a fallback ("average
+    price") even when the fallback sits in an earlier column."""
     norm = [_norm(c) for c in header_cells]
     col_of = {}
     for field, syns in FIELD_SYNONYMS.items():
-        for i, h in enumerate(norm):
-            if h in syns and i not in col_of.values():
-                col_of[field] = i
+        for syn in syns:                      # priority order matters
+            hit = None
+            for i, h in enumerate(norm):
+                if h == syn and i not in col_of.values():
+                    hit = i
+                    break
+            if hit is not None:
+                col_of[field] = hit
                 break
     return col_of
 
@@ -229,6 +236,16 @@ def parse_daily_excel(path: Path, report_date: str) -> pd.DataFrame:
     if main is not None:
         records += _extract_sheet(pd.read_excel(path, sheet_name=main, header=None, dtype=str))
 
+    # OTC platform sheet: money-transfer and financial-services companies that
+    # never appear on the regular/second-platform bulletin.
+    traded_main = {r["ticker"] for r in records}
+    otc = next((s for s in sheets if s.strip().lower() == "otc"), None)
+    if otc is not None:
+        for r in _extract_sheet(pd.read_excel(path, sheet_name=otc, header=None, dtype=str)):
+            if r["ticker"] not in traded_main:
+                r["market"] = "OTC"
+                records.append(r)
+
     # Companies that didn't trade: capture their carried-over closing price too,
     # so every listed company gets a row each day (volume/trades = 0).
     traded = {r["ticker"] for r in records}
@@ -287,7 +304,7 @@ def write_latest_json(prices: pd.DataFrame) -> None:
                     continue                       # skip blanks so the JSON stays valid
                 clean[k] = s
             latest[str(tk)] = clean
-    LATEST_JSON.write_text(json.dumps(latest, ensure_ascii=False, indent=2))
+    LATEST_JSON.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def _clean_num(v):
@@ -314,7 +331,7 @@ def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
     hist = {}
     if HISTORY_JSON.exists():
         try:
-            hist = json.loads(HISTORY_JSON.read_text())
+            hist = json.loads(HISTORY_JSON.read_text(encoding="utf-8"))
         except Exception:
             hist = {}
     if {"ticker", "date", "close"}.issubset(prices.columns):
@@ -340,7 +357,7 @@ def write_history_json(prices: pd.DataFrame, summary_path: Path) -> None:
                     _merge_series(hist, "__ISX60", idx)
     except Exception as e:
         print("index history skipped:", e)
-    HISTORY_JSON.write_text(json.dumps(hist, ensure_ascii=False))
+    HISTORY_JSON.write_text(json.dumps(hist, ensure_ascii=False), encoding="utf-8")
 
 
 def main() -> None:
