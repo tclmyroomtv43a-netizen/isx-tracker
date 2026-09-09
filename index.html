@@ -315,6 +315,7 @@
       <span class="feed-spacer"></span>
       <button class="btn" id="feedSyncBtn" type="button">Sync ISX prices</button>
       <button class="btn" id="feedLoadAllBtn" type="button">+ Load all ISX companies</button>
+      <button class="btn" id="finFillBtn" type="button" title="Fill multi-year financials extracted from the ISX Companies Guide PDFs (data/financials_fields.json)">Fill financials</button>
       <button class="btn" id="guideFillBtn" type="button" title="Fill Arabic name, sector and ISX document links for every company from the ISX Companies Guide">Fill from ISX Guide</button>
       <label class="feed-int">Auto
         <select id="feedIntervalSel">
@@ -391,7 +392,9 @@
     const a = Math.abs(v);
     if (a >= 1000) return Math.round(v).toLocaleString();
     if (a >= 10) return (Math.round(v * 10) / 10).toString();
-    return (Math.round(v * 100) / 100).toString();
+    if (a >= 1) return (Math.round(v * 100) / 100).toString();
+    if (a === 0) return "0";
+    return parseFloat(v.toPrecision(3)).toString();   // keep small values (EPS 0.002) readable
   }
 
   function fieldChartSVG(ser){
@@ -1096,6 +1099,10 @@
     let cls = "feed-dot", txt = "";
     if (state === "loading"){ cls += " load"; txt = "Fetching ISX data..."; }
     else if (state === "error"){ cls += " err"; txt = "Feed unavailable (" + info + "). Set FEED_URL to your latest.json (e.g. GitHub raw URL)."; }
+    else if (state === "fin"){
+      cls += " ok";
+      txt = "Financials: filled " + info.filled + " companies from the guide PDFs (" + info.total + " extracted)";
+    }
     else if (state === "guide"){
       cls += " ok";
       txt = "ISX Guide: filled " + info.filled + " companies" +
@@ -1157,6 +1164,8 @@
     if (sel) sel.addEventListener("change", () => setRefreshInterval(parseInt(sel.value, 10)));
     const gb = document.getElementById("guideFillBtn");
     if (gb) gb.addEventListener("click", fillFromGuide);
+    const fb = document.getElementById("finFillBtn");
+    if (fb) fb.addEventListener("click", fillFinancials);
     setInterval(updateCountdownLabel, 1000);
   })();
 
@@ -1227,8 +1236,81 @@
     updateFeedStatus("guide", { filled: filled, added: added, total: n });
   }
 
+  /* ---- financials extracted from the guide PDFs (isx_pdf_extract.py) ---- */
+  const FIN_URL = "data/financials_fields.json";
+  let finData = {};
+
+  // which extracted metrics go into which dossier field. The FIRST metric in
+  // each list becomes the charted series, so the primary measure leads.
+  const FIN_MAP = {
+    "financials__assets":                ["total_assets_iqd", "current_assets_iqd", "fixed_assets_iqd", "islamic_financing_iqd", "intangible_assets_iqd"],
+    "financials__revenue":               ["revenue_iqd", "operating_income_iqd"],
+    "financials__net-income":            ["net_profit_iqd"],
+    "financials__cash":                  ["cash_iqd", "ending_cash_iqd", "net_cash_flow_iqd", "balances_at_banks_iqd"],
+    "financials__liabilities":           ["total_liabilities_iqd", "customer_deposits_iqd", "short_term_liabilities_iqd", "other_liabilities_iqd"],
+    "financials__equity":                ["total_equity_iqd", "paid_capital_iqd", "retained_earnings_iqd", "reserves_iqd", "long_term_sources_iqd", "working_capital_iqd"],
+    "stock-info__earnings-history":      ["eps_iqd"],
+    "stock-info__p-b":                   ["book_value_iqd"],
+    "stock-info__p-e":                   ["pe_ratio"],
+    "stock-info__market-capitalization": ["market_cap_iqd_m"],
+    "stock-info__historical-share-price":["close_price_iqd", "avg_price_iqd", "high_price_iqd", "low_price_iqd"],
+    "stock-info__volatility":            ["traded_shares", "trading_volume", "share_turnover_pct", "trading_rate_pct"],
+    "stock-info__dividend-history":      ["dividend_pct"],
+    "ownership__ownership-history":      ["ownership_pct"],
+    "ownership__current-owners":         ["profile_participants"],
+    "basic-identity__headquarters":      ["profile_address", "profile_phone"],
+    "basic-identity__website":           ["profile_website", "profile_email"],
+    "basic-identity__founded-date":      ["profile_established", "profile_listing_date"],
+    "basic-identity__company-registration": ["profile_isin", "profile_auditor", "profile_code"],
+    "basic-identity__industry":          ["profile_sector"],
+    "business-model__core-business":     ["profile_activity"],
+    "leadership__ceo":                   ["profile_director"]
+  };
+
+  async function fetchFin(){
+    try{
+      const res = await fetch(FIN_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      finData = (await res.json()) || {};
+    }catch(err){ finData = {}; }
+  }
+
+  function fillOneFinancials(c){
+    const tk = tickerOf(c);
+    const m = tk ? finData[tk] : null;
+    if (!m) return false;
+    let wrote = 0;
+    Object.keys(FIN_MAP).forEach(key => {
+      const lines = FIN_MAP[key].map(metric => m[metric]).filter(Boolean);
+      if (!lines.length) return;
+      const text = lines.join("\n");
+      if (c.id === displayedId){
+        const el = document.querySelector('[name="' + key + '"]');
+        if (el && !el.value.trim()){ el.value = text; wrote++; }
+      } else if (!String(c.data[key] || "").trim()){
+        c.data[key] = text; wrote++;
+      }
+    });
+    return wrote > 0;
+  }
+
+  async function fillFinancials(){
+    if (!Object.keys(finData).length) await fetchFin();
+    const n = Object.keys(finData).length;
+    if (!n){
+      updateFeedStatus("error", "financials_fields.json not found — run isx_pdf_extract.py and commit data/financials_fields.json");
+      return;
+    }
+    let filled = 0;
+    companies.forEach(c => { if (fillOneFinancials(c)) filled++; });
+    if (displayedId != null){ autoSizeFields(); updateProgress(); }
+    renderCompanyList();
+    saveNow();
+    updateFeedStatus("fin", { filled: filled, total: n });
+  }
+
   async function bootFeed(){
-    await Promise.all([fetchFeed(), fetchHistory(), fetchGuide()]);
+    await Promise.all([fetchFeed(), fetchHistory(), fetchGuide(), fetchFin()]);
     syncAllFromFeed();
     renderPriceChart();
     const sel = document.getElementById("feedIntervalSel");
