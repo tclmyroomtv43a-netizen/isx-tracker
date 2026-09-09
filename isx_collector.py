@@ -60,7 +60,7 @@ FIELD_SYNONYMS = {
     "open":       ["opening price"],
     "high":       ["highest price"],
     "low":        ["lowest price"],
-    "close":      ["closing price", "average price"],   # OTC sheet has no close
+    "close":      ["closing price", "average price", "previous average price"],
     "prev_close": ["prev closing price", "previous closing price"],
     "change_pct": ["change (%)", "change(%)", "change %", "change"],
     "trades":     ["no.of trades", "no. of trades", "number of trades"],
@@ -111,17 +111,28 @@ def _find_header_row(df):
 
 
 def _extract_sheet(df) -> list:
-    """Company rows from a price-table sheet. Skips title/sector/total rows and
-    tolerates a second header partway down (Regular + Second Platform markets)."""
-    hdr, col_of = _find_header_row(df)
-    if hdr is None:
-        return []
-    tcol = col_of["ticker"]
+    """Company rows from a price-table sheet.
+
+    A sheet can hold SEVERAL tables with DIFFERENT column layouts - e.g. the OTC
+    sheet has a traded table and then a "Not Trading OTC Companies" table whose
+    Code sits in another column. So instead of locking onto the first header, we
+    re-read the column mapping every time a new header row appears and apply it
+    to the rows beneath. Sector and total rows have no ticker and drop out."""
     out = []
-    for i in range(hdr + 1, len(df)):
+    col_of = None
+    for i in range(len(df)):
         row = df.iloc[i].tolist()
+        norm = [_norm(c) for c in row]
+        if "code" in norm and ("company name" in norm or "company names" in norm):
+            cand = _resolve_columns(row)
+            if "ticker" in cand:
+                col_of = cand          # switch to this table's layout
+            continue
+        if not col_of:
+            continue
+        tcol = col_of["ticker"]
         code = str(row[tcol]).strip() if tcol < len(row) else ""
-        if not TICKER_RE.match(code):     # real tickers are 2-6 capitals; skips headers/sectors/totals
+        if not TICKER_RE.match(code):   # real tickers are 2-6 capitals
             continue
         rec = {"ticker": code}
         for field, ci in col_of.items():
