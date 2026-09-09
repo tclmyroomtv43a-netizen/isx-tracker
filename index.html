@@ -16,10 +16,10 @@
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', system-ui, sans-serif; font-size:14px; line-height:1.5;}
+  body{background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', system-ui, sans-serif; font-size:15.5px; line-height:1.55;}
   ::selection{background:var(--gold-dim); color:#12161A;}
 
-  .shell{display:grid; grid-template-columns:260px 1fr; min-height:100vh;}
+  .shell{display:grid; grid-template-columns:290px minmax(0,1fr); min-height:100vh;}
   @media (max-width:900px){ .shell{grid-template-columns:1fr;} .sidebar{position:static; height:auto;} }
 
   .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--panel); border-right:1px solid var(--line); padding:20px 0 40px;}
@@ -35,41 +35,66 @@
   .progress-fill{height:100%; background:var(--gold); width:0%; transition:width .25s ease;}
 
   .toc{padding:8px 8px 0;}
-  .toc a{display:flex; gap:10px; align-items:baseline; padding:5px 12px; color:var(--ink-dim); text-decoration:none; font-size:12.5px; border-radius:var(--radius);}
+  .toc a{display:flex; gap:10px; align-items:baseline; padding:6px 12px; color:var(--ink-dim); text-decoration:none; font-size:13.5px; border-radius:var(--radius);}
   .toc a:hover{background:var(--panel-2); color:var(--ink);}
   .toc a .n{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gold-dim); width:22px; flex:none;}
 
-  .main{padding:34px 40px 120px; max-width:960px;}
+  .main{padding:34px 46px 120px; max-width:1720px; margin:0 auto; width:100%;}
   @media (max-width:900px){ .main{padding:24px 18px 100px;} }
 
   .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid var(--line);}
-  .btn{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; background:var(--panel); color:var(--ink); border:1px solid var(--line); padding:8px 14px; border-radius:var(--radius); cursor:pointer;}
+  .btn{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.04em; background:var(--panel); color:var(--ink); border:1px solid var(--line); padding:8px 14px; border-radius:var(--radius); cursor:pointer;}
   .btn:hover{border-color:var(--gold-dim); color:var(--gold);}
   .btn.primary{border-color:var(--gold-dim); color:var(--gold);}
   .btn.active{background:var(--gold); color:#12161A; border-color:var(--gold); font-weight:600;}
-  .search{flex:1; min-width:180px; background:var(--panel); border:1px solid var(--line); color:var(--ink); padding:8px 12px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; outline:none;}
+  .search{flex:1; min-width:200px; background:var(--panel); border:1px solid var(--line); color:var(--ink); padding:9px 13px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:14px; outline:none;}
   .search:focus{border-color:var(--gold-dim);}
 
-  .part-desc{color:var(--ink-faint); font-size:12px; margin-bottom:22px;}
+  .part-desc{color:var(--ink-faint); font-size:13px; margin-bottom:22px;}
 
   .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px 24px; margin-bottom:18px; scroll-margin-top:20px; position:relative;}
   .card-head{display:flex; align-items:baseline; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--line-soft);}
-  .card-head .num{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:13px;}
-  .card-head h2{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:18px; margin:0; color:var(--ink); flex:1;}
+  .card-head .num{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:14px;}
+  .card-head h2{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:21px; margin:0; color:var(--ink); flex:1;}
   .card-delete{display:none; background:transparent; border:1px solid var(--line); color:var(--ink-faint); font-size:10.5px; font-family:'IBM Plex Mono',monospace; padding:4px 10px; border-radius:var(--radius); cursor:pointer;}
   body.edit-mode .card-delete{display:inline-block;}
   .card-delete:hover{color:var(--red); border-color:var(--red);}
 
-  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:14px 18px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:18px 22px; align-items:start;}
   .field{display:flex; flex-direction:column; gap:5px; position:relative;}
   .field-top{display:flex; align-items:baseline; justify-content:space-between; gap:8px;}
   .field label{font-size:11.5px; color:var(--ink-dim);}
-  .field input[type=text], .field textarea{width:100%; background:var(--panel-2); border:1px solid var(--line); color:var(--ink); padding:8px 10px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:13px; outline:none; resize:vertical;}
-  .field textarea{min-height:56px; line-height:1.45;}
+  .field input[type=text], .field textarea{width:100%; background:var(--panel-2); border:1px solid var(--line); color:var(--ink); padding:10px 12px; border-radius:var(--radius); font-family:'IBM Plex Sans',sans-serif; font-size:14.5px; line-height:1.55; outline:none; resize:vertical;}
+  .field textarea{min-height:46px; line-height:1.55; overflow:hidden;}
   .field input:focus, .field textarea:focus{border-color:var(--gold-dim); background:#20262c;}
   .field.wide{grid-column:1/-1;}
+  /* content-proportional sizing: set by autoSizeFields() based on how much text a field holds */
+  .field.span3{grid-column:1/-1;}
+  @media (min-width:1100px){ .field.span2{grid-column:span 2;} }
+  @media (max-width:1099px){ .field.span2{grid-column:1/-1;} }
+  .field-top label{font-size:13px;}
 
   .rating{display:flex; gap:2px; flex:none;}
+  .rate-wrap{display:flex; align-items:center; gap:6px; flex:none;}
+  .prio{flex:none; width:17px; height:17px; padding:0; border-radius:3px; cursor:pointer;
+        font-family:'IBM Plex Mono',monospace; font-size:9.5px; line-height:1; font-weight:600;
+        background:transparent; border:1px solid var(--line); color:var(--ink-faint);
+        transition:color .15s ease, border-color .15s ease, background .15s ease;}
+  .prio:hover{border-color:var(--gold-dim);}
+  .prio[data-prio="low"]{color:var(--ink-faint); border-color:var(--line);}
+  .prio[data-prio="med"]{color:var(--gold-dim); border-color:var(--gold-dim);}
+  .prio[data-prio="high"]{color:#12161A; background:var(--gold); border-color:var(--gold);}
+
+  /* overall weighted rating panel in the sidebar */
+  .score-wrap{padding:12px 20px 14px; border-bottom:1px solid var(--line-soft); margin-bottom:8px;}
+  .score-label{display:flex; justify-content:space-between; align-items:baseline;
+               font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-dim); margin-bottom:7px;}
+  .score-value{font-family:'IBM Plex Serif',serif; font-size:17px; font-weight:600; color:var(--gold);}
+  .score-stars{font-size:13px; letter-spacing:1px; color:var(--line); margin-bottom:6px;}
+  .score-stars .on{color:var(--gold);}
+  .score-track{height:3px; background:var(--line); border-radius:2px; overflow:hidden;}
+  .score-fill{height:100%; background:var(--gold); width:0%; transition:width .3s ease;}
+  .score-note{margin-top:7px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--ink-faint); line-height:1.5;}
   .star{cursor:pointer; font-size:12px; line-height:1; color:var(--line); user-select:none;}
   .star.filled{color:var(--gold);}
   .star:hover{color:var(--gold-dim);}
@@ -227,6 +252,12 @@
       <input id="companyNameInput" type="text" placeholder="Company name…" autocomplete="off">
       <div class="sub" id="brandSub">Select a company to view its dossier.</div>
     </div>
+    <div class="score-wrap">
+      <div class="score-label"><span>Overall rating</span><span class="score-value" id="scoreValue">—</span></div>
+      <div class="score-stars" id="scoreStars"><span>★</span><span>★</span><span>★</span></div>
+      <div class="score-track"><div class="score-fill" id="scoreFill"></div></div>
+      <div class="score-note" id="scoreNote">Star a field to start scoring. L/M/H sets how much it counts.</div>
+    </div>
     <div class="progress-wrap">
       <div class="progress-label"><span>Fields completed</span><span id="progressPct">0%</span></div>
       <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
@@ -241,6 +272,7 @@
               <option value="price_desc">Price ↓</option>
               <option value="price_asc">Price ↑</option>
               <option value="change_desc">% ↓</option>
+              <option value="rating_desc">Rating ↓</option>
             </select>
           </div>
           <div class="company-list" id="companyList"></div>
@@ -282,7 +314,7 @@
         </select>
       </label>
     </div>
-    <div class="part-desc" style="margin-bottom:8px;">Click <strong>Edit fields</strong> to reveal delete controls on any box or section. The 1–3 stars on each field are an importance rating you set yourself — they're just a personal reference marker and never combine into any overall company score.</div>
+    <div class="part-desc" style="margin-bottom:8px;">Click <strong>Edit fields</strong> to reveal delete controls on any box or section. Each field has <strong>1–3 stars</strong> (how the company scores on that point) and a <strong>priority button</strong> — L, M or H — for how much it counts. The sidebar <strong>Overall rating</strong> is the weighted average: stars × priority weight (Low 1, Medium 2, High 4) over the fields you've starred. Unstarred fields are ignored, so the score reflects only what you've judged.</div>
     <div class="part-desc">Sections 1–10, 12–25, 27–31 — sections 11 (Competitors) and 26 (M&amp;A) removed, plus a handful of individual fields (Sister companies, Franchises, Joint ventures, Major milestones, Recent share purchases/sales, President) trimmed per request.</div>
     <div id="profileContainer"></div>
 
@@ -307,6 +339,43 @@
     const l = label.toLowerCase();
     return TEXTAREA_HINTS.some(h => l.includes(h));
   }
+
+  /* ---- content-proportional field sizing ----
+     Boxes grow to fit what they hold: textareas auto-grow to their content,
+     single-line inputs holding a lot of text are promoted to textareas, and
+     fields with long content widen to two columns or a full row.          */
+  function fitTextarea(el){
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = Math.max(el.scrollHeight + 2, 44) + "px";
+  }
+
+  function autoSizeField(f){
+    let el = f.querySelector('input[type=text], textarea');
+    if (!el) return;
+    const val = el.value || "";
+    if (el.tagName === "INPUT" && val.length > 80){
+      const ta = document.createElement("textarea");
+      ta.id = el.id; ta.name = el.name; ta.value = val;
+      ta.setAttribute("rows", "2");
+      el.replaceWith(ta);
+      el = ta;
+    }
+    if (el.tagName === "TEXTAREA") fitTextarea(el);
+    f.classList.remove("span2", "span3");
+    if (val.length > 420) f.classList.add("span3");
+    else if (val.length > 150) f.classList.add("span2");
+  }
+
+  function autoSizeFields(){
+    document.querySelectorAll(".main .field").forEach(autoSizeField);
+  }
+
+  // keep boxes fitting while the person types
+  document.addEventListener("input", function(e){
+    const el = e.target;
+    if (el && el.tagName === "TEXTAREA" && el.closest(".main .field")) fitTextarea(el);
+  });
 
   const PROFILE_SECTIONS = [
     {num:1, id:"basic-identity", title:"Basic Identity", fields:[
@@ -445,9 +514,100 @@
   function newCompanyId(){ return "c" + (seq++) + "_" + Math.random().toString(36).slice(2,7); }
 
   function ratingHTML(name){
-    return `<div class="rating" data-rating-for="${escAttr(name)}" data-current="0">
+    return `<div class="rate-wrap">
+      <div class="rating" data-rating-for="${escAttr(name)}" data-current="0">
       <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span>
+    </div>
+      <button type="button" class="prio" data-prio-for="${escAttr(name)}" data-prio="med" title="Priority: how much this field counts toward the overall company rating. Click to cycle Low → Medium → High.">M</button>
     </div>`;
+  }
+
+  /* ============== WEIGHTED RATING ==============
+     Stars (1-3) = how the company scores on that field.
+     Priority (Low/Med/High) = how much that field pulls on the overall rating.
+     Overall = sum(stars x weight) / sum(3 x weight), over rated fields only.  */
+  const PRIO_ORDER = ["low", "med", "high"];
+  const PRIO_WEIGHT = { low: 1, med: 2, high: 4 };
+  const PRIO_LETTER = { low: "L", med: "M", high: "H" };
+
+  function setPriority(btn, val){
+    if (!btn) return;
+    const v = PRIO_WEIGHT[val] ? val : "med";
+    btn.setAttribute("data-prio", v);
+    btn.textContent = PRIO_LETTER[v];
+  }
+
+  function cyclePriority(btn){
+    const cur = btn.getAttribute("data-prio") || "med";
+    const next = PRIO_ORDER[(PRIO_ORDER.indexOf(cur) + 1) % PRIO_ORDER.length];
+    setPriority(btn, next);
+    updateScore();
+    scheduleSave();
+  }
+
+  /* score straight from the live form (the company on screen) */
+  function scoreFromForm(){
+    let got = 0, max = 0, n = 0;
+    const counts = { low: 0, med: 0, high: 0 };
+    document.querySelectorAll('.main .rating[data-rating-for]').forEach(r => {
+      const stars = parseInt(r.getAttribute("data-current") || "0", 10);
+      if (stars <= 0) return;                       // only rated fields count
+      const key = r.getAttribute("data-rating-for");
+      const btn = document.querySelector(`.prio[data-prio-for="${CSS.escape(key)}"]`);
+      const prio = (btn && btn.getAttribute("data-prio")) || "med";
+      const w = PRIO_WEIGHT[prio] || 2;
+      got += stars * w; max += 3 * w; n++; counts[prio]++;
+    });
+    return { got, max, n, counts, pct: max ? Math.round(got / max * 100) : 0,
+             avg: max ? (got / max * 3) : 0 };
+  }
+
+  /* score from a stored company object (for the sidebar list / sorting) */
+  function scoreFromData(c){
+    const d = (c && c.data) || {};
+    const ratings = d["__ratings"] || {};
+    const prios = d["__priorities"] || {};
+    let got = 0, max = 0, n = 0;
+    Object.keys(ratings).forEach(k => {
+      const stars = parseInt(ratings[k], 10);
+      if (!(stars > 0)) return;
+      const w = PRIO_WEIGHT[prios[k]] || 2;
+      got += stars * w; max += 3 * w; n++;
+    });
+    return { n, pct: max ? Math.round(got / max * 100) : 0, avg: max ? (got / max * 3) : 0 };
+  }
+
+  function companyScore(c){
+    if (c && c.id === displayedId) return scoreFromForm();
+    return scoreFromData(c);
+  }
+
+  function starBar(avg){
+    let out = "";
+    for (let i = 1; i <= 3; i++) out += '<span class="' + (avg >= i - 0.25 ? "on" : "") + '">★</span>';
+    return out;
+  }
+
+  function updateScore(){
+    const s = scoreFromForm();
+    const val = document.getElementById("scoreValue");
+    const bar = document.getElementById("scoreStars");
+    const fill = document.getElementById("scoreFill");
+    const note = document.getElementById("scoreNote");
+    if (!val) return;
+    if (s.n === 0){
+      val.textContent = "—";
+      bar.innerHTML = starBar(0);
+      fill.style.width = "0%";
+      note.textContent = "Star a field to start scoring. L/M/H sets how much it counts.";
+    } else {
+      val.textContent = s.avg.toFixed(1) + " / 3";
+      bar.innerHTML = starBar(s.avg);
+      fill.style.width = s.pct + "%";
+      note.textContent = s.pct + "% · " + s.n + " rated field" + (s.n === 1 ? "" : "s") +
+        " (H " + s.counts.high + " · M " + s.counts.med + " · L " + s.counts.low + ")";
+    }
+    refreshActiveRowMeta();
   }
 
   function setRating(ratingEl, val){
@@ -561,9 +721,13 @@
       updateProgress();
       return;
     }
+    const prioBtn = e.target.closest(".prio");
+    if (prioBtn){ cyclePriority(prioBtn); return; }
     const star = e.target.closest(".star");
     if (star){
       setRating(star.closest(".rating"), parseInt(star.getAttribute("data-val"), 10));
+      updateScore();
+      scheduleSave();
       return;
     }
     const fieldDel = e.target.closest(".field-delete");
@@ -755,6 +919,7 @@
     companies.forEach(c => { if (applyFeedToCompany(c)) n++; });
     if (displayedId != null) updateProgress();
     renderCompanyList();
+    scheduleSave();
     updateFeedStatus("synced", n);
     return n;
   }
@@ -954,6 +1119,7 @@
       renderCompanyList();
       selectCompany(c.id, { animate: false });
       drillToSections();
+      saveNow();
     } else {
       alert("That file didn't look like a dossier or a dossier database.");
     }
@@ -983,11 +1149,19 @@
         if (ratingEl) setRating(ratingEl, data["__ratings"][key]);
       });
     }
+    document.querySelectorAll('.main .prio[data-prio-for]').forEach(b => setPriority(b, "med"));
+    if (data["__priorities"]){
+      Object.keys(data["__priorities"]).forEach(key => {
+        const b = document.querySelector(`.prio[data-prio-for="${CSS.escape(key)}"]`);
+        if (b) setPriority(b, data["__priorities"][key]);
+      });
+    }
     if (data["__companyName"] !== undefined){
       companyNameInput.value = data["__companyName"];
       document.title = "Company Dossier — " + (companyNameInput.value.trim() || "Untitled Company");
     }
     updateProgress();
+    updateScore();
   }
 
   document.getElementById("printBtn").addEventListener("click", () => window.print());
@@ -1085,6 +1259,44 @@
       "Established, ISX-listed composite insurer (NHAM) marking its 25th year in 2026, with a stable, unlevered balance sheet — paid-up capital unchanged at 25.0B IQD, no debt, total assets ~83.4B IQD. Q1 2026 shows top- and bottom-line pressure versus Q1 2025: total revenue down ~26% (13.6B vs 18.3B IQD) and net profit down ~44% (2.4B vs 4.3B IQD), driven mainly by a large drop in insurance-premium income only partly offset by new 'other insurance revenues'. Notably, the stock itself tells a very different story from the fundamentals: after trading flat around IQD 0.80–1.00 for most of 2016–2024, NHAM shares have rallied over 550% YTD in 2026 to ~IQD 5.00 (52-week high IQD 6.10) on essentially no trading volume — a move that looks driven by illiquidity/speculation rather than by the softer Q1 2026 operating results. Overall: financially sound at the balance-sheet level but with a near-term earnings headwind, and a share price whose recent run does not obviously track the underlying numbers — this conclusion rests on one quarterly filing, the company website, and Rabee Securities' market data, so it should be revisited once ownership, deeper competitor, and industry-level data are gathered."
   };
 
+  /* ============== PERSISTENCE ==============
+     Saves the whole database in the browser so a refresh doesn't lose work.
+     Wrapped in try/catch: if storage is unavailable (private mode, sandboxed
+     preview) the tool still runs, it just won't remember between visits.
+     Export JSON remains the durable, portable backup.                      */
+  const STORE_KEY = "isx_company_database_v1";
+  let saveTimer = null;
+
+  function loadSavedCompanies(){
+    try{
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return null;
+      const obj = JSON.parse(raw);
+      return Array.isArray(obj && obj.companies) && obj.companies.length ? obj.companies : null;
+    }catch(e){ return null; }
+  }
+
+  function saveNow(){
+    try{
+      saveDisplayed();
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        version: 2,
+        saved: new Date().toISOString(),
+        companies: companies.map(c => ({ id: c.id, name: c.name, data: c.data }))
+      }));
+    }catch(e){ /* storage unavailable - ignore */ }
+  }
+
+  function scheduleSave(){
+    if (saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(saveNow, 700);
+  }
+
+  document.addEventListener("input", function(e){
+    if (e.target && e.target.closest && e.target.closest(".main .field")) scheduleSave();
+  });
+  window.addEventListener("beforeunload", saveNow);
+
   /* ============== COMPANY DATA MODEL & NAVIGATION ============== */
 
   const companyListEl = document.getElementById("companyList");
@@ -1100,6 +1312,12 @@
       if (v > 0) ratings[r.getAttribute("data-rating-for")] = v;
     });
     data["__ratings"] = ratings;
+    const prios = {};
+    document.querySelectorAll('.main .prio[data-prio-for]').forEach(b => {
+      const p = b.getAttribute("data-prio") || "med";
+      if (p !== "med") prios[b.getAttribute("data-prio-for")] = p;   // med is the default
+    });
+    data["__priorities"] = prios;
     data["__companyName"] = companyNameInput.value;
     return data;
   }
@@ -1110,6 +1328,7 @@
       r.setAttribute("data-current", "0");
       r.querySelectorAll(".star").forEach(s => s.classList.remove("filled"));
     });
+    document.querySelectorAll('.main .prio[data-prio-for]').forEach(b => setPriority(b, "med"));
     REPEATABLE_GROUPS.forEach(g => {
       const c = document.getElementById("entries-" + g.id);
       if (c) c.innerHTML = "";
@@ -1122,7 +1341,7 @@
     const total = schemaFieldCount();
     let filled = 0;
     Object.keys(c.data).forEach(k => {
-      if (k === "__ratings" || k === "__companyName") return;
+      if (k === "__ratings" || k === "__companyName" || k === "__priorities") return;
       if (String(c.data[k]).trim() !== "") filled++;
     });
     return Math.round(Math.min(filled, total) / total * 100);
@@ -1134,10 +1353,16 @@
   function companySubLabel(c, pct){
     const t = companyTicker(c);
     const rec = t ? feedData[t.toUpperCase()] : null;
+    const sc = companyScore(c);
+    const rate = sc.n ? (" · ★" + sc.avg.toFixed(1)) : "";
     if (rec && rec.close != null && rec.close !== ""){
       let s = (t ? (t + " · ") : "") + rec.close + " IQD";
       if (rec.change_pct != null && rec.change_pct !== "") s += " · " + rec.change_pct + "%";
-      return s;
+      return s + rate;
+    }
+    if (sc.n){
+      const p = (pct == null ? companyProgress(c) : pct) + "%";
+      return (t ? (t + " · ") : "") + "★" + sc.avg.toFixed(1) + " · " + p;
     }
     const p = (pct == null ? companyProgress(c) : pct) + "% complete";
     return t ? (t + " · " + p) : p;
@@ -1169,6 +1394,7 @@
     if (companySortMode === "price_desc") arr.sort(cmp(companyPriceVal, -1));
     else if (companySortMode === "price_asc") arr.sort(cmp(companyPriceVal, 1));
     else if (companySortMode === "change_desc") arr.sort(cmp(companyChangeVal, -1));
+    else if (companySortMode === "rating_desc") arr.sort(cmp(c => { const s = companyScore(c); return s.n ? s.avg : null; }, -1));
     else arr.sort(byName);
     return arr;
   }
@@ -1231,6 +1457,7 @@
     resetForm();
     applyImport(c && c.data ? c.data : { "__companyName": (c ? c.name : "") });
     displayedId = c ? c.id : null;
+    autoSizeFields();
     if (typeof renderPriceChart === "function") renderPriceChart();
   }
 
@@ -1239,6 +1466,7 @@
     const target = companies.find(x => x.id === id);
     if (!target) return;
     saveDisplayed();
+    scheduleSave();
     activeId = id;
     sidePanelActiveNameEl.textContent = target.name || "Untitled Company";
     updateActiveRow();
@@ -1268,6 +1496,7 @@
     renderCompanyList();
     selectCompany(c.id, { animate: false });
     drillToSections();
+    saveNow();
     companyNameInput.focus();
     companyNameInput.select();
   }
@@ -1299,6 +1528,7 @@
     } else {
       renderCompanyList();
     }
+    saveNow();
   }
 
   companyListEl.addEventListener("click", function(e){
@@ -1322,6 +1552,328 @@
   document.getElementById("sideBackBtn").addEventListener("click", backToCompanies);
   window.addEventListener("resize", updateActiveRow);
 
+  const ASIACELL_PREFILL = {
+    "__companyName": "Asiacell Communications (TASC)",
+    "basic-identity__official-legal-name": "Asiacell Communications PJSC — شركة آسياسيل للاتصالات (شركة مساهمة خاصة). Converted from an LLC (then the largest limited liability company in Iraq) to a private joint stock company ahead of the 2013 IPO.",
+    "basic-identity__common-brand-name": "Asiacell / آسياسيل / ئاسیاسێڵ",
+    "basic-identity__founded-date": "Founded 1999 in Sulaymaniyah; first commercial service 2000. Listed on the ISX 4 February 2013 (listing approved 4 December 2012).",
+    "basic-identity__founders": "Faruk Mustafa Rasool (founder; currently Chairman of the Board and still the largest individual shareholder at 28.09%).",
+    "basic-identity__headquarters": "Sulaymaniyah, Kurdistan Region, Iraq. Executive/commercial offices in Baghdad, Mosul and other major cities.",
+    "basic-identity__countries-of-operation": "Iraq only (all governorates, including the Kurdistan Region). No foreign operations.",
+    "basic-identity__website": "https://www.asiacell.com — Investor Relations: https://www.asiacell.com/en/about-us/investor-relations",
+    "basic-identity__industry": "Telecommunications",
+    "basic-identity__sub-industry": "Mobile network operator (MNO) — wireless voice and data services. ISX sector: Telecommunication.",
+    "basic-identity__business-classification-naics-sic": "NAICS 517112 (Wireless Telecommunications Carriers, except Satellite); SIC 4812 (Radiotelephone Communications).",
+    "basic-identity__public-or-private": "Public — private joint stock company (مساهمة خاصة) listed on the Iraq Stock Exchange. Listing is a licence obligation: Iraqi mobile operators are required to float 25% of their shares.",
+    "basic-identity__stock-ticker": "TASC",
+    "basic-identity__stock-exchange": "Iraq Stock Exchange (ISX), Telecommunication sector. Regular market. Also carried on Decypha/Mubasher and Rabee Securities.",
+    "basic-identity__company-registration": "Registered in Iraq; regulated by the Communications and Media Commission (CMC) for licensing/operations and by the Iraq Securities Commission (ISC) + ISX for disclosure. Registrar: Companies Registration Dept., Ministry of Trade.",
+    "basic-identity__parent-company": "Ooredoo Q.P.S.C. (Qatar, ticker ORDS) — effective stake 64.06%–64.1%, held through Al-Rowad Company for General Services (49.00%) and Barzan Holding Company SPC (15.06%). Ooredoo reports Asiacell as its own operating segment.",
+    "basic-identity__subsidiaries": "Not separately disclosed in public filings.",
+    "basic-identity__brands-owned": "Asiacell (consumer); A'mali (business/enterprise services brand); LAILA and CEI (AI service platforms, 2026).",
+    "history__founding-story": "Established 1999 in Sulaymaniyah by Faruk Mustafa Rasool as the first mobile telecommunications company in Iraq; commercial operations began in 2000, when Iraq had effectively no mobile market.",
+    "history__original-purpose": "To build and operate a GSM mobile network in northern Iraq, later expanded nationwide.",
+    "history__first-product-service": "GSM mobile voice service (2000).",
+    "history__major-expansions": "Oct 2003: two-year GSM licence for the six northern governorates. 2005: licence extended to cover all of Iraq. Aug 2007: won one of three 15-year nationwide licences from the CMC for USD 1.25bn. 2009: achieved nationwide coverage — the first Iraqi operator to do so. Network today covers ~97% of the population with ~8,201 LTE sites.",
+    "history__major-failures": "2022 revenue/EBITDA dip amid intense competition (FY2022 revenue QAR 3.7bn; 9M-2022 revenue -2%, EBITDA -7%). Long delay in 3G/4G rollout caused by spectrum pricing disputes with the government (2014 dispute over 3G spectrum pricing, ~USD 307m per operator sought).",
+    "history__rebranding": "Aligned with parent branding after Qtel became Ooredoo (2013), but retained the Asiacell brand in Iraq.",
+    "history__name-changes": "Qtel Group (parent) renamed Ooredoo in 2013; Asiacell's own name unchanged since founding.",
+    "history__acquisitions": "No material acquisitions disclosed; growth has been organic plus licence acquisition.",
+    "history__divestitures": "Ooredoo group-level plan (reported 2022–2023) to sell its tower portfolio — including Asiacell's towers — on a sale-and-leaseback basis; Morgan Stanley reported as adviser. Gulf telcos have since signed a deal to create a ~USD 2bn tower company.",
+    "history__mergers": "None.",
+    "history__bankruptcy-restructuring": "None. Converted from LLC to PJSC ahead of the IPO.",
+    "history__ownership-changes": "Qtel (now Ooredoo) built its stake progressively: initial 30–40% (from 2007), agreed June 2012 to raise it to 60% for ~USD 1.5bn, then increased to 64.06% in Feb 2013 for IQD 241.3bn (USD 207.12m) after Iraqi authorities clarified foreign-ownership limits.",
+    "history__important-historical-events": "Feb 2013 IPO: 67.5bn shares (25% of capital) at IQD 22/share, raising IQD 1,485.1bn (~USD 1.27bn) — the largest IPO in the MENA region since 2008 and the largest in ISX history. 2014–2017: ISIS occupation damaged infrastructure and cost revenue. 2020–2022: licence-renewal dispute and court challenge. 2022: removal of the 20% telecom tax supported usage. 2026: first 5G lab in Iraq opened with Al-Nahrain University under CMC sponsorship.",
+    "history__evolution-of-its-business-model": "Voice-led GSM (2000s) → data/3G-4G monetisation (2015 onward) → digital and AI services, enterprise/IoT and 5G readiness (2024–2026). Data is now the main growth driver of revenue.",
+    "ownership__current-owners": "As at 31/12/2024 (holders of ≥5%): Al-Rowad Company for General Services 151,893,249,189 shares (49.00%); Faruk Mustafa Rasool 87,092,425,840 (28.09%); Barzan Holding Company SPC 46,690,088,618 (15.06%). These three total 285,675,763,647 shares = 92.15% of capital. IMPLICATION: the residual free float is only ~7.85% of capital, far below the 25% originally floated at IPO — this is the single most important fact for liquidity and price behaviour in TASC.",
+    "ownership__largest-shareholders": "1) Al-Rowad Company for General Services — 49.00% (Ooredoo's Iraqi holding vehicle). 2) Faruk Mustafa Rasool (founder/chairman) — 28.09%. 3) Barzan Holding Company SPC — 15.06%. Al-Rowad + Barzan = 64.06%, exactly matching Ooredoo's reported effective stake, confirming both are Ooredoo-side vehicles.",
+    "ownership__founders-ownership": "Faruk Mustafa Rasool holds 87,092,425,840 shares (28.09%): 75,476,432,862 shares directly and 11,615,992,978 shares through Faruk Investment Group Ltd, of which he is the sole owner.",
+    "ownership__institutional-ownership": "Effectively the Ooredoo group (64.06%). No meaningful disclosed third-party institutional register on the ISX; foreign institutions participated in the 2013 IPO (US and European institutions were reported buyers).",
+    "ownership__government-ownership": "No direct Iraqi state ownership. Indirect foreign-state exposure: parent Ooredoo is majority-owned by the State of Qatar and related Qatari government entities.",
+    "ownership__ultimate-beneficial-owner": "Ooredoo Q.P.S.C. (Qatar), itself majority state-controlled, for the 64.06% block; Faruk Mustafa Rasool personally for 28.09%.",
+    "ownership__controlling-shareholder": "Ooredoo Q.P.S.C. with 64.06% — full control of ordinary resolutions. Combined with the founder's 28.09%, more than 92% of the register is closely held, so minority holders have no practical influence over corporate decisions.",
+    "ownership__voting-rights": "Ordinary shares, nominal value IQD 1 each; one vote per share (standard Iraqi PJSC structure). No dual-class structure disclosed.",
+    "ownership__ownership-history": "2007: Qtel enters. 2012: agreement to raise stake to 60% (~USD 1.5bn). Feb 2013: IPO of 25% and Qtel consolidation at 64.06%. Register has been stable since, with the founder retaining ~28%.",
+    "ownership__insider-ownership": "~28.09% held by the founder/chairman personally — unusually high insider ownership for a listed ISX company, and a key reason the tradable float is so thin.",
+    "leadership__ceo": "Amer Al Sunna — Chief Executive Officer since September 2013 (previously Managing Director of Asiacell from February 2013). Still serving as CEO as of 2026, leading the AI/5G strategy.",
+    "leadership__chairman": "Faruk Mustafa Rasool — founder and Chairman of the Board.",
+    "leadership__cfo": "Not publicly disclosed in accessible sources — check the latest annual report or AGM minutes (محضر الهيئة العامة).",
+    "leadership__board-of-directors": "Mixed board of Ooredoo representatives and local shareholders, chaired by founder Faruk Mustafa Rasool. Ooredoo-side representation has included Sheikh Mohammed bin Abdullah bin Thani as vice chairman (verify against the latest AGM minutes — board elections are disclosed via ISX).",
+    "leadership__major-executives-backgrounds": "Amer Al Sunna: joined the Ooredoo group in Aug 2010 as CEO of wi-tribe Jordan; Chief Operating Advisor of wi-tribe Philippines (2011); Managing Director of Asiacell (Feb 2013); previously CEO of three telecom/internet companies owned by VTEL Holdings in Ukraine, Armenia and Georgia; Group COO at Orange Jordan; earlier roles at Etisalat.",
+    "leadership__education": "Amer Al Sunna — B.Sc. Electrical Engineering, University of Jordan.",
+    "leadership__previous-companies": "Ooredoo group (wi-tribe Jordan, wi-tribe Philippines), VTEL Holdings, Orange Jordan, Etisalat.",
+    "leadership__length-of-tenure": "CEO tenure ~13 years (since September 2013) — exceptionally long and stable for the Iraqi market. Chairman/founder involved since 1999.",
+    "leadership__executive-compensation": "Not disclosed publicly.",
+    "leadership__executive-departures": "No recent high-profile departures identified; leadership has been notably stable.",
+    "leadership__board-independence": "Low. The board reflects the concentrated register (Ooredoo 64.06% + founder 28.09%); no meaningful independent representation for the ~7.85% free float.",
+    "leadership__management-structure": "Iraqi PJSC board with an executive team led by the CEO; strategic, technical and procurement support from the Ooredoo group (shared supply-chain and digital initiatives).",
+    "business-model__core-business": "Nationwide mobile telecommunications in Iraq: prepaid and postpaid voice, SMS and mobile data, plus enterprise and digital services.",
+    "business-model__business-model": "Capital-intensive licensed network operator. Builds and operates radio access and transport infrastructure under a CMC licence, then monetises it through recurring per-subscriber spend — overwhelmingly prepaid recharge. Scale, coverage and licence scarcity are the economics; incremental data traffic on an installed base carries high drop-through, which is why EBITDA margin sits near 46%.",
+    "business-model__products": "Prepaid and postpaid mobile plans; mobile internet (4G/4G+); eSIM; SMS/MMS; international calling and roaming; USB modems; M2M/shared data packages; value-added services (voicemail, content, credit transfer); mobile financial services.",
+    "business-model__services": "Consumer mobile; enterprise connectivity and fixed/mobile voice and data under the A'mali brand; toll-free and bulk SMS; IoT/M2M; edge/cloud services (multi-edge computing deployment in Baghdad); AI-powered customer services (LAILA, CEI).",
+    "business-model__revenue-sources": "Predominantly consumer mobile service revenue, with data the primary growth engine. Ooredoo attributes Asiacell's growth to rising data demand plus customer additions. Smaller contributions from enterprise, roaming/international and VAS.",
+    "business-model__how-it-makes-money": "Recurring subscriber spend on airtime and data bundles, sold mostly as prepaid recharge through a distributor and dealer network; monetises incremental data on already-built LTE capacity.",
+    "business-model__who-pays-it": "~20 million Iraqi mobile subscribers (mostly prepaid retail consumers), plus enterprise and government accounts.",
+    "business-model__who-uses-its-products": "Individual consumers across all Iraqi governorates; businesses; public-sector bodies (e.g. school connectivity programmes).",
+    "business-model__b2b-b2c-b2g": "Overwhelmingly B2C by revenue; growing B2B (A'mali, private LTE, IoT, cloud/edge); some B2G (CMC/UNESCO school connectivity, university partnerships).",
+    "business-model__subscription-transaction-sales-licensing-etc": "Mainly prepaid transaction/recharge model with a smaller postpaid subscription base — typical of emerging markets and a working-capital advantage (cash collected in advance).",
+    "business-model__pricing-model": "Bundled voice/data packages and recharge denominations; competitive pricing against Zain Iraq and Korek. Pricing power is constrained by three-way competition and by regulator/political sensitivity to tariffs.",
+    "business-model__distribution-model": "Extensive third-party distributor and dealer network, own retail shops, plus digital channels (Asiacell app, online top-up).",
+    "business-model__geographic-markets": "Iraq nationwide — all governorates including Baghdad and the Kurdistan Region; ~97% population coverage, the most extensive of any Iraqi operator.",
+    "business-model__major-customer-groups": "Mass-market prepaid consumers (dominant), postpaid consumers, SMEs and corporates, government/education.",
+    "business-model__major-suppliers": "Network and IT vendors: Huawei (SRv6 IP transport), Nokia/Ericsson (regional vendor set), Google Cloud (AI, Nov 2025), Cisco (AI network assurance), LigaData (data governance), Evam (customer engagement). Ooredoo group procurement provides scale.",
+    "business-model__supply-chain": "Equipment imports (radio, transport, core), tower/site infrastructure, energy (diesel/grid for site power — a notable cost line in Iraq), leased lines and international capacity via the Ministry of Communications gateway.",
+    "business-model__manufacturing": "None — asset-heavy network operator, not a manufacturer.",
+    "business-model__sales-channels": "Dealers and distributors, branded shops, digital self-service app, enterprise direct sales.",
+    "brands__sub-brands": "A'mali (business services); LAILA and CEI (AI platforms).",
+    "brands__brand-value": "Not independently valued in public sources.",
+    "brands__brand-recognition": "Very high nationally. In 2012 the French market-research firm Altai identified Asiacell as Iraq's leading brand across all sectors, not just telecom.",
+    "brands__brand-reputation": "Associated with network quality and coverage leadership; OpenSignal repeatedly awarded Asiacell for download and upload speed experience in Iraq (unbeaten across three consecutive reports as of 2023).",
+    "brands__brand-changes-rebranding": "Brand retained through the Qtel→Ooredoo parent rebrand in 2013.",
+    "financials__revenue": "Operating revenue (audited, IQD bn): FY2025 2,024 | FY2024 1,872 | FY2023 1,659. In parent-currency terms Ooredoo reported Asiacell FY2025 revenue of QAR 5,583m. Historical reference: FY2020 IQD 1,361bn.",
+    "financials__revenue-growth": "FY2025 +8% | FY2024 +13% | FY2023 +11%. Growth is driven by data demand and subscriber additions. Contrast with FY2022, when revenue fell ~2% (9M) amid intense competition.",
+    "financials__gross-profit": "Not separately disclosed — telecom operators report EBITDA rather than gross profit.",
+    "financials__gross-margin": "Not applicable/not disclosed; use EBITDA margin instead.",
+    "financials__operating-income": "Not separately disclosed in the public summary; EBITDA is the disclosed profitability measure.",
+    "financials__operating-margin": "Not disclosed; EBITDA margin 46% (FY2025).",
+    "financials__net-income": "Net profit (audited, IQD bn): FY2025 519 | FY2024 394 | FY2023 352. FY2025 net profit grew ~32% YoY — materially faster than revenue (+8%), indicating operating leverage and/or lower below-EBITDA costs.",
+    "financials__net-margin": "FY2025 ~25.6% (519/2,024) | FY2024 ~21.0% | FY2023 ~21.2%. Margin expansion in FY2025 is the standout financial development.",
+    "financials__cash": "Not disclosed in the public IR summary — obtain from the full audited annual report or ISX filing.",
+    "financials__debt": "Not disclosed in the public IR summary. Note the very high dividend payout implies limited retained-earnings build; check the balance sheet in the annual report.",
+    "financials__net-debt": "Not publicly disclosed — required before any EV/EBITDA calculation can be meaningful.",
+    "financials__assets": "Not disclosed in the public IR summary — see full annual report / ISX disclosure.",
+    "financials__liabilities": "Not disclosed in the public IR summary — see full annual report / ISX disclosure.",
+    "financials__equity": "Share capital IQD 310bn. Total equity not disclosed in the public summary.",
+    "financials__tax-expense": "Not separately disclosed. Sector context: the 20% telecom tax on services was cancelled in 2022, which supported subsequent usage and revenue growth.",
+    "stock-info__current-share-price": "IQD 15.75 (ISX close, 7 September 2026 daily bulletin No. 156): opening 15.75, high 15.76, low 15.73, previous close 15.75, change 0.00%. Volume that session 5,793,156 shares; value IQD 91,209,647; 110 trades — Asiacell was the third most active stock by traded value that day.",
+    "stock-info__historical-share-price": "IPO priced at IQD 22.00 (Feb 2013) — the shares have traded below their IPO price for most of their listed life. Full adjusted price history since Dec 2015 is loaded in this database's chart from the Rabee/RSISX series.",
+    "stock-info__market-capitalization": "~IQD 4,882bn (4.88 trillion) at IQD 15.75 × 310,000,000,000 shares ≈ USD 3.7bn at ~1,320 IQD/USD. One of the largest companies on the ISX by market value.",
+    "stock-info__enterprise-value": "Cannot be computed reliably — net debt is not publicly disclosed.",
+    "stock-info__p-e": "~9.4x trailing (price 15.75 ÷ FY2025 EPS of ~1.674). EPS derived as IQD 519bn net profit ÷ 310bn shares.",
+    "stock-info__p-s": "~2.4x (market cap 4,882bn ÷ FY2025 revenue 2,024bn).",
+    "stock-info__p-b": "Not computable — total equity not disclosed in public summary data.",
+    "stock-info__ev-ebitda": "Not computable without net debt. For reference, market cap ÷ FY2025 EBITDA (860bn) ≈ 5.7x.",
+    "stock-info__dividend-yield": "~9.5% on the FY2025 dividend of IQD 1.50/share (150% of capital) at a price of IQD 15.75. Payout ratio ~90% of FY2025 net profit (465bn ÷ 519bn). The yield — not growth — is the core investment case.",
+    "stock-info__dividend-history": "Cash dividends as % of capital (capital IQD 270.012bn to 2014, IQD 310bn thereafter): FY2011 30% (81bn) | FY2012 200% (540bn) | FY2013 150% (405bn) | FY2014 14.8% capitalised as bonus shares (capital raised to 310bn) | FY2015 25% (77.5bn) | FY2016 75% (232.5bn) | FY2017 100% (310bn) | FY2018 100% (310bn) | FY2019 100% (310bn) | FY2020 70% (217bn) | FY2021 none declared | FY2022 100% (310bn) | FY2023 100% (310bn) | FY2024 150% (465bn, AGM 24-05-2025) | FY2025 150% (465bn, AGM 23-05-2026). Two consecutive years at 150% = IQD 1.50/share.",
+    "stock-info__earnings-history": "Net profit IQD bn: 2023 352 → 2024 394 → 2025 519. Quarterly reference (per data aggregators): latest reported quarter revenue ~IQD 500.2bn and net income ~IQD 130.2bn; prior quarter revenue ~IQD 475.4bn, net income ~IQD 114.7bn.",
+    "stock-info__earnings-estimates": "No meaningful published sell-side estimates for the ISX listing.",
+    "stock-info__analyst-targets": "No public analyst price targets. Rabee Securities publishes research but distributes it only to account holders.",
+    "stock-info__share-issuance": "IPO Feb 2013: 67.5bn new shares at IQD 22 = 25% of capital, raising IQD 1,485.1bn. 2014: 14.8% profit capitalisation via bonus shares, lifting capital from IQD 270.012bn to IQD 310bn. No issuance since — capital has been static at IQD 310bn for over a decade.",
+    "stock-info__buybacks": "None disclosed.",
+    "stock-info__volatility": "Low day-to-day price volatility but structurally thin liquidity: with only ~7.85% of capital outside the three ≥5% holders, modest order flow can move the price, and large positions are hard to build or exit. Typical daily traded value is a small fraction of market cap.",
+    "stock-info__performance-vs-industry": "Compare against the ISX60 index (in this dossier's chart) and the RSISX index. Asiacell is one of the two dominant Iraqi telecom listings; sector peer Zain Iraq is not ISX-listed in the same way, limiting direct listed comparables.",
+    "customers__who-are-the-customers": "~20.0 million mobile subscribers (FY2025), overwhelmingly prepaid retail consumers across Iraq, plus enterprise and government accounts.",
+    "customers__consumer-demographics": "Mass-market Iraqi population across all governorates; young population profile supports data adoption.",
+    "customers__geographic-distribution": "Nationwide, ~97% population coverage — historically strongest in the Kurdistan Region (home market, Sulaymaniyah) with a large Baghdad and southern presence built out after the 2007 national licence.",
+    "customers__enterprise-customers": "Served through the A'mali brand; expanding via private LTE, IoT/M2M and edge-computing offerings in Baghdad.",
+    "customers__government-customers": "Public-sector connectivity work including the CMC/UNESCO programme to connect 1,500 schools (with a further 1,500 planned) for the Educational Management Information System.",
+    "customers__customer-retention": "Company cites loyalty-programme initiatives and eSIM launch as retention drivers; specific retention rates not disclosed.",
+    "customers__churn": "Not disclosed. Sector caveat: multi-SIM behaviour is common in Iraq, so reported subscriber counts overstate unique users.",
+    "customers__lifetime-value": "Not disclosed. Derived ARPU: FY2025 revenue IQD 2,024bn ÷ 20.0m subscribers ≈ IQD 101,200/year ≈ IQD 8,400/month (~USD 6.4/month) — an approximation using total revenue, not service revenue.",
+    "customers__customer-satisfaction": "OpenSignal has repeatedly rated Asiacell first in Iraq for download and upload speed experience.",
+    "customers__major-contracts": "CMC/UNESCO school connectivity; university partnerships (Al-Nahrain 5G lab, NewsSocial national AI ecosystem in Iraqi universities).",
+    "market-position__market-share": "~39–40% of Iraqi mobile subscribers (39.2% in 2022 vs Zain Iraq 41.9% and Korek 18.9%). Asiacell's share has since risen as Korek declined; with 20.0m subscribers in FY2025 versus Zain Iraq's ~15.7–18m, Asiacell is now at or near the top of the market by subscribers.",
+    "market-position__market-leader-challenger-niche": "Co-leader with Zain Iraq in a three-player market; leader in network coverage and measured speed.",
+    "market-position__market-size": "Iraq's total mobile subscriber base grew from ~40.7m (2021) to ~45.7m (2023). The three MNOs together control over 90% of the mobile market.",
+    "market-position__addressable-market": "Population ~44m with a young demographic; fixed broadband penetration is very low, so mobile is the primary internet access route — the main structural growth driver. Majority of subscribers were still on 2G/3G as of recent reporting, leaving substantial 4G/5G upgrade headroom.",
+    "market-position__growth-rate": "Subscriber growth: FY2023 +3.5%, FY2024 +8.1%, FY2025 +4.7%. Revenue growth 8–13% p.a. over the same period.",
+    "market-position__geographic-market-share": "Historically strongest in the Kurdistan Region; nationwide coverage since 2009 gives it the broadest footprint of any operator.",
+    "market-position__pricing-position": "Competitive/mid-market; premium positioning on network quality rather than price.",
+    "market-position__customer-perception": "Perceived as the quality/coverage leader (speed awards, nationwide reach).",
+    "market-position__brand-strength": "Among the strongest consumer brands in Iraq across all sectors.",
+    "market-position__barriers-to-entry": "Very high: only three nationwide licences were ever issued (2007, USD 1.25bn each), spectrum is state-allocated, and network build-out is highly capital-intensive. The main breach of this barrier is political rather than commercial — a state-backed fourth operator.",
+    "market-position__switching-costs": "Low at the individual level (prepaid, multi-SIM common); mitigated by coverage advantage and loyalty programmes.",
+    "industry__industry-size": "Three MNOs (Zain Iraq, Asiacell, Korek) control over 90% of Iraqi mobile. Total mobile subscribers ~45.7m (2023). The National Investment Commission has earmarked substantial funding (reported IQD 39,582.1bn) for telecom infrastructure including inter-governorate fibre.",
+    "industry__industry-growth": "Driven by data adoption and 4G migration; fixed broadband penetration remains low, concentrating growth in mobile.",
+    "industry__major-competitors": "Zain Iraq (subsidiary of Kuwait's Zain; ~USD 1.1bn revenue in 2024, +11% YoY; network modernisation deal with Nokia). Korek Telecom (Erbil-based, historically Orange-affiliated; subscribers fell from 11.6m in 2015 to 8.2m in 2022, share down to ~18.9%, and it was temporarily cut off from domestic and international carriers in late 2023 over unpaid fees). Emerging: National Mobile Telecommunications Company (NMTC), state-backed, in partnership with Vodafone.",
+    "industry__regulation": "Regulated by the Communications and Media Commission (CMC), an independent body answerable to parliament, which controls licensing and spectrum. The Ministry of Communications operates the international gateway. The CMC is preparing a 5G auction covering 3.5 GHz and millimetre-wave spectrum.",
+    "industry__technological-changes": "4G/LTE densification (Asiacell has ~8,201 LTE sites), non-standalone 5G pilots for enterprise, fibre backhaul expansion, and the Fibre in Gulf (FIG) submarine cable project connecting Iraq with Gulf states (Ooredoo with Alcatel Submarine Networks, up to 720 Tbps).",
+    "strategy__company-s-stated-strategy": "Lead Iraq's digital transformation: continued network investment, early preparation for 5G, AI-enabled services and customer experience, and building national digital capability through education partnerships.",
+    "strategy__actual-strategy": "Defend and extend coverage/quality leadership, monetise data on the installed LTE base, hold EBITDA margin near 46%, and return nearly all profit to shareholders as dividends rather than reinvesting in diversification.",
+    "strategy__growth-strategy": "Subscriber additions plus rising data usage; enterprise/IoT and cloud-edge as secondary growth; no geographic diversification outside Iraq.",
+    "strategy__geographic-expansion": "None outside Iraq — a single-country operator, which concentrates political and currency risk.",
+    "strategy__new-products": "eSIM, loyalty programme, AI assistants (LAILA, CEI), streaming partnership with 1001, multi-edge computing for low-latency workloads in Baghdad.",
+    "strategy__cost-reduction": "Cost discipline maintaining a 46% EBITDA margin despite higher leased-line and energy costs; potential tower sale-and-leaseback at group level.",
+    "strategy__pricing-strategy": "Bundle-led, competitive against Zain; avoids price-war positioning in favour of quality differentiation.",
+    "strategy__diversification": "Limited — digital/AI services and enterprise are adjacent, not transformative. Revenue remains overwhelmingly Iraqi mobile.",
+    "strategy__capital-allocation": "Heavily dividend-weighted: FY2024 and FY2025 each returned 150% of capital (IQD 465bn), roughly 90% of FY2025 net profit, alongside continued network capex.",
+    "strategy__long-term-goals": "5G readiness and leadership in Iraq's digital/AI ecosystem; sustaining scale leadership in subscribers.",
+    "moat__brand": "Strong — recognised as a leading national brand; quality/coverage association.",
+    "moat__technology": "Largest LTE footprint in Iraq (~8,201 sites) and measured speed leadership; upgrade-ready grid for non-standalone 5G.",
+    "moat__distribution": "Deep dealer/distributor network built since 2000 across all governorates — hard to replicate quickly.",
+    "moat__data": "Large subscriber data estate; investing in data governance (LigaData) and AI (Google Cloud, Cisco).",
+    "moat__regulatory-barriers": "The core moat: one of only three nationwide CMC licences ever issued (2007, USD 1.25bn each). This same barrier is also the company's biggest vulnerability, since it is politically granted and has been politically contested.",
+    "moat__manufacturing-capability": "Not applicable.",
+    "moat__supply-chain-advantage": "Ooredoo group scale in procurement and shared technology programmes.",
+    "employees__number-of-employees": "~2,000–2,044 employees (company reached ~2,000 staff following its 2007 national licence; third-party data puts the current figure near 2,044).",
+    "employees__locations": "Sulaymaniyah headquarters, Baghdad and Mosul executive offices, plus retail and regional operations nationwide.",
+    "employees__workplace-culture": "Not independently documented in Iraqi public sources; Glassdoor/Indeed-style sentiment data is not meaningful for this market.",
+    "tech-rd__technologies-used": "GSM/2G, 3G, 4G/LTE and 4G+ across ~8,201 sites; SRv6 over IP transport (Huawei); non-standalone 5G pilots for enterprise; multi-edge computing appliances in Baghdad; eSIM.",
+    "tech-rd__software": "Business support system modernisation and digital transformation programme; award-winning consumer app.",
+    "tech-rd__ai-usage": "Central to current strategy: LAILA and CEI AI platforms won five Stevie 2026 awards including two golds; partnerships with Google Cloud (AI tools, Nov 2025), Cisco (AI network assurance) and Evam (customer engagement); national AI ecosystem in Iraqi universities with NewsSocial under government supervision.",
+    "tech-rd__data-infrastructure": "Data governance framework and centre of expertise implemented with LigaData; edge computing in Baghdad.",
+    "tech-rd__major-technological-partnerships": "Huawei (transport network), Google Cloud, Cisco, LigaData, Evam, Al-Nahrain University (first 5G lab in Iraq, April 2026, CMC-sponsored), 1001 (streaming).",
+    "tech-rd__technological-dependencies": "Reliant on foreign network vendors and on the Ministry of Communications' international gateway for international traffic — a structural dependency on state infrastructure.",
+    "tech-rd__technology-advantages-disadvantages": "Advantage: broadest and fastest network in Iraq, upgrade-ready for 5G. Disadvantage: no 5G spectrum yet awarded; a majority of the market is still on 2G/3G, and rural LTE availability across Iraq remains limited.",
+    "footprint__offices": "Headquarters in Sulaymaniyah; executive offices in Baghdad and Mosul; regional offices nationwide.",
+    "footprint__stores": "Branded shops plus an extensive third-party dealer network across all governorates.",
+    "footprint__data-centers": "Edge computing deployment in Baghdad; core network facilities not publicly detailed.",
+    "footprint__countries": "Iraq only.",
+    "footprint__major-facilities": "~8,201 LTE network sites nationwide; tower infrastructure is shared with other Iraqi MNOs to reduce operating cost, and a group-level tower sale-and-leaseback has been explored.",
+    "footprint__real-estate-ownership-vs-leasing": "Mixed; tower assets potentially moving to a leaseback model under the Ooredoo group tower strategy.",
+    "supply-chain__critical-components": "Radio access and transport equipment, core network systems, SIM/eSIM supply, site power (energy costs are a material and rising line item in Iraq).",
+    "supply-chain__supplier-concentration": "Concentrated among a few global vendors (Huawei prominent in transport); mitigated by Ooredoo group procurement.",
+    "supply-chain__logistics": "Equipment import into Iraq; international connectivity routed via the Ministry of Communications gateway, with the FIG submarine cable set to add regional capacity.",
+    "supply-chain__supply-chain-vulnerabilities": "Import dependence, energy supply and cost, security of physical sites, and reliance on state-controlled international gateway capacity.",
+    "marketing__target-audience": "Mass-market Iraqi consumers, with a young, data-hungry demographic as the growth segment.",
+    "marketing__brand-positioning": "Quality, reliability and the widest coverage — 'first choice for mobile telecommunications in Iraq'.",
+    "marketing__celebrity-partnerships": "Kadhim Al-Saher became a brand representative in 2015; Kurdish singer Chopy Fatah served as cultural ambassador from 2008. In 2026 Asiacell announced a landmark sponsorship partnership with Paris Saint-Germain — described as a first in Iraq's history.",
+    "marketing__advertising-campaigns": "Notable initiative: free access to Wikipedia for subscribers from February 2017 (covering ~12m customers at the time), which attracted international attention and some net-neutrality debate.",
+    "marketing__social-media": "Active corporate presence (LinkedIn, consumer channels); premium sponsorship activity in sport and entertainment.",
+    "reputation__customer-sentiment": "Generally positive on network performance; repeated OpenSignal speed awards.",
+    "reputation__investor-sentiment": "Valued primarily as a high-yield, low-liquidity income stock rather than a growth vehicle; the thin float limits institutional participation.",
+    "reputation__media-coverage": "Regular coverage via Ooredoo group results, Iraq Business News and regional outlets; coverage skews to results, partnerships and licensing/regulatory disputes.",
+    "reputation__industry-reputation": "Regarded as the most operationally capable of the three Iraqi MNOs.",
+    "reputation__awards": "Five Stevie 2026 awards including two golds for AI innovation (LAILA, CEI); OpenSignal download and upload speed awards (three consecutive reports as of 2023); Best Business Awards 2023 best app; recognised by Altai (2012) as Iraq's leading brand; named best GSM operator by the Iraqi Ministry of Communications in 2011.",
+    "reputation__criticism": "Sector-level political criticism that Iraq's mobile operators became monopolistic and should be nationalised — a view voiced by the lawmaker who brought the 2021 licence lawsuit and who later became prime minister.",
+    "legal__lawsuits": "2021: a Baghdad court revoked the cabinet's decision to renew the three operators' licences, following a lawsuit alleging the renewals were tainted by corruption. The case was brought by lawmaker Mohammed Shia Al-Sudani, who subsequently served as prime minister — making this a live political as well as legal issue.",
+    "legal__regulatory-investigations": "Historic CMC scrutiny over compliance with the licence's ISX listing obligation.",
+    "legal__fines": "Asiacell incurred regulatory fines over delays in meeting listing obligations; these were resolved through negotiation with the CMC.",
+    "legal__settlements": "In 2026 Asiacell publicly announced it had settled its commitments and complied with its legal and financial obligations to the Iraqi government — a materially positive development for licence risk.",
+    "political__government-contracts": "CMC/UNESCO school connectivity programme; government-supervised national AI education initiative; Chevening academic cooperation agreement with the UK FCDO (Feb 2026).",
+    "political__sanctions-exposure": "No direct sanctions exposure identified. Indirect geopolitical exposure through Qatari state-linked ownership and operating solely inside Iraq.",
+    "political__trade-restrictions": "Equipment imports subject to Iraqi customs and any vendor-related international restrictions (relevant given Huawei's role in the transport network).",
+    "esg__energy-consumption": "Site power is a significant cost driver; Ooredoo cited higher energy and leased-line costs as margin pressures.",
+    "esg__human-rights": "Free Wikipedia access initiative (2017) framed as digital inclusion; school connectivity programmes support educational access.",
+    "partnerships__strategic-partnerships": "Ooredoo Group (controlling shareholder and technical partner); Paris Saint-Germain (2026 sponsorship); 1001 (streaming).",
+    "partnerships__technology-partnerships": "Google Cloud (AI, Nov 2025), Cisco (AI network assurance), Huawei (SRv6 IP transport), LigaData (data governance), Evam (customer engagement), Alcatel Submarine Networks via Ooredoo (Fibre in Gulf cable).",
+    "partnerships__government-partnerships": "CMC (5G lab sponsorship, school connectivity), Ministry of Communications (international gateway), UNESCO.",
+    "partnerships__university-partnerships": "Al-Nahrain University College of Information Engineering — first 5G lab in Iraq (April 2026); national AI ecosystem across Iraqi universities with NewsSocial.",
+    "news__partnerships": "2026: Paris Saint-Germain sponsorship; UK FCDO/Chevening academic agreement (Feb 2026); NewsSocial national AI ecosystem; 1001 streaming. 2025: Google Cloud, Cisco, LigaData, Evam.",
+    "news__expansions": "April 2026: opening of Iraq's first 5G laboratory with Al-Nahrain University under CMC sponsorship — the first practical use of 5G technology in Iraq.",
+    "news__earnings-announcements": "FY2025 results: revenue IQD 2,024bn (+8%), EBITDA IQD 860bn (46% margin), net profit IQD 519bn, 20.0m subscribers (+4.7%). FY2024 results announced 23 April 2025.",
+    "news__major-successes": "AGM of 23 May 2026 approved a 150% cash dividend for FY2025; five Stevie 2026 awards for AI innovation; record subscriber base of 20.0m.",
+    "news__executive-changes": "None recent; CEO Amer Al Sunna in post since 2013.",
+    "documents__annual-reports": "https://www.asiacell.com/en/about-us/investor-relations — annual performance summary at /AnnualPerformance/Annualsummary; shareholders and dividends at /sandd; AGM materials at /agm.",
+    "documents__quarterly-reports": "Quarterly financials filed with the CMC and ISX; parent Ooredoo reports Asiacell as a segment each quarter (in QAR).",
+    "documents__sec-regulatory-filings": "ISC/ISX filings (Iraq): disclosures, corporate actions and AGM minutes (محضر الهيئة العامة) — the primary source for capital changes and dividend decisions. ISC news archive: isc.gov.iq.",
+    "documents__investor-presentations": "Ooredoo group investor materials cover the Asiacell segment: https://www.ooredoo.com",
+    "documents__press-releases": "https://www.asiacell.com/en/about-us/news-and-event/press-releases/PR2026",
+    "risks__financial__debt": "Debt and net debt are not publicly disclosed in summary IR data — a genuine information gap. The ~90% payout ratio means little profit is retained, so any capex step-up (5G spectrum) would likely require debt or a dividend cut.",
+    "risks__financial__falling-margins": "EBITDA margin has held at 46%, but energy and leased-line costs have been flagged as pressures. FY2022 showed the downside case: revenue -2% and EBITDA -7% under competitive pressure.",
+    "risks__financial__customer-concentration": "Low — mass-market prepaid base of 20m subscribers.",
+    "risks__business__competition": "Three-way competition with Zain Iraq and Korek, plus a state-backed fourth entrant: the National Mobile Telecommunications Company (NMTC), created by cabinet resolution of 11 March 2025 as a Vodafone joint venture with a founding contract signed 31 August 2025, funded via the Communications Ministry (Al-Salam General Company), the Iraqi Trade Bank and the State Employees' Pension Fund. It is positioned to hold a national 5G licence and to compete directly with the three foreign-majority-owned incumbents.",
+    "risks__business__market-decline": "Low — mobile data demand is structurally growing; the risk is share and pricing, not market size.",
+    "risks__technological__obsolescence": "Asiacell has no 5G spectrum yet; if a rival (particularly a state-backed operator) secures 5G first, the network-quality advantage that underpins the brand could erode.",
+    "risks__technological__cybersecurity": "Standard operator exposure; investing with Cisco on network assurance.",
+    "risks__legal__regulation": "THE KEY RISK. The 2007 licences ran 15 years to 2022. A 2020 cabinet decision to extend them (5 years plus 3 years' compensation for ISIS-era and pandemic losses) was overturned by a Baghdad court in 2021 after a corruption-based challenge, and the public record on the final renewal terms is opaque. Asiacell announced a settlement of its obligations to the government in 2026, which is reassuring, but licence duration, renewal cost and spectrum fees remain the dominant uncertainty for long-term value. The CMC is also preparing a 5G auction that will raise spectrum costs.",
+    "risks__legal__lawsuits": "Licence-renewal litigation (2021) and historic fines over listing-obligation delays.",
+    "risks__geopolitical__war": "Direct precedent: ISIS control of large parts of Iraq from 2014–2017 damaged infrastructure and caused losses significant enough to be cited as grounds for licence compensation.",
+    "risks__geopolitical__political-instability": "High. Telecom licensing in Iraq is politically driven; calls to nationalise the sector have come from senior political figures, and the state is now building a competing operator.",
+    "risks__operational__supply-chain": "Import dependence for network equipment; energy supply and cost for site power.",
+    "risks__operational__key-person-risk": "Founder/chairman Faruk Mustafa Rasool holds 28.09% and has led the company since 1999; concentration of both ownership and influence.",
+    "future__management-s-stated-goals": "Continue investing in innovation to support Iraq's long-term social and economic progress; extend high-speed connectivity; advance 5G readiness and AI-powered services and platforms.",
+    "future__expansion-plans": "5G readiness ahead of the CMC spectrum auction (3.5 GHz and mmWave); enterprise/IoT and edge computing; regional capacity via the Fibre in Gulf submarine cable.",
+    "future__industry-forecast": "Continued mobile data growth, 4G migration and eventual 5G; new competitive dynamics once the National Mobile Company launches.",
+    "future__technological-threats": "Being late to 5G relative to a state-backed operator holding a ready national 5G licence.",
+    "future__potential-opportunities": "Large 2G/3G base still to migrate to 4G/5G; very low fixed-broadband penetration keeps mobile as the primary internet channel; enterprise digitisation and IoT.",
+    "future__possible-failure-scenarios": "Adverse licence renewal terms or punitive spectrum fees; successful state-backed competitor with subsidised pricing; forced tariff intervention; a dividend cut if capex or licence costs escalate.",
+    "future__possible-growth-scenarios": "Data ARPU growth on the installed LTE base with the margin held near 46%, continued ~150% dividends, and a share re-rating if free float and liquidity ever increase.",
+    "final-assessment__reduce-the-entire-investigation-to-a-single-overall-conclusion": "Asiacell is one of the highest-quality operating businesses on the ISX: 20m subscribers, ~97% population coverage, a 46% EBITDA margin, FY2025 revenue of IQD 2,024bn and net profit of IQD 519bn (+32% YoY), trading around 9.4x trailing earnings with a ~9.5% dividend yield after two consecutive years of 150%-of-capital distributions. The investment case is income, not growth: capital has been static at IQD 310bn since 2014 and roughly 90% of profit is paid out. Two structural facts dominate. First, liquidity — the three holders above 5% own 92.15% of the company (Ooredoo 64.06% via Al-Rowad and Barzan, founder Faruk Mustafa Rasool 28.09%), leaving a residual free float near 7.85%, so the stock is hard to accumulate or exit in size and minorities have no governance influence. Second, licence risk — the business rests on one of three 2007 nationwide licences whose 15-year term expired in 2022, whose renewal was overturned by a Baghdad court in 2021 amid corruption allegations, and whose terms remain publicly opaque; the 2026 settlement of obligations to the government is a meaningful positive, but the state is simultaneously creating a Vodafone-partnered national operator with a 5G licence ready for activation. Net: a cash-generative, well-run, dividend-paying monopolistic asset whose valuation discount reflects genuine political and liquidity risk rather than operational weakness. Priority items to verify from primary sources: the balance sheet (cash, debt, equity) from the full audited annual report, and the current licence term and renewal conditions from CMC/ISX disclosures and AGM minutes.",
+    "__ratings": {},
+    "products-services__0__name": "Asiacell Prepaid (mobile voice + data bundles)",
+    "products-services__0__launch-date": "2000 (original GSM service); continuously repackaged",
+    "products-services__0__price": "Recharge-denomination based; bundle pricing competitive with Zain Iraq and Korek",
+    "products-services__0__features": "Voice, SMS, 4G/4G+ data bundles, credit transfer, VAS, international calling and roaming",
+    "products-services__0__target-customer": "Mass-market Iraqi consumers — the overwhelming majority of the 20.0m subscriber base",
+    "products-services__0__geographic-availability": "Nationwide, ~97% population coverage across all governorates",
+    "products-services__0__sales-volume": "Core of FY2025 revenue of IQD 2,024bn",
+    "products-services__0__profitability-if-available": "Supports a 46% EBITDA margin at company level; prepaid collects cash in advance, aiding working capital",
+    "products-services__0__competitors": "Zain Iraq, Korek Telecom; future National Mobile Telecommunications Company (Vodafone JV)",
+    "products-services__0__product-lifecycle": "Mature — growth now comes from data attach rather than new voice users",
+    "products-services__0__customer-reviews": "Network speed rated first in Iraq by OpenSignal across consecutive reports",
+    "products-services__0__strengths": "Widest coverage, best measured speeds, deepest dealer distribution",
+    "products-services__0__weaknesses": "Low switching costs, multi-SIM behaviour, price competition",
+    "products-services__1__name": "Mobile internet / 4G–4G+ data",
+    "products-services__1__launch-date": "LTE rollout following long-delayed spectrum award; ~8,201 LTE sites today",
+    "products-services__1__price": "Sold as data bundles and add-ons",
+    "products-services__1__features": "4G/4G+ high-speed data, deep-indoor coverage marketing, eSIM support",
+    "products-services__1__target-customer": "Young, data-heavy consumer segment; the primary internet channel in Iraq given very low fixed-broadband penetration",
+    "products-services__1__geographic-availability": "Nationwide, strongest in urban centres; rural LTE availability across Iraq remains limited",
+    "products-services__1__sales-volume": "Principal growth driver of revenue per Ooredoo commentary",
+    "products-services__1__profitability-if-available": "High drop-through — incremental traffic on already-built capacity",
+    "products-services__1__competitors": "Zain Iraq (Nokia network modernisation), Korek",
+    "products-services__1__product-lifecycle": "Growth — large 2G/3G base still to migrate",
+    "products-services__1__customer-reviews": "Speed leadership recognised by OpenSignal",
+    "products-services__1__strengths": "Upgrade-ready grid for non-standalone 5G",
+    "products-services__1__weaknesses": "No 5G spectrum awarded yet; spectrum costs expected to rise at auction",
+    "products-services__2__name": "A'mali — enterprise/business services",
+    "products-services__2__launch-date": "Business brand established post-IPO era",
+    "products-services__2__price": "Contract-based",
+    "products-services__2__features": "Fixed and mobile voice and data, network communication systems, toll-free, bulk SMS, M2M/IoT, private LTE, multi-edge computing (Baghdad)",
+    "products-services__2__target-customer": "SMEs, corporates, oil-services sector, government bodies",
+    "products-services__2__geographic-availability": "Iraq nationwide",
+    "products-services__2__sales-volume": "Not separately disclosed",
+    "products-services__2__profitability-if-available": "Not disclosed",
+    "products-services__2__competitors": "Zain Iraq enterprise (private-LTE work with Schlumberger), Korek",
+    "products-services__2__product-lifecycle": "Growth/diversification",
+    "products-services__2__customer-reviews": "n/a",
+    "products-services__2__strengths": "Network reach and Ooredoo group capability",
+    "products-services__2__weaknesses": "Small relative to consumer revenue",
+    "products-services__3__name": "AI and digital services (LAILA, CEI)",
+    "products-services__3__launch-date": "2025–2026",
+    "products-services__3__price": "Bundled with services",
+    "products-services__3__features": "AI assistants and customer-experience intelligence; full-stack AI telecom ecosystem; streaming via 1001 partnership",
+    "products-services__3__target-customer": "Existing subscriber base; universities and public sector",
+    "products-services__3__geographic-availability": "Iraq",
+    "products-services__3__sales-volume": "Not disclosed",
+    "products-services__3__profitability-if-available": "Not disclosed — strategic/brand value at this stage",
+    "products-services__3__competitors": "Regional operators' digital arms",
+    "products-services__3__product-lifecycle": "Introduction",
+    "products-services__3__customer-reviews": "Won five Stevie 2026 awards including two golds",
+    "products-services__3__strengths": "First-mover in Iraq; partnerships with Google Cloud and Cisco",
+    "products-services__3__weaknesses": "Unproven revenue contribution",
+    "__priorities": {
+      "basic-identity__stock-ticker": "high",
+      "basic-identity__parent-company": "high",
+      "ownership__current-owners": "high",
+      "ownership__largest-shareholders": "high",
+      "ownership__controlling-shareholder": "high",
+      "ownership__founders-ownership": "high",
+      "ownership__insider-ownership": "high",
+      "leadership__ceo": "med",
+      "leadership__chairman": "med",
+      "business-model__core-business": "high",
+      "business-model__revenue-sources": "high",
+      "financials__revenue": "high",
+      "financials__net-income": "high",
+      "financials__net-margin": "high",
+      "financials__debt": "high",
+      "stock-info__current-share-price": "high",
+      "stock-info__market-capitalization": "high",
+      "stock-info__p-e": "high",
+      "stock-info__dividend-yield": "high",
+      "stock-info__dividend-history": "high",
+      "stock-info__share-issuance": "high",
+      "stock-info__volatility": "high",
+      "customers__who-are-the-customers": "med",
+      "market-position__market-share": "high",
+      "market-position__barriers-to-entry": "high",
+      "industry__major-competitors": "high",
+      "industry__regulation": "high",
+      "moat__regulatory-barriers": "high",
+      "strategy__capital-allocation": "high",
+      "legal__lawsuits": "high",
+      "legal__settlements": "high",
+      "risks__legal__regulation": "high",
+      "risks__business__competition": "high",
+      "risks__geopolitical__political-instability": "high",
+      "risks__financial__debt": "high",
+      "future__possible-failure-scenarios": "med",
+      "final-assessment__reduce-the-entire-investigation-to-a-single-overall-conclusion": "high"
+    }
+  };
+
   /* ============== INIT ============== */
   document.getElementById("profileContainer").insertAdjacentHTML("afterbegin",
     '<div class="card chart-card" id="priceChartCard">' +
@@ -1332,10 +1884,31 @@
       '<div class="chart-body" id="priceChartBody"><div class="chart-empty">Loading price history…</div></div>' +
     '</div>');
 
-  companies = [ { id: newCompanyId(), name: (PREFILL["__companyName"] || "Alhamraa Insurance (NHAM)"), data: PREFILL } ];
+  companies = [];
+  const SEEDS = [
+    { name: (PREFILL["__companyName"] || "Alhamraa Insurance (NHAM)"), data: PREFILL },
+    { name: (ASIACELL_PREFILL["__companyName"] || "Asiacell Communications (TASC)"), data: ASIACELL_PREFILL }
+  ];
+  const saved = loadSavedCompanies();
+  if (saved){
+    companies = saved.map(c => ({
+      id: c.id || newCompanyId(),
+      name: c.name || (c.data && c.data["__companyName"]) || "Untitled Company",
+      data: c.data || {}
+    }));
+    // add any built-in company that isn't in the saved database yet
+    const haveTickers = new Set(companies.map(c => tickerOf(c)).filter(Boolean));
+    SEEDS.forEach(s => {
+      const tk = (s.data["basic-identity__stock-ticker"] || "").trim().toUpperCase();
+      if (tk && !haveTickers.has(tk)) companies.push({ id: newCompanyId(), name: s.name, data: s.data });
+    });
+  } else {
+    companies = SEEDS.map(s => ({ id: newCompanyId(), name: s.name, data: s.data }));
+  }
+
   renderCompanyList();
   selectCompany(companies[0].id, { animate: false });
-  drillToSections();
+  backToCompanies();          // open on the company list, not inside one company
   bootFeed();
   document.body.classList.add("first-load");
   window.setTimeout(() => document.body.classList.remove("first-load"), 1300);
