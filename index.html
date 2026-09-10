@@ -340,6 +340,7 @@
       <span class="feed-spacer"></span>
       <button class="btn" id="feedSyncBtn" type="button">Sync ISX prices</button>
       <button class="btn" id="feedLoadAllBtn" type="button">+ Load all ISX companies</button>
+      <button class="btn" id="newsFillBtn" type="button" title="Add dated corporate news from the ISX weekly and monthly reports">Fill news</button>
       <button class="btn" id="finFillBtn" type="button" title="Fill multi-year financials extracted from the ISX Companies Guide PDFs (data/financials_fields.json)">Fill financials</button>
       <button class="btn" id="guideFillBtn" type="button" title="Fill Arabic name, sector and ISX document links for every company from the ISX Companies Guide">Fill from ISX Guide</button>
       <label class="feed-int">Auto
@@ -1126,6 +1127,10 @@
     let cls = "feed-dot", txt = "";
     if (state === "loading"){ cls += " load"; txt = "Fetching ISX data..."; }
     else if (state === "error"){ cls += " err"; txt = "Feed unavailable (" + info + "). Set FEED_URL to your latest.json (e.g. GitHub raw URL)."; }
+    else if (state === "news"){
+      cls += " ok";
+      txt = "Corporate news: added to " + info.filled + " companies (" + info.total + " have news)";
+    }
     else if (state === "fin"){
       cls += " ok";
       txt = "Financials: filled " + info.filled + " companies from the guide PDFs (" + info.total + " extracted)";
@@ -1193,6 +1198,8 @@
     if (gb) gb.addEventListener("click", fillFromGuide);
     const fb = document.getElementById("finFillBtn");
     if (fb) fb.addEventListener("click", fillFinancials);
+    const nb = document.getElementById("newsFillBtn");
+    if (nb) nb.addEventListener("click", fillNews);
     setInterval(updateCountdownLabel, 1000);
   })();
 
@@ -1336,8 +1343,61 @@
     updateFeedStatus("fin", { filled: filled, total: n });
   }
 
+  /* ---- corporate news from the ISX weekly/monthly reports ---- */
+  const NEWS_URL = "data/news_fields.json";
+  let newsData = {};
+  const NEWS_MARK = "— ISX corporate news —";
+
+  async function fetchNews(){
+    try{
+      const res = await fetch(NEWS_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      newsData = (await res.json()) || {};
+    }catch(err){ newsData = {}; }
+  }
+
+  function fillOneNews(c){
+    const tk = tickerOf(c);
+    const byField = tk ? newsData[tk] : null;
+    if (!byField) return false;
+    let wrote = 0;
+    Object.keys(byField).forEach(key => {
+      const text = byField[key];
+      if (!text) return;
+      const block = NEWS_MARK + "\n" + text;
+      const put = (cur) => {
+        if (!cur.trim()) return block;                 // empty field: just the news
+        if (cur.indexOf(NEWS_MARK) !== -1) return null; // already added: leave alone
+        return cur.trim() + "\n\n" + block;            // keep research, append news
+      };
+      if (c.id === displayedId){
+        const el = document.querySelector('[name="' + key + '"]');
+        if (el){ const v = put(el.value); if (v !== null){ el.value = v; wrote++; } }
+      } else {
+        const v = put(String(c.data[key] || ""));
+        if (v !== null){ c.data[key] = v; wrote++; }
+      }
+    });
+    return wrote > 0;
+  }
+
+  async function fillNews(){
+    if (!Object.keys(newsData).length) await fetchNews();
+    const n = Object.keys(newsData).length;
+    if (!n){
+      updateFeedStatus("error", "news_fields.json not found — run isx_corporate_news.py and commit data/news_fields.json");
+      return;
+    }
+    let filled = 0;
+    companies.forEach(c => { if (fillOneNews(c)) filled++; });
+    if (displayedId != null){ autoSizeFields(); updateProgress(); }
+    renderCompanyList();
+    saveNow();
+    updateFeedStatus("news", { filled: filled, total: n });
+  }
+
   async function bootFeed(){
-    await Promise.all([fetchFeed(), fetchHistory(), fetchGuide(), fetchFin()]);
+    await Promise.all([fetchFeed(), fetchHistory(), fetchGuide(), fetchFin(), fetchNews()]);
     syncAllFromFeed();
     renderPriceChart();
     if (document.body.classList.contains("home-view")) renderMarketHome();
