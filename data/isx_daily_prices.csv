@@ -981,3 +981,115 @@ date,ticker,name,open,high,low,close,prev_close,change_pct,volume,value_iqd,trad
 2026-09-17,ABAP,Babil Animal & Vegetable Production ,,,,8.4,,,0.0,,0.0
 2026-09-17,AMAP,Modern for Animal Production,,,,0.31,,,0.0,,0.0
 2026-09-17,HNTI,National for Tourist Investment,,,,10.0,,,0.0,,0.0
+2026-09-20,BASH,Ashur International Bank,0.31,0.31,0.31,0.31,0.31,0.0,3926905.0,1217340.55,8.0
+2026-09-20,BBOB,Bank of Baghdad,2.88,2.9,2.87,2.88,2.87,0.35,12037017.0,34653456.74,87.0
+2026-09-20,BCOI,Commercial Islamic Bank of Iraq,0.55,0.56,0.55,0.56,0.55,1.82,47086252.0,26017439.66,28.0
+2026-09-20,BEFI,Economy Bank,0.24,0.24,0.24,0.24,0.24,0.0,10000.0,2400.0,1.0
+2026-09-20,BIBI,Investment Bank of Iraq,0.39,0.41,0.39,0.39,0.39,0.0,51606061.0,20206485.01,15.0
+2026-09-20,BIIB,Iraqi Islamic Bank,1.0,1.0,0.97,0.97,0.97,0.0,3709340.0,3639820.08,21.0
+2026-09-20,BIME,Middle East Bank,0.07,0.07,0.07,0.07,0.07,0.0,18844023.0,1319081.61,10.0
+2026-09-20,BKUI,Kurdistan International Bank,1.06,1.1,1.06,1.1,1.06,3.77,1000000.0,1082666.68,3.0
+2026-09-20,BMNS,Al -Mansour Bank,2.07,2.07,2.05,2.05,2.07,-0.97,274963019.0,564480021.26,151.0
+2026-09-20,BNOI,National Bank of Iraq,3.8,3.8,3.75,3.78,3.8,-0.53,3926788.0,14819672.24,73.0
+2026-09-20,TASC,Asia Cell Telecommunication,15.8,16.0,15.79,15.79,15.8,-0.06,1939806.0,30719582.04,115.0
+2026-09-20,TZNI,Al-Khatam Telecom,3.8,3.8,3.76,3.8,3.8,0.0,28632.0,108535.65,5.0
+2026-09-20,NAME,Al-Ameen for Insurance,0.86,0.86,0.86,0.86,0.86,0.0,11558.0,9939.88,2.0
+2026-09-20,SBPT,Baghdad -Iraq Transportation,20.0,20.0,19.6,19.6,20.0,-2.0,733267.0,14456029.6,12.0
+2026-09-20,SKTA,Kharkh Tour Amuzement City,4.45,4.45,4.45,4.45,4.45,0.0,446.0,1984.7,1.0
+2026-09-20,SMRI,Mamoura Realestate ,2.55,2.6,2.5,2.55,2.52,1.19,7142142.0,18218997.67,41.0
+2026-09-20,IBSD,Baghdad Soft Drinks,6.13,6.25,6.13,6.23,6.13,1.63,16524617.0,102451275.54,89.0
+2026-09-20,IIDP,Iraqi Date Processing and Marketing,2.39,2.39,2.16,2.16,2.39,-9.62,42987.0,94273.19,7.0
+2026-09-20,IKHC,Al -Khazer Construction Materials,1.12,1.12,1.12,1.12,1.11,0.9,8875.0,9940.0,1.0
+2026-09-20,IKLV,Al-Kindi of Veterinary Vaccines,2.7,2.7,2.7,2.7,2.7,0.0,100000.0,270000.0,2.0
+2026-09-20,IMAP,Al-Mansour Pharmaceuticals Industries,2.25,2.26,2.25,2.26,2.25,0.44,548544.0,1239116.52,15.0
+2026-09-20,IRMC,Ready Made Clothes ,2.25,2.3,2.25,2.3,2.25,2.22,8164034.0,18411296.5,25.0
+2026-09-20,HBAG,Baghdad Hotel,12.25,12.25,12.25,12.25,12.25,0.0,114.0,1396.5,1.0
+2026-09-20,HMAN,Mansour Hotel,55.5,55.52,55.5,55.5,54.0,2.78,257417.0,14287102.45,15.0
+2026-09-20,AAHP,Al-Ahlyia agricultural production,2.11,2.11,2.11,2.11,2.11,0.0,7099527.0,14980001.97,2.0
+2026-09-20,AMEF,Middle East for Production- Fish,5.6,5.6,5.6,5.6,5.67,-1.23,8875.0,49700.0,1.0
+2026-09-20,BINT,International Islamic Bank,0.12,0.12,0.11,0.11,0.1,10.0,9175400.0,1051048.0,15.0
+2026-09-20,BROI,Credit Bank Of Iraq,0.49,0.5,0.49,0.5,0.49,2.04,4119490.0,2058745.0,11.0
+2026-09-20,NHAM,Al-Hamraa for Insurance,4.1,4.1,4.0,4.0,4.1,-2.44,262267.0,1049201.3,4.0
+2026-09-20,SAEI,Al-Ameen Estate Investment,1.48,1.48,1.47,1.47,1.42,3.52,203582.0,299801.36,4.0
+2026-09-20,IFCM,Fallujah for construction Materials,2.75,2.75,2.75,2.75,2.75,0.0,413.0,1135.75,1.0
+2026-09-20,BMFI,Mosul Bank For Investment,0.13,0.14,0.13,0.14,0.12,16.67,31475908.0,4191377.12,15.0
+2026-09-20,BSUC,Sumer Commercial Bank,0.21,0.21,0.21,0.21,0.22,-4.55,10118337.0,2124850.77,15.0
+2026-09-20,SIGT,General Transportation,1.33,1.33,1.33,1.33,1.33,0.0,22421.0,29819.93,1.0
+2026-09-20,IELI,Electronic Industry,1.37,1.37,1.37,1.37,1.37,0.0,137225.0,187998.25,3.0
+2026-09-20,IMCM,Modern Construction Materials,1.2,1.2,1.2,1.2,1.33,-9.77,20000.0,24000.0,1.0
+2026-09-20,INCP,National Chemical &Plastic,1.8,1.8,1.8,1.8,1.8,0.0,5555.0,9999.0,1.0
+2026-09-20,ITLI,The Light Industries,1.26,1.28,1.26,1.27,1.25,1.6,3200000.0,4050000.0,21.0
+2026-09-20,HISH,Ishtar Hotels,9.34,9.34,9.16,9.2,9.39,-2.02,595327.0,5495300.91,23.0
+2026-09-20,HNTI,National for Tourist Investment,9.8,9.8,9.8,9.8,10.0,-2.0,45780.0,448644.0,1.0
+2026-09-20,HPAL,Palestine Hotel,21.0,21.2,20.97,20.97,21.0,-0.14,380526.0,7991046.0,8.0
+2026-09-20,HSAD,Al-Sadeer Hotel,24.0,24.0,23.0,23.25,24.0,-3.12,30000.0,700500.0,6.0
+2026-09-20,AISP,Iraqi for Seed Production,5.26,5.4,5.23,5.23,5.26,-0.57,9671086.0,51136076.38,97.0
+2026-09-20,AMAP,Modern for Animal Production,0.31,0.38,0.31,0.38,0.31,22.58,136727.0,47429.95,7.0
+2026-09-20,BWAI,Al-Warka Bank,,0.13,0.13,0.13,,,10500000.0,1365000.0,3.0
+2026-09-20,BHAM,Hammurabi Commercial Bank,,,,,,,,,
+2026-09-20,BSAN,Al-Sanam Islamic Bank,,,,3.0,,,,,
+2026-09-20,FIDI,Iraqi Deposit Insurance Corporation,,,,1.0,,,,,
+2026-09-20,FRSE,Rabee Securities,,,,25.0,,,,,
+2026-09-20,FKSX,Karmal Brokerage,,,,10.0,,,,,
+2026-09-20,FISH,Ishtar Gate for e-Paymant,,,,1.0,,,,,
+2026-09-20,FSBE,Sama Baghdad Exchange,,,,,,,,,
+2026-09-20,SYAM,Blue Yam General Trading Company,,,,,,,,,
+2026-09-20,NMAS,Almaseer lnsurance Company,,,,,,,,,
+2026-09-20,NBAT,Batek Insurance Company,,,,,,,,,
+2026-09-20,NZA,Zain lnsurance Company,,,,,,,,,
+2026-09-20,NDAR,Dar Altheqa Insurance Company,,,,,,,,,
+2026-09-20,NSHA,Shatt Al Arab Insurance,,,,1.0,,,,,
+2026-09-20,NBAD,Al Badia Insurance,,,,,,,,,
+2026-09-20,NKUI,Kurdistan Insurance,,,,0.5,,,,,
+2026-09-20,NELF,Elaf Insurance,,,,,,,,,
+2026-09-20,NDIL,Dilina Insurance Company,,,,,,,,,
+2026-09-20,NGAT,Asia Gate Insurance Company,,,,,,,,,
+2026-09-20,NSHQ,Shariq Insurance Company,,,,,,,,,
+2026-09-20,NSIA,Asia Insurance Company,,,,,,,,,
+2026-09-20,INFF,National Food Industries Company,,,,,,,,,
+2026-09-20,IKFP,Kirkuk producing constructional materials,,,,2.0,,,,,
+2026-09-20,BGUC,Gulf Commercial Bank,,,,0.32,,,0.0,,0.0
+2026-09-20,BELF,Elaf Islamic Bank,,,,0.32,,,0.0,,0.0
+2026-09-20,BNAI,National Islamic Bank,,,,1.0,,,0.0,,0.0
+2026-09-20,BCIH,Cihan Bank for Islamic Investment&Finance,,,,1.75,,,0.0,,0.0
+2026-09-20,NDSA,Dar Al-Salam for Insurance,,,,0.73,,,0.0,,0.0
+2026-09-20,HKAR,Rehab Karbalaa ,,,,0.5,,,0.0,,0.0
+2026-09-20,SMOF,Al-Mosul for funfairs,,,,6.46,,,0.0,,0.0
+2026-09-20,SNUC,AL-Nukhba for Construction,,,,0.69,,,0.0,,0.0
+2026-09-20,IMIB,Metallic Industries and Bicycles,,,,1.94,,,0.0,,0.0
+2026-09-20,IIEW,Iraqi Engineering Works,,,,5.04,,,0.0,,0.0
+2026-09-20,IHLI,Al-Hilal Industries,,,,1.4,,,0.0,,0.0
+2026-09-20,HBAY,Babylon Hotel,,,,108.0,,,0.0,,0.0
+2026-09-20,HTVM,Tourist Village of Mosul dam,,,,13.3,,,0.0,,0.0
+2026-09-20,AIPM,Agricultural Products Meat,,,,4.7,,,0.0,,0.0
+2026-09-20,AIRP,Iraqi Agricultural Products ,,,,11.0,,,0.0,,0.0
+2026-09-20,BANS,AL-Anssari Islamic Bank,,,,0.05,,,0.0,,0.0
+2026-09-20,BLAD,Al-Ataa Islamic Bank,,,,0.08,,,0.0,,0.0
+2026-09-20,BAMS,Al-Mashreq Al-Arabi Islamic Bank,,,,0.85,,,0.0,,0.0
+2026-09-20,BAME,Ameen Al-Iraq Islamic Bank,,,,1.0,,,0.0,,0.0
+2026-09-20,BTRI,Trans Iraq Bank Investment,,,,0.25,,,0.0,,0.0
+2026-09-20,BQAB,Al-Qabidh Islamic Bank,,,,0.07,,,0.0,,0.0
+2026-09-20,BINI,Iraq Noor Islamic Bank for Investment,,,,0.2,,,0.0,,0.0
+2026-09-20,BAAI,Arab Islamic Bank,,,,1.0,,,0.0,,0.0
+2026-09-20,BMAL,AL- Mal Islamic Bank,,,,1.0,,,0.0,,0.0
+2026-09-20,BERI,Erbil Investment & FinanceBank,,,,0.11,,,0.0,,0.0
+2026-09-20,BQUR,Al-Qurtas Islamic Bank,,,,1.0,,,0.0,,0.0
+2026-09-20,BRTB,Region Trade Bank,,,,1.01,,,0.0,,0.0
+2026-09-20,BIDB,International Development Bank,,,,1.05,,,0.0,,0.0
+2026-09-20,BMUI,Al-Mustashar Islamic Bank for Investment,,,,1.0,,,0.0,,0.0
+2026-09-20,BTRU,Trust International Islamic Bank,,,,0.75,,,0.0,,0.0
+2026-09-20,BJAB,Al janoob Islamic Bank,,,,0.94,,,0.0,,0.0
+2026-09-20,VWIF,AL-Wiaam for Financial Investment,,,,0.68,,,0.0,,0.0
+2026-09-20,VAMF,Al-Ameen for Financial Investment,,,,1.26,,,0.0,,0.0
+2026-09-20,NAHF,Alahliya For Insurance,,,,0.75,,,0.0,,0.0
+2026-09-20,SIBD,Ibdaa Al-sharq Alwast General Contracting,,,,1.0,,,0.0,,0.0
+2026-09-20,IHFI,National Furniture Industries,,,,,,,0.0,,0.0
+2026-09-20,IBPM,Baghdad for Packing Materials,,,,3.0,,,0.0,,0.0
+2026-09-20,IMCI,Modern chemical industries,,,,100.0,,,0.0,,0.0
+2026-09-20,HASH,Ashour Hotel,,,,25.98,,,0.0,,0.0
+2026-09-20,BUND,United Bank,,,,0.05,,,0.0,,0.0
+2026-09-20,BUOI,Union Bank of Iraq,,,,0.16,,,0.0,,0.0
+2026-09-20,BWOR,World Islamic Bank for Investment,,,,1.0,,,0.0,,0.0
+2026-09-20,SBAG,AL-Badia for General Trans,,,,1.2,,,0.0,,0.0
+2026-09-20,IICM,Iraqi Carton Manufactories,,,,1.65,,,0.0,,0.0
+2026-09-20,ABAP,Babil Animal & Vegetable Production ,,,,8.4,,,0.0,,0.0
