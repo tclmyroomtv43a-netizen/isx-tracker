@@ -2713,8 +2713,8 @@ date,ticker,name,open,high,low,close,prev_close,change_pct,volume,value_iqd,trad
 2026-10-15,BWOR,World Islamic Bank for Investment,,,,1.0,,,0,,0
 2026-10-18,BBOB,Bank of Baghdad,2.79,2.79,2.76,2.79,2.79,0.0,4797907,13385645.49,22
 2026-10-18,BCOI,Commercial Islamic Bank of Iraq,0.53,0.53,0.53,0.53,0.53,0.0,1501402,795743.06,6
-2026-10-18,BELF,Elaf Islamic Bank,0.22,0.22,0.22,0.22,0.22,0.0,250000,55000.0,1
-2026-10-18,BEFI,Economy Bank,0.25,0.26,0.25,0.25,0.27,-7.41,211111,53888.86,4
+2026-10-18,BEFI,Economy Bank,0.22,0.22,0.22,0.22,0.22,0.0,250000,55000.0,1
+2026-10-18,BELF,Elaf Islamic Bank,0.25,0.26,0.25,0.25,0.27,-7.41,211111,53888.86,4
 2026-10-18,BGUC,Gulf Commercial Bank,0.3,0.3,0.29,0.29,0.3,-3.33,3426866,1014059.8,5
 2026-10-18,BIIB,Iraqi Islamic Bank,0.93,0.93,0.93,0.93,0.93,0.0,10198565,9484665.45,23
 2026-10-18,BIME,Middle East Bank,0.06,0.06,0.06,0.06,0.06,0.0,671940,40316.4,3

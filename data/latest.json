@@ -161,20 +161,6 @@
     "date": "2026-10-18",
     "ticker": "BEFI",
     "name": "Economy Bank",
-    "open": "0.25",
-    "high": "0.26",
-    "low": "0.25",
-    "close": "0.25",
-    "prev_close": "0.27",
-    "change_pct": "-7.41",
-    "volume": "211111",
-    "value_iqd": "53888.86",
-    "trades": "4"
-  },
-  "BELF": {
-    "date": "2026-10-18",
-    "ticker": "BELF",
-    "name": "Elaf Islamic Bank",
     "open": "0.22",
     "high": "0.22",
     "low": "0.22",
@@ -184,6 +170,20 @@
     "volume": "250000",
     "value_iqd": "55000.0",
     "trades": "1"
+  },
+  "BELF": {
+    "date": "2026-10-18",
+    "ticker": "BELF",
+    "name": "Elaf Islamic Bank",
+    "open": "0.25",
+    "high": "0.26",
+    "low": "0.25",
+    "close": "0.25",
+    "prev_close": "0.27",
+    "change_pct": "-7.41",
+    "volume": "211111",
+    "value_iqd": "53888.86",
+    "trades": "4"
   },
   "BERI": {
     "date": "2026-10-18",
