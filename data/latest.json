@@ -1,6 +1,6 @@
 {
   "AAHP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AAHP",
     "name": "Al-Ahlyia agricultural production",
     "close": "2.0",
@@ -8,21 +8,15 @@
     "trades": "0"
   },
   "ABAP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "ABAP",
     "name": "Babil Animal & Vegetable Production",
-    "open": "8.0",
-    "high": "8.0",
-    "low": "8.0",
     "close": "8.0",
-    "prev_close": "8.0",
-    "change_pct": "0.0",
-    "volume": "7455",
-    "value_iqd": "59640.0",
-    "trades": "1"
+    "volume": "0",
+    "trades": "0"
   },
   "AIPM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AIPM",
     "name": "Agricultural Products Meat",
     "close": "4.17",
@@ -30,49 +24,43 @@
     "trades": "0"
   },
   "AIRP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AIRP",
     "name": "Iraqi Agricultural Products",
-    "open": "10.7",
-    "high": "10.7",
-    "low": "10.7",
     "close": "10.7",
-    "prev_close": "10.7",
-    "change_pct": "0.0",
-    "volume": "195474",
-    "value_iqd": "2091571.8",
-    "trades": "4"
+    "volume": "0",
+    "trades": "0"
   },
   "AISP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AISP",
     "name": "Iraqi for Seed Production",
-    "open": "5.03",
-    "high": "5.05",
-    "low": "5.02",
-    "close": "5.05",
-    "prev_close": "5.03",
-    "change_pct": "0.4",
-    "volume": "4202026",
-    "value_iqd": "21125982.2",
-    "trades": "54"
+    "open": "5.05",
+    "high": "5.1",
+    "low": "5.03",
+    "close": "5.1",
+    "prev_close": "5.05",
+    "change_pct": "0.99",
+    "volume": "7758658",
+    "value_iqd": "39147696.43",
+    "trades": "41"
   },
   "AMAP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AMAP",
     "name": "Modern for Animal Production",
     "open": "0.31",
     "high": "0.31",
-    "low": "0.31",
-    "close": "0.31",
-    "prev_close": "0.32",
-    "change_pct": "-3.12",
-    "volume": "100000",
-    "value_iqd": "31000.0",
-    "trades": "1"
+    "low": "0.3",
+    "close": "0.3",
+    "prev_close": "0.31",
+    "change_pct": "-3.23",
+    "volume": "104530",
+    "value_iqd": "31364.3",
+    "trades": "3"
   },
   "AMEF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "AMEF",
     "name": "Middle East for Production- Fish",
     "close": "5.6",
@@ -80,7 +68,7 @@
     "trades": "0"
   },
   "BAAI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BAAI",
     "name": "Arab Islamic Bank",
     "close": "1.0",
@@ -88,7 +76,7 @@
     "trades": "0"
   },
   "BAIB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BAIB",
     "name": "Asia Al Iraq Islamic Bank for Investment",
     "close": "0.96",
@@ -96,7 +84,7 @@
     "trades": "0"
   },
   "BAME": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BAME",
     "name": "Ameen Al-Iraq Islamic Bank",
     "close": "1.0",
@@ -118,7 +106,7 @@
     "trades": "6"
   },
   "BANS": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BANS",
     "name": "AL-Anssari Islamic Bank",
     "close": "0.05",
@@ -126,35 +114,35 @@
     "trades": "0"
   },
   "BASH": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BASH",
     "name": "Ashur International Bank",
-    "open": "0.25",
+    "open": "0.24",
     "high": "0.25",
     "low": "0.24",
     "close": "0.24",
-    "prev_close": "0.25",
-    "change_pct": "-4.0",
-    "volume": "26000",
-    "value_iqd": "6450.0",
-    "trades": "4"
+    "prev_close": "0.24",
+    "change_pct": "0.0",
+    "volume": "42951338",
+    "value_iqd": "10331321.12",
+    "trades": "33"
   },
   "BBOB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BBOB",
     "name": "Bank of Baghdad",
-    "open": "2.45",
-    "high": "2.5",
-    "low": "2.45",
-    "close": "2.5",
-    "prev_close": "2.45",
-    "change_pct": "2.04",
-    "volume": "17030058",
-    "value_iqd": "42142215.28",
-    "trades": "59"
+    "open": "2.55",
+    "high": "2.57",
+    "low": "2.51",
+    "close": "2.55",
+    "prev_close": "2.5",
+    "change_pct": "2.0",
+    "volume": "14353112",
+    "value_iqd": "36415292.32",
+    "trades": "41"
   },
   "BCIH": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BCIH",
     "name": "Cihan Bank for Islamic Investment&Finance",
     "close": "1.13",
@@ -162,7 +150,7 @@
     "trades": "0"
   },
   "BCOI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BCOI",
     "name": "Commercial Islamic Bank of Iraq",
     "open": "0.49",
@@ -171,26 +159,20 @@
     "close": "0.49",
     "prev_close": "0.49",
     "change_pct": "0.0",
-    "volume": "2036721",
-    "value_iqd": "997993.29",
-    "trades": "11"
+    "volume": "1000000",
+    "value_iqd": "490000.0",
+    "trades": "8"
   },
   "BEFI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BEFI",
     "name": "Economy Bank",
-    "open": "0.21",
-    "high": "0.22",
-    "low": "0.21",
     "close": "0.22",
-    "prev_close": "0.21",
-    "change_pct": "4.76",
-    "volume": "1110000",
-    "value_iqd": "233200.0",
-    "trades": "3"
+    "volume": "0",
+    "trades": "0"
   },
   "BELF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BELF",
     "name": "Elaf Islamic Bank",
     "close": "0.31",
@@ -198,7 +180,7 @@
     "trades": "0"
   },
   "BERI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BERI",
     "name": "Erbil Bank",
     "close": "0.37",
@@ -206,19 +188,25 @@
     "trades": "0"
   },
   "BFIB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BFIB",
     "name": "First Iraq Bank",
     "volume": "0",
     "trades": "0"
   },
   "BGUC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BGUC",
     "name": "Gulf Commercial Bank",
+    "open": "0.29",
+    "high": "0.29",
+    "low": "0.29",
     "close": "0.29",
-    "volume": "0",
-    "trades": "0"
+    "prev_close": "0.29",
+    "change_pct": "0.0",
+    "volume": "6600000",
+    "value_iqd": "1914000.0",
+    "trades": "4"
   },
   "BHAM": {
     "date": "2026-09-29",
@@ -226,7 +214,7 @@
     "name": "Hammurabi Commercial Bank"
   },
   "BIBI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BIBI",
     "name": "Investment Bank of Iraq",
     "open": "0.36",
@@ -235,12 +223,12 @@
     "close": "0.36",
     "prev_close": "0.36",
     "change_pct": "0.0",
-    "volume": "1146666",
-    "value_iqd": "412799.76",
-    "trades": "2"
+    "volume": "15000000",
+    "value_iqd": "5400000.0",
+    "trades": "3"
   },
   "BIDB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BIDB",
     "name": "International Development Bank",
     "close": "1.05",
@@ -248,21 +236,21 @@
     "trades": "0"
   },
   "BIIB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BIIB",
     "name": "Iraqi Islamic Bank",
-    "open": "0.88",
-    "high": "0.9",
-    "low": "0.88",
+    "open": "0.89",
+    "high": "0.91",
+    "low": "0.89",
     "close": "0.9",
-    "prev_close": "0.89",
-    "change_pct": "1.12",
-    "volume": "1721689",
-    "value_iqd": "1522902.66",
-    "trades": "9"
+    "prev_close": "0.9",
+    "change_pct": "0.0",
+    "volume": "9742825",
+    "value_iqd": "8765984.9",
+    "trades": "35"
   },
   "BIME": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BIME",
     "name": "Middle East Bank",
     "open": "0.06",
@@ -271,12 +259,12 @@
     "close": "0.06",
     "prev_close": "0.06",
     "change_pct": "0.0",
-    "volume": "29110125",
-    "value_iqd": "1746607.5",
-    "trades": "17"
+    "volume": "18000000",
+    "value_iqd": "1080000.0",
+    "trades": "8"
   },
   "BINI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BINI",
     "name": "Iraq Noor Islamic Bank for Investment",
     "close": "0.21",
@@ -284,15 +272,21 @@
     "trades": "0"
   },
   "BINT": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BINT",
     "name": "International Islamic Bank",
-    "close": "0.13",
-    "volume": "0",
-    "trades": "0"
+    "open": "0.14",
+    "high": "0.14",
+    "low": "0.12",
+    "close": "0.12",
+    "prev_close": "0.13",
+    "change_pct": "-7.69",
+    "volume": "6928736",
+    "value_iqd": "831654.22",
+    "trades": "12"
   },
   "BJAB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BJAB",
     "name": "Al janoob Islamic Bank",
     "close": "0.96",
@@ -300,7 +294,7 @@
     "trades": "0"
   },
   "BKUI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BKUI",
     "name": "Kurdistan International Bank",
     "close": "1.0",
@@ -308,21 +302,15 @@
     "trades": "0"
   },
   "BLAD": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BLAD",
     "name": "Al-Ataa Islamic Bank",
-    "open": "0.07",
-    "high": "0.07",
-    "low": "0.07",
     "close": "0.07",
-    "prev_close": "0.07",
-    "change_pct": "0.0",
-    "volume": "360",
-    "value_iqd": "25.2",
-    "trades": "2"
+    "volume": "0",
+    "trades": "0"
   },
   "BMAL": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BMAL",
     "name": "AL- Mal Islamic Bank",
     "close": "1.0",
@@ -330,29 +318,35 @@
     "trades": "0"
   },
   "BMFI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BMFI",
     "name": "Mosul Bank For Investment",
+    "open": "0.1",
+    "high": "0.1",
+    "low": "0.1",
     "close": "0.1",
-    "volume": "0",
-    "trades": "0"
+    "prev_close": "0.1",
+    "change_pct": "0.0",
+    "volume": "1000000",
+    "value_iqd": "100000.0",
+    "trades": "1"
   },
   "BMNS": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BMNS",
     "name": "Al -Mansour Bank",
-    "open": "1.76",
-    "high": "1.83",
-    "low": "1.76",
-    "close": "1.8",
-    "prev_close": "1.76",
-    "change_pct": "2.27",
-    "volume": "42061848",
-    "value_iqd": "75604983.22",
-    "trades": "70"
+    "open": "1.8",
+    "high": "1.89",
+    "low": "1.79",
+    "close": "1.87",
+    "prev_close": "1.8",
+    "change_pct": "3.89",
+    "volume": "87992205",
+    "value_iqd": "160869710.41",
+    "trades": "112"
   },
   "BMUI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BMUI",
     "name": "Al-Mustashar Islamic Bank for Investment",
     "close": "1.0",
@@ -360,7 +354,7 @@
     "trades": "0"
   },
   "BNAI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BNAI",
     "name": "National Islamic Bank",
     "close": "1.0",
@@ -368,21 +362,21 @@
     "trades": "0"
   },
   "BNOI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BNOI",
     "name": "National Bank of Iraq",
-    "open": "3.03",
+    "open": "3.0",
     "high": "3.04",
-    "low": "2.99",
-    "close": "3.0",
-    "prev_close": "3.03",
-    "change_pct": "-0.99",
-    "volume": "99470785",
-    "value_iqd": "298673184.13",
-    "trades": "112"
+    "low": "3.0",
+    "close": "3.01",
+    "prev_close": "3.0",
+    "change_pct": "0.3333333333333188",
+    "volume": "20585718",
+    "value_iqd": "61876261.84",
+    "trades": "98"
   },
   "BQAB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BQAB",
     "name": "Al-Qabidh Islamic Bank",
     "close": "0.07",
@@ -390,7 +384,7 @@
     "trades": "0"
   },
   "BQUR": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BQUR",
     "name": "Al-Qurtas Islamic Bank",
     "close": "1.04",
@@ -398,7 +392,7 @@
     "trades": "0"
   },
   "BRAJ": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BRAJ",
     "name": "Al-Rajih Islamic Bank",
     "close": "1.0",
@@ -406,21 +400,21 @@
     "trades": "0"
   },
   "BROI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BROI",
     "name": "Credit Bank Of Iraq",
-    "open": "0.45",
+    "open": "0.44",
     "high": "0.45",
     "low": "0.44",
-    "close": "0.44",
-    "prev_close": "0.45",
-    "change_pct": "-2.22",
-    "volume": "2659243",
-    "value_iqd": "1170401.77",
-    "trades": "14"
+    "close": "0.45",
+    "prev_close": "0.44",
+    "change_pct": "2.27",
+    "volume": "200101",
+    "value_iqd": "90040.16",
+    "trades": "2"
   },
   "BRTB": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BRTB",
     "name": "Region Trade Bank",
     "close": "1.01",
@@ -434,7 +428,7 @@
     "close": "3.0"
   },
   "BSUC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BSUC",
     "name": "Sumer Commercial Bank",
     "close": "0.21",
@@ -442,7 +436,7 @@
     "trades": "0"
   },
   "BTRI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BTRI",
     "name": "Trans Iraq Bank Investment",
     "close": "0.25",
@@ -458,7 +452,7 @@
     "trades": "0"
   },
   "BUND": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BUND",
     "name": "United Bank",
     "open": "0.05",
@@ -467,12 +461,12 @@
     "close": "0.05",
     "prev_close": "0.05",
     "change_pct": "0.0",
-    "volume": "600000",
-    "value_iqd": "30000.0",
-    "trades": "7"
+    "volume": "1988",
+    "value_iqd": "99.4",
+    "trades": "1"
   },
   "BUOI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BUOI",
     "name": "Union Bank of Iraq",
     "close": "0.11",
@@ -491,7 +485,7 @@
     "trades": "1"
   },
   "BWOR": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "BWOR",
     "name": "World Islamic Bank for Investment",
     "close": "1.0",
@@ -544,21 +538,15 @@
     "trades": "1"
   },
   "HASH": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HASH",
     "name": "Ashour Hotel",
-    "open": "22.0",
-    "high": "22.0",
-    "low": "22.0",
     "close": "22.0",
-    "prev_close": "22.0",
-    "change_pct": "0.0",
-    "volume": "4000",
-    "value_iqd": "88000.0",
-    "trades": "4"
+    "volume": "0",
+    "trades": "0"
   },
   "HBAG": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HBAG",
     "name": "Baghdad Hotel",
     "open": "12.3",
@@ -567,12 +555,12 @@
     "close": "12.3",
     "prev_close": "12.3",
     "change_pct": "0.0",
-    "volume": "813",
-    "value_iqd": "9999.9",
-    "trades": "2"
+    "volume": "1000",
+    "value_iqd": "12300.0",
+    "trades": "1"
   },
   "HBAY": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HBAY",
     "name": "Babylon Hotel",
     "close": "112.0",
@@ -580,21 +568,21 @@
     "trades": "0"
   },
   "HISH": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HISH",
     "name": "Ishtar Hotels",
     "open": "9.0",
-    "high": "9.01",
+    "high": "9.0",
     "low": "9.0",
     "close": "9.0",
     "prev_close": "9.0",
     "change_pct": "0.0",
-    "volume": "776104",
-    "value_iqd": "6989936.0",
-    "trades": "6"
+    "volume": "915000",
+    "value_iqd": "8235000.0",
+    "trades": "14"
   },
   "HKAR": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HKAR",
     "name": "Rehab Karbalaa",
     "close": "0.43",
@@ -602,21 +590,15 @@
     "trades": "0"
   },
   "HMAN": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HMAN",
     "name": "Mansour Hotel",
-    "open": "55.0",
-    "high": "55.0",
-    "low": "55.0",
     "close": "55.0",
-    "prev_close": "55.0",
-    "change_pct": "0.0",
-    "volume": "409",
-    "value_iqd": "22495.0",
-    "trades": "1"
+    "volume": "0",
+    "trades": "0"
   },
   "HNTI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HNTI",
     "name": "National for Tourist Investment",
     "close": "8.65",
@@ -624,18 +606,18 @@
     "trades": "0"
   },
   "HPAL": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HPAL",
     "name": "Palestine Hotel",
-    "open": "18.89",
-    "high": "19.25",
-    "low": "18.89",
-    "close": "19.24",
-    "prev_close": "18.89",
-    "change_pct": "1.85",
-    "volume": "248043",
-    "value_iqd": "4719196.0",
-    "trades": "15"
+    "open": "19.26",
+    "high": "19.32",
+    "low": "19.2",
+    "close": "19.21",
+    "prev_close": "19.24",
+    "change_pct": "-0.16",
+    "volume": "1103726",
+    "value_iqd": "21235777.2",
+    "trades": "57"
   },
   "HSAD": {
     "date": "2026-09-20",
@@ -652,21 +634,21 @@
     "trades": "6.0"
   },
   "HTVM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "HTVM",
     "name": "Tourist Village of Mosul dam",
-    "open": "12.0",
+    "open": "13.38",
     "high": "13.38",
-    "low": "12.0",
+    "low": "13.38",
     "close": "13.38",
-    "prev_close": "12.0",
-    "change_pct": "11.5",
-    "volume": "21772",
-    "value_iqd": "268035.66",
-    "trades": "4"
+    "prev_close": "13.38",
+    "change_pct": "0.0",
+    "volume": "8181",
+    "value_iqd": "109461.78",
+    "trades": "1"
   },
   "IBPM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IBPM",
     "name": "Baghdad for Packing Materials",
     "close": "3.0",
@@ -674,65 +656,71 @@
     "trades": "0"
   },
   "IBSD": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IBSD",
     "name": "Baghdad Soft Drinks",
-    "open": "5.55",
-    "high": "5.55",
+    "open": "5.54",
+    "high": "5.54",
     "low": "5.5",
-    "close": "5.54",
-    "prev_close": "5.55",
-    "change_pct": "-0.18",
-    "volume": "6528629",
-    "value_iqd": "36059701.37",
-    "trades": "105"
+    "close": "5.5",
+    "prev_close": "5.54",
+    "change_pct": "-0.72",
+    "volume": "6923649",
+    "value_iqd": "38154065.29",
+    "trades": "123"
   },
   "IELI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IELI",
     "name": "Electronic Industry",
+    "open": "1.26",
+    "high": "1.26",
+    "low": "1.26",
     "close": "1.26",
-    "volume": "0",
-    "trades": "0"
+    "prev_close": "1.26",
+    "change_pct": "0.0",
+    "volume": "1000",
+    "value_iqd": "1260.0",
+    "trades": "2"
   },
   "IFCM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IFCM",
     "name": "Fallujah for construction Materials",
-    "open": "2.56",
-    "high": "2.59",
-    "low": "2.55",
+    "open": "2.54",
+    "high": "2.55",
+    "low": "2.54",
     "close": "2.55",
-    "prev_close": "2.58",
-    "change_pct": "-1.16",
-    "volume": "568945",
-    "value_iqd": "1459489.2",
-    "trades": "11"
+    "prev_close": "2.55",
+    "change_pct": "0.0",
+    "volume": "150860",
+    "value_iqd": "383693.0",
+    "trades": "5"
   },
   "IHFI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IHFI",
     "name": "National Furniture Industries",
-    "open": "0.88",
-    "high": "0.88",
-    "low": "0.88",
     "close": "0.88",
-    "prev_close": "0.88",
-    "change_pct": "0.0",
-    "volume": "100",
-    "value_iqd": "88.0",
-    "trades": "1"
-  },
-  "IHLI": {
-    "date": "2026-11-17",
-    "ticker": "IHLI",
-    "name": "Al-Hilal Industries",
-    "close": "1.21",
     "volume": "0",
     "trades": "0"
   },
+  "IHLI": {
+    "date": "2026-11-18",
+    "ticker": "IHLI",
+    "name": "Al-Hilal Industries",
+    "open": "1.21",
+    "high": "1.21",
+    "low": "1.21",
+    "close": "1.21",
+    "prev_close": "1.21",
+    "change_pct": "0.0",
+    "volume": "764000",
+    "value_iqd": "924440.0",
+    "trades": "12"
+  },
   "IICM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IICM",
     "name": "Iraqi Carton Manufactories",
     "open": "1.55",
@@ -741,20 +729,26 @@
     "close": "1.55",
     "prev_close": "1.55",
     "change_pct": "0.0",
-    "volume": "32065",
-    "value_iqd": "49700.75",
-    "trades": "1"
+    "volume": "19537",
+    "value_iqd": "30282.35",
+    "trades": "3"
   },
   "IIDP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IIDP",
     "name": "Iraqi Date Processing and Marketing",
+    "open": "1.83",
+    "high": "1.83",
+    "low": "1.83",
     "close": "1.83",
-    "volume": "0",
-    "trades": "0"
+    "prev_close": "1.83",
+    "change_pct": "0.0",
+    "volume": "2428598",
+    "value_iqd": "4444334.34",
+    "trades": "10"
   },
   "IIEW": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IIEW",
     "name": "Iraqi Engineering Works",
     "close": "4.99",
@@ -762,17 +756,17 @@
     "trades": "0"
   },
   "IITC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IITC",
     "name": "Iraqi For Tufted Carpets",
-    "open": "17.0",
-    "high": "17.0",
-    "low": "16.75",
-    "close": "16.75",
-    "prev_close": "17.0",
-    "change_pct": "-1.47",
-    "volume": "202650",
-    "value_iqd": "3401922.0",
+    "open": "16.75",
+    "high": "16.75",
+    "low": "16.7",
+    "close": "16.7",
+    "prev_close": "16.75",
+    "change_pct": "-0.3",
+    "volume": "171184",
+    "value_iqd": "2863921.15",
     "trades": "7"
   },
   "IKFP": {
@@ -787,7 +781,7 @@
     "trades": "9"
   },
   "IKHC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IKHC",
     "name": "Al -Khazer Construction Materials",
     "close": "1.1",
@@ -795,35 +789,35 @@
     "trades": "0"
   },
   "IKLV": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IKLV",
     "name": "Al-Kindi of Veterinary Vaccines",
-    "open": "2.85",
-    "high": "2.85",
+    "open": "2.5",
+    "high": "2.5",
     "low": "2.5",
     "close": "2.5",
     "prev_close": "2.5",
     "change_pct": "0.0",
-    "volume": "5488496",
-    "value_iqd": "13721360.31",
-    "trades": "8"
+    "volume": "5971897",
+    "value_iqd": "14929742.5",
+    "trades": "14"
   },
   "IMAP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IMAP",
     "name": "Al-Mansour Pharmaceuticals Industries",
-    "open": "2.27",
-    "high": "2.4",
-    "low": "2.27",
-    "close": "2.31",
-    "prev_close": "2.26",
-    "change_pct": "2.21",
-    "volume": "107418242",
-    "value_iqd": "247110895.11",
-    "trades": "45"
+    "open": "2.31",
+    "high": "2.31",
+    "low": "2.2",
+    "close": "2.26",
+    "prev_close": "2.31",
+    "change_pct": "-2.16",
+    "volume": "102436250",
+    "value_iqd": "234542833.58",
+    "trades": "62"
   },
   "IMCI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IMCI",
     "name": "Modern chemical industries",
     "close": "100.0",
@@ -831,29 +825,29 @@
     "trades": "0"
   },
   "IMCM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IMCM",
     "name": "Modern Construction Materials",
-    "close": "0.91",
+    "open": "0.87",
+    "high": "0.87",
+    "low": "0.87",
+    "close": "0.87",
+    "prev_close": "0.91",
+    "change_pct": "-4.4",
+    "volume": "20000",
+    "value_iqd": "17400.0",
+    "trades": "1"
+  },
+  "IMIB": {
+    "date": "2026-11-18",
+    "ticker": "IMIB",
+    "name": "Metallic Industries and Bicycles",
+    "close": "1.85",
     "volume": "0",
     "trades": "0"
   },
-  "IMIB": {
-    "date": "2026-11-17",
-    "ticker": "IMIB",
-    "name": "Metallic Industries and Bicycles",
-    "open": "1.85",
-    "high": "1.85",
-    "low": "1.85",
-    "close": "1.85",
-    "prev_close": "1.85",
-    "change_pct": "0.0",
-    "volume": "65000",
-    "value_iqd": "120250.0",
-    "trades": "2"
-  },
   "IMOS": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IMOS",
     "name": "Modren Sweing",
     "open": "5.5",
@@ -862,37 +856,37 @@
     "close": "5.5",
     "prev_close": "5.5",
     "change_pct": "0.0",
-    "volume": "100000",
-    "value_iqd": "550000.0",
+    "volume": "179",
+    "value_iqd": "984.5",
     "trades": "1"
   },
   "INCP": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "INCP",
     "name": "National Chemical &Plastic",
     "open": "1.85",
-    "high": "1.85",
+    "high": "1.9",
     "low": "1.85",
-    "close": "1.85",
-    "prev_close": "1.8",
-    "change_pct": "2.78",
-    "volume": "5000",
-    "value_iqd": "9250.0",
-    "trades": "5"
+    "close": "1.9",
+    "prev_close": "1.85",
+    "change_pct": "2.7",
+    "volume": "500867",
+    "value_iqd": "930638.31",
+    "trades": "17"
   },
   "INFF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "INFF",
     "name": "National Food Industries Company",
     "high": "0.55",
     "low": "0.53",
-    "close": "0.53",
-    "volume": "701626",
-    "value_iqd": "371894.3",
-    "trades": "4"
+    "close": "0.54",
+    "volume": "7283334",
+    "value_iqd": "3920167.02",
+    "trades": "14"
   },
   "IRMC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "IRMC",
     "name": "Ready Made Clothes",
     "close": "2.25",
@@ -900,21 +894,21 @@
     "trades": "0"
   },
   "ITLI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "ITLI",
     "name": "The Light Industries",
-    "open": "1.11",
-    "high": "1.14",
-    "low": "1.11",
-    "close": "1.13",
-    "prev_close": "1.14",
-    "change_pct": "-0.88",
-    "volume": "674400",
-    "value_iqd": "759016.0",
-    "trades": "3"
+    "open": "1.15",
+    "high": "1.16",
+    "low": "1.15",
+    "close": "1.16",
+    "prev_close": "1.13",
+    "change_pct": "2.65",
+    "volume": "150000",
+    "value_iqd": "173500.0",
+    "trades": "5"
   },
   "NAHF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "NAHF",
     "name": "Alahliya For Insurance",
     "close": "0.65",
@@ -922,18 +916,12 @@
     "trades": "0"
   },
   "NAME": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "NAME",
     "name": "Al-Ameen for Insurance",
-    "open": "0.68",
-    "high": "0.68",
-    "low": "0.62",
     "close": "0.62",
-    "prev_close": "0.68",
-    "change_pct": "-8.82",
-    "volume": "4413945",
-    "value_iqd": "2737788.98",
-    "trades": "7"
+    "volume": "0",
+    "trades": "0"
   },
   "NBAD": {
     "date": "2026-09-29",
@@ -956,7 +944,7 @@
     "name": "Dilina Insurance Company"
   },
   "NDSA": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "NDSA",
     "name": "Dar Al-Salam for Insurance",
     "close": "0.65",
@@ -974,26 +962,32 @@
     "name": "Asia Gate Insurance Company"
   },
   "NGIR": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "NGIR",
     "name": "Gulf Insurance",
-    "close": "0.59",
-    "volume": "0",
-    "trades": "0"
+    "open": "0.54",
+    "high": "0.54",
+    "low": "0.54",
+    "close": "0.54",
+    "prev_close": "0.59",
+    "change_pct": "-8.47",
+    "volume": "100000",
+    "value_iqd": "54000.0",
+    "trades": "1"
   },
   "NHAM": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "NHAM",
     "name": "Al-Hamraa for Insurance",
     "open": "3.05",
     "high": "3.05",
-    "low": "3.05",
-    "close": "3.05",
+    "low": "2.87",
+    "close": "2.87",
     "prev_close": "3.05",
-    "change_pct": "0.0",
-    "volume": "293",
-    "value_iqd": "893.65",
-    "trades": "1"
+    "change_pct": "-5.9",
+    "volume": "201636",
+    "value_iqd": "581961.22",
+    "trades": "8"
   },
   "NKHA": {
     "date": "2026-09-29",
@@ -1033,63 +1027,63 @@
     "name": "Zain lnsurance Company"
   },
   "OMWJ": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "OMWJ",
     "name": "Amwaj lnternational  Real Estate",
-    "open": "123.03",
-    "high": "134.0",
-    "low": "123.01",
-    "close": "131.0",
-    "prev_close": "123.0",
-    "change_pct": "6.5",
-    "volume": "339455",
-    "value_iqd": "43148213.83",
-    "trades": "135"
+    "open": "130.99",
+    "high": "133.0",
+    "low": "127.05",
+    "close": "127.05",
+    "prev_close": "131.0",
+    "change_pct": "-3.02",
+    "volume": "266105",
+    "value_iqd": "34405907.2",
+    "trades": "78"
   },
   "SAEI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SAEI",
     "name": "Al-Ameen Estate Investment",
-    "open": "1.06",
-    "high": "1.06",
+    "open": "1.0",
+    "high": "1.14",
     "low": "1.0",
-    "close": "1.0",
-    "prev_close": "1.1",
-    "change_pct": "-9.09",
-    "volume": "1400000",
-    "value_iqd": "1400393.84",
-    "trades": "9"
+    "close": "1.14",
+    "prev_close": "1.0",
+    "change_pct": "14.0",
+    "volume": "15429",
+    "value_iqd": "16949.9",
+    "trades": "4"
   },
   "SBAG": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SBAG",
     "name": "AL-Badia for General Trans",
     "open": "1.4",
     "high": "1.4",
     "low": "1.4",
     "close": "1.4",
-    "prev_close": "1.36",
-    "change_pct": "2.94",
-    "volume": "200000",
-    "value_iqd": "280000.0",
+    "prev_close": "1.4",
+    "change_pct": "0.0",
+    "volume": "301",
+    "value_iqd": "421.4",
     "trades": "1"
   },
   "SBPT": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SBPT",
     "name": "Baghdad -Iraq Transportation",
-    "open": "18.0",
+    "open": "17.0",
     "high": "18.0",
     "low": "17.0",
-    "close": "17.0",
+    "close": "17.75",
     "prev_close": "17.0",
-    "change_pct": "0.0",
-    "volume": "5698",
-    "value_iqd": "97564.0",
-    "trades": "2"
+    "change_pct": "4.41",
+    "volume": "365253",
+    "value_iqd": "6420631.0",
+    "trades": "28"
   },
   "SIBD": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SIBD",
     "name": "Ibdaa Al-sharq Alwast General Contracting",
     "close": "1.0",
@@ -1097,21 +1091,21 @@
     "trades": "0"
   },
   "SIGT": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SIGT",
     "name": "General Transportation",
-    "open": "1.2",
-    "high": "1.2",
-    "low": "1.2",
-    "close": "1.2",
+    "open": "1.18",
+    "high": "1.19",
+    "low": "1.14",
+    "close": "1.14",
     "prev_close": "1.2",
-    "change_pct": "0.0",
-    "volume": "25431",
-    "value_iqd": "30517.2",
-    "trades": "2"
+    "change_pct": "-5.0",
+    "volume": "603794",
+    "value_iqd": "704425.16",
+    "trades": "5"
   },
   "SKTA": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SKTA",
     "name": "Kharkh Tour Amuzement City",
     "close": "4.35",
@@ -1119,40 +1113,40 @@
     "trades": "0"
   },
   "SMOF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SMOF",
     "name": "Al-Mosul for funfairs",
-    "open": "6.8",
-    "high": "6.8",
-    "low": "6.8",
     "close": "6.8",
-    "prev_close": "6.8",
-    "change_pct": "0.0",
-    "volume": "4973204",
-    "value_iqd": "33817787.2",
-    "trades": "6"
+    "volume": "0",
+    "trades": "0"
   },
   "SMRI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SMRI",
     "name": "Mamoura Realestate",
-    "open": "2.35",
-    "high": "2.35",
-    "low": "2.32",
+    "open": "2.3",
+    "high": "2.4",
+    "low": "2.27",
     "close": "2.32",
     "prev_close": "2.32",
     "change_pct": "0.0",
-    "volume": "39085",
-    "value_iqd": "91011.28",
-    "trades": "9"
+    "volume": "1622263",
+    "value_iqd": "3738701.56",
+    "trades": "11"
   },
   "SNUC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "SNUC",
     "name": "AL-Nukhba for Construction",
+    "open": "0.59",
+    "high": "0.59",
+    "low": "0.59",
     "close": "0.59",
-    "volume": "0",
-    "trades": "0"
+    "prev_close": "0.59",
+    "change_pct": "0.0",
+    "volume": "1072",
+    "value_iqd": "632.48",
+    "trades": "2"
   },
   "SYAM": {
     "date": "2026-09-29",
@@ -1160,21 +1154,21 @@
     "name": "Blue Yam General Trading Company"
   },
   "TASC": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "TASC",
     "name": "Asia Cell Telecommunication",
-    "open": "13.38",
-    "high": "14.0",
-    "low": "13.37",
-    "close": "13.56",
-    "prev_close": "13.37",
-    "change_pct": "1.42",
-    "volume": "6363274",
-    "value_iqd": "86389180.5",
-    "trades": "171"
+    "open": "13.56",
+    "high": "13.88",
+    "low": "13.56",
+    "close": "13.75",
+    "prev_close": "13.56",
+    "change_pct": "1.4",
+    "volume": "2457194",
+    "value_iqd": "33661760.65",
+    "trades": "90"
   },
   "TZNI": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "TZNI",
     "name": "Al-Khatam Telecom",
     "open": "3.4",
@@ -1183,12 +1177,12 @@
     "close": "3.4",
     "prev_close": "3.4",
     "change_pct": "0.0",
-    "volume": "3173",
-    "value_iqd": "10788.2",
-    "trades": "6"
+    "volume": "49718",
+    "value_iqd": "169041.2",
+    "trades": "5"
   },
   "VAMF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "VAMF",
     "name": "Al-Ameen for Financial Investment",
     "close": "1.26",
@@ -1196,7 +1190,7 @@
     "trades": "0"
   },
   "VWIF": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "ticker": "VWIF",
     "name": "AL-Wiaam for Financial Investment",
     "close": "0.68",
